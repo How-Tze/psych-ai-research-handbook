@@ -1,0 +1,39 @@
+---
+title: "心理学研究的 AI 进阶手册"
+subtitle: "从零散问答到可推进、可检查、可交接的个人研究项目"
+author: "Hao Xie"
+date: "2026-09-16"
+---
+
+**v1.1 · 2026年9月**
+
+这是一份面向心理学与社会科学学生、科研助理和导师的开放研究手册。它关注的不是“怎样让 AI 替你研究”，而是怎样把 AI 放进真实研究过程，减少版本比较、材料整理、项目维护、代码检查和结果一致性核对等结构性劳动，同时保留研究者对问题、方法、伦理与结论的最终判断。
+
+::: {.callout-important appearance="simple" icon=false}
+## 阅读版与冻结版
+
+当前网站是 **v1.1 的 HTML 阅读版**。正式发行的 PDF 与 DOCX 已冻结；HTML 以同一正文为基础，主要改变导航与网页呈现，不改变 v1.1 的方法结论。
+:::
+
+[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.pdf){.btn .btn-primary}  [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.docx){.btn .btn-outline-primary}
+
+## 推荐阅读方式
+
+第一次阅读，建议先看“使用说明”和第1—3章；随后直接跳到当前任务对应的文献、研究设计、数据代码或写作章节。已经开始把 AI 放进真实项目的读者，可以继续阅读第8—10章。
+
+如果你主要需要“今天具体打开哪个 AI 产品、API 是什么、怎样开始”，请配合动态更新的 [**《心理学研究者的 AI Start Guide》**](https://How-Tze.github.io/psych-ai-start-guide/) 使用。该配套指南与本手册分开维护：本手册保存相对稳定的方法原则，Start Guide 负责快速变化的产品与入口。
+
+## 版本原则
+
+- **v1.1 PDF / DOCX**：冻结的正式发行文件。
+- **HTML 阅读版**：与 v1.1 正文同步的在线阅读形态。
+- **后续内容更新**：进入新的版本号，不静默改写已经冻结的发行文件。
+- 产品能力、套餐、界面与政策会变化；相关动态事实均应以页面标注的核查时间和官方来源为准。
+## 开放许可与引用
+
+除另有说明外，本手册由作者拥有权利的原创内容采用 [**Creative Commons Attribution 4.0 International（CC BY 4.0）**](https://creativecommons.org/licenses/by/4.0/) 许可。你可以复制、传播和改编本手册，包括用于商业用途，但需要进行适当署名、提供许可链接，并在有修改时说明修改。第三方引文、商标、截图或另有许可声明的材料不因此自动纳入本许可。
+
+建议引用：
+
+> Xie, Hao. (2026). *心理学研究的 AI 进阶手册* (v1.1). https://How-Tze.github.io/psych-ai-research-handbook/
+

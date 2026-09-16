@@ -1,0 +1,14 @@
+_site/
+.quarto/
+_freeze/
+*.tmp
+~$*
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb

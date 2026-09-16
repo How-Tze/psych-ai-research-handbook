@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: If you use this handbook, please cite it using the metadata below.
+title: 心理学研究的 AI 进阶手册
+type: book
+version: '1.1'
+date-released: '2026-09-16'
+authors:
+- family-names: Xie
+  given-names: Hao
+repository-code: https://github.com/How-Tze/psych-ai-research-handbook
+url: https://How-Tze.github.io/psych-ai-research-handbook/
+abstract: 面向心理学与社会科学研究者的 AI 研究工作流手册，讨论项目状态、运行框架、文献与证据、研究设计、数据与代码、写作、项目维护、Agent 使用以及核验与恢复。
+license: CC-BY-4.0

@@ -1,0 +1,55 @@
+project:
+  type: book
+  output-dir: _site
+lang: zh-CN
+title: 心理学研究的 AI 进阶手册
+author: Hao Xie
+book:
+  title: 心理学研究的 AI 进阶手册
+  subtitle: 从零散问答到可推进、可检查、可交接的个人研究项目
+  author: Hao Xie
+  date: 2026-09-16
+  site-url: https://How-Tze.github.io/psych-ai-research-handbook/
+  repo-url: https://github.com/How-Tze/psych-ai-research-handbook
+  repo-actions:
+  - issue
+  search: true
+  chapters:
+  - index.qmd
+  - chapters/00-usage.qmd
+  - chapters/01-introduction.qmd
+  - part: 主体
+    chapters:
+    - chapters/02-project.qmd
+    - chapters/03-work-environment.qmd
+    - chapters/04-quick-start.qmd
+    - chapters/05-literature.qmd
+    - chapters/06-design.qmd
+    - chapters/07-data-code.qmd
+    - chapters/08-writing.qmd
+    - chapters/09-maintenance.qmd
+    - chapters/10-automation.qmd
+    - chapters/11-safety-recovery.qmd
+    - chapters/12-conclusion.qmd
+  - part: 附录与来源
+    chapters:
+    - chapters/appendix-a.qmd
+    - chapters/appendix-b.qmd
+    - chapters/appendix-c.qmd
+    - chapters/references.qmd
+    - chapters/ai-collaboration.qmd
+  license: CC BY 4.0
+  page-footer:
+    left: © 2026 Hao Xie
+    right: '[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    link-external-newwindow: true
+    smooth-scroll: true
+execute:
+  freeze: auto
