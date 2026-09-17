@@ -22,6 +22,40 @@ Maintain and publish the stable online reading edition of 《心理学研究的 
 - Use `gh-pages` for rendered GitHub Pages output.
 - Do not commit `_site/` to `main` unless the publication strategy is deliberately changed.
 
+## Repository maintenance
+
+### Git workflow
+- Never perform substantial multi-file maintenance directly on `main`.
+- Create a dedicated branch for audits, frontend changes, refactors, or automated fixes. Use prefixes such as `maintenance/`, `fix/`, or `docs/`.
+- Never modify, move, delete, or recreate existing release tags without explicit user approval.
+- Never alter the published v1.1 frozen PDF/DOCX release assets as part of website maintenance.
+- Do not merge a maintenance branch into `main` without explicit human approval.
+- Prefer small, coherent commits.
+
+### Content freeze
+For the current maintenance cycle:
+- Do not expand substantive handbook content.
+- Do not introduce new tools, frameworks, examples, arguments, or references.
+- Do not silently rewrite prose or change methodological or factual claims.
+- Presentation-only transformations are allowed where necessary to fix HTML rendering.
+- If a rendering defect appears to require changing substantive wording, leave it unresolved and report it.
+
+### Temporary audit and QA artifacts
+- Treat automation-generated technical artifacts as disposable by default.
+- Store temporary material under `.audit/` or `.qa/`; these directories must remain gitignored.
+- Do not commit automated audit reports, raw validator output, QA screenshots, render/debug logs, temporary diffs, crawl output, pixel comparisons, test caches, generated `_site/`, secrets, or API keys.
+- Record only durable conclusions in tracked files such as `HANDOFF.md`, `CHANGELOG.md`, or stable documentation under `docs/`.
+
+### Publication integrity
+- `main` represents the current maintainable public source.
+- The existing `v1.1` tag and GitHub Release are a frozen historical publication snapshot.
+- Website maintenance does not automatically create a new handbook version.
+- CSS, HTML, navigation, accessibility, and repository-presentation fixes do not constitute v1.2.
+- Handle future substantive content changes separately.
+
+### Deployment
+- Do not run a production deployment or `quarto publish gh-pages` unless explicitly instructed by the user.
+
 ## Style
 - Chinese is the primary reader language.
 - Prefer stable method language over fast-changing product-specific claims.

@@ -15,29 +15,48 @@ book:
   - issue
   search: true
   chapters:
-  - index.qmd
-  - chapters/00-usage.qmd
-  - chapters/01-introduction.qmd
+  - href: index.qmd
+    text: 首页
+  - href: chapters/00-usage.qmd
+    text: 使用说明
+  - href: chapters/01-introduction.qmd
+    text: 导读：为什么值得重新认识科研中的 AI
   - part: 主体
     chapters:
-    - chapters/02-project.qmd
-    - chapters/03-work-environment.qmd
-    - chapters/04-quick-start.qmd
-    - chapters/05-literature.qmd
-    - chapters/06-design.qmd
-    - chapters/07-data-code.qmd
-    - chapters/08-writing.qmd
-    - chapters/09-maintenance.qmd
-    - chapters/10-automation.qmd
-    - chapters/11-safety-recovery.qmd
-    - chapters/12-conclusion.qmd
+    - href: chapters/02-project.qmd
+      text: 第1章 你做的其实是一个项目
+    - href: chapters/03-work-environment.qmd
+      text: 第2章 AI 已经从聊天框进入工作环境
+    - href: chapters/04-quick-start.qmd
+      text: 第3章 快速开始
+    - href: chapters/05-literature.qmd
+      text: 第4章 文献、阅读与理论整理
+    - href: chapters/06-design.qmd
+      text: 第5章 研究问题、设计与材料
+    - href: chapters/07-data-code.qmd
+      text: 第6章 数据、代码与统计分析
+    - href: chapters/08-writing.qmd
+      text: 第7章 写作、修订与投稿
+    - href: chapters/09-maintenance.qmd
+      text: 第8章 让 AI 帮你维护研究项目
+    - href: chapters/10-automation.qmd
+      text: 第9章 固定重复工作
+    - href: chapters/11-safety-recovery.qmd
+      text: 第10章 核验、权限与恢复
+    - href: chapters/12-conclusion.qmd
+      text: 结语
   - part: 附录与来源
     chapters:
-    - chapters/appendix-a.qmd
-    - chapters/appendix-b.qmd
-    - chapters/appendix-c.qmd
-    - chapters/references.qmd
-    - chapters/ai-collaboration.qmd
+    - href: chapters/appendix-a.qmd
+      text: 附录A 心理学研究常见 AI 场景速查
+    - href: chapters/appendix-b.qmd
+      text: 附录B 最小个人项目模板
+    - href: chapters/appendix-c.qmd
+      text: 附录C 当 LLM 本身进入研究设计
+    - href: chapters/references.qmd
+      text: 参考文献与动态来源说明
+    - href: chapters/ai-collaboration.qmd
+      text: AI 协作说明
   license: CC BY 4.0
   page-footer:
     left: © 2026 Hao Xie
@@ -46,6 +65,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    number-sections: false
     toc: true
     toc-depth: 3
     code-copy: true

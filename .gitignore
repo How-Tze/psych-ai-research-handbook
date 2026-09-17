@@ -1,7 +1,16 @@
 _site/
 .quarto/
+.audit/
+.qa/
+.audit-screenshots/
+.qa-screenshots/
 _freeze/
 *.tmp
+*.audit.json
+*.audit.html
+*.audit.log
+*.qa.json
+*.qa.log
 ~$*
 .env
 .env.*
