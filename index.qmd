@@ -15,7 +15,7 @@ date: "2026-09-16"
 当前网站是 **v1.1 的 HTML 阅读版**。正式发行的 PDF 与 DOCX 已冻结；HTML 以同一正文为基础，主要改变导航与网页呈现，不改变 v1.1 的方法结论。
 :::
 
-[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.pdf){.btn .btn-primary}  [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.docx){.btn .btn-outline-primary}
+[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.pdf){.btn .btn-primary}  [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.docx){.btn .btn-outline-primary}  [**查看 GitHub Release**](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.1){.btn .btn-outline-secondary}
 
 ## 推荐阅读方式
 
@@ -29,6 +29,7 @@ date: "2026-09-16"
 - **HTML 阅读版**：与 v1.1 正文同步的在线阅读形态。
 - **后续内容更新**：进入新的版本号，不静默改写已经冻结的发行文件。
 - 产品能力、套餐、界面与政策会变化；相关动态事实均应以页面标注的核查时间和官方来源为准。
+
 ## 开放许可与引用
 
 除另有说明外，本手册由作者拥有权利的原创内容采用 [**Creative Commons Attribution 4.0 International（CC BY 4.0）**](https://creativecommons.org/licenses/by/4.0/) 许可。你可以复制、传播和改编本手册，包括用于商业用途，但需要进行适当署名、提供许可链接，并在有修改时说明修改。第三方引文、商标、截图或另有许可声明的材料不因此自动纳入本许可。
@@ -37,3 +38,4 @@ date: "2026-09-16"
 
 > Xie, Hao. (2026). *心理学研究的 AI 进阶手册* (v1.1). https://How-Tze.github.io/psych-ai-research-handbook/
 
+[查看版本记录（CHANGELOG）](https://github.com/How-Tze/psych-ai-research-handbook/blob/main/CHANGELOG.md)
