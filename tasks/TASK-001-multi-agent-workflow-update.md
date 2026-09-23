@@ -2,13 +2,13 @@
 
 - **TASK ID:** TASK-001
 - **STATUS:** REVIEW
-- **PHASE:** v1.2 Multi-Agent Workflow Authoring Preparation (pre-authoring only)
+- **PHASE:** v1.2 Multi-Agent Workflow Integration and Review
 - **OWNER / EXECUTOR:** Human and Strategic / Authoring Chat for content approval; execution agent for brief, evidence, and approved integration
-- **AUTHORING GATE:** REQUIRES_CHAT_AUTHORING; Writing Brief awaits Strategic / Authoring Chat and human review
+- **AUTHORING GATE:** PASSED; [approved draft](../drafts/TASK-001-approved.md) is authoritative for mechanical integration
 
 ## CONTEXT
 
-The frozen v1.1 handbook uses Project / Harness / Workflow and already discusses fixed work, scripts, Skills, and Agents in [Chapter 9](../chapters/10-automation.qmd). The [project maintenance chapter](../chapters/09-maintenance.qmd) and [verification / responsibility chapter](../chapters/11-safety-recovery.qmd) may support brief cross-references. The governance phase gate has passed and v1.2 is the target version. The current phase authorizes pre-authoring analysis only.
+The frozen v1.1 handbook uses Project / Harness / Workflow and already discusses fixed work, scripts, Skills, and Agents in [Chapter 9](../chapters/10-automation.qmd). The [project maintenance chapter](../chapters/09-maintenance.qmd) and [verification / responsibility chapter](../chapters/11-safety-recovery.qmd) provide cross-reference context. The governance and Authoring Gates have passed; v1.2 is the target version. This phase authorizes mechanical integration and QA of the approved draft only.
 
 ## OBJECTIVE
 
@@ -27,7 +27,7 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 
 ## OUT OF SCOPE
 
-- Any reader-facing chapter edit, release PDF/DOCX asset, tag, or GitHub Release change in the current phase.
+- Any reader-facing chapter edit beyond the approved §9.5 and chapter-application revision; any release PDF/DOCX asset, tag, or GitHub Release change in the current phase.
 - Current model rankings or prices, subscription tactics, temporary interfaces, detailed API setup, or current ChatGPT / Claude / Gemini / DeepSeek product matrices.
 - Claims that a vendor or model is always best for planning or review; a fixed optimum number of parallel agents.
 - Dynamic product onboarding, which belongs in the separate Start Guide when appropriate.
@@ -35,6 +35,7 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 ## DELIVERABLES
 
 - [TASK-001 Writing Brief](TASK-001-writing-brief.md) with exact placement, proposed section outline, target reader, links to existing Project / Harness / Workflow concepts, and evidence or source needs.
+- [Approved reader-facing draft](../drafts/TASK-001-approved.md) for the authorized section and application revision.
 - Clearly separated stable claims and optional dated product examples for the Start Guide.
 - Substantive draft reviewed and explicitly approved through Strategic / Authoring Chat.
 - Future-version handbook section, any justified cross-references, and a compact task-spec example, integrated mechanically from the approved draft.
@@ -61,9 +62,8 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 
 ## DEPENDENCIES
 
-- The governance phase gate and v1.2 target are approved for pre-authoring work; the Writing Brief will document integration and stable/dynamic boundaries.
-- A later phase or explicit authorization is required before chapter edits or substantive draft integration.
-- Completion of the Authoring Gate before integrating substantial reader-facing prose.
+- The governance and Authoring Gates have passed; the approved draft controls the exact integration wording.
+- Human review is required before merge or any v1.2 version-label, release, or deployment action.
 
 ## ESCALATION CONDITIONS
 
@@ -77,11 +77,13 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 1. The execution agent prepares the Writing Brief and marks `REQUIRES_CHAT_AUTHORING`.
 2. Place the prepared brief in `REVIEW` for the Authoring Gate; this marker is not a task status or drafting authorization. Use `BLOCKED` if an escalation condition prevents review.
 3. After gate review and explicit authorization, return the task to `IN_PROGRESS`; Strategic / Authoring Chat drafts or reviews the substantial reader-facing prose, and the human explicitly approves the draft.
-4. In a later authorized phase, the execution agent integrates that approved draft mechanically and runs QA. Further editorial changes require separately granted authority.
+4. In this authorized phase, the execution agent integrates that approved draft mechanically and runs QA. Further editorial changes require separately granted authority.
 
-## PRE-AUTHORING HANDOFF
+## INTEGRATION / QA HANDOFF
 
-The [Writing Brief](TASK-001-writing-brief.md) contains the content integration map, stable/dynamic claim map, duplication/conflict audit, cross-references, structure and length, and factual verification list. No reader-facing prose or chapter edit has been made. `REVIEW` refers to the Authoring Gate package, not final TASK-001 acceptance.
+The [Writing Brief](TASK-001-writing-brief.md) and [Authoring Packet](TASK-001-authoring-packet.md) preserve the pre-authoring map and source context. The approved §9.5 and chapter-application revision were copied verbatim into [Chapter 9](../chapters/10-automation.qmd), without additional cross-reference edits or substantive wording changes. The five two-space Markdown hard breaks in the approved six-field blockquote were preserved; Git's whitespace check flags them, but Quarto renders the six fields on separate lines.
+
+`quarto render` passed. Static QA confirmed the 9.5 heading and anchor, TOC entry, existing callout and table, six-field blockquote, revised application, Chapter 8/10 navigation, all local links across 19 HTML pages, homepage download files, and references page. The known non-visible `zh-CN` “Abstract” translation warnings remain. Browser security policy blocked opening the local HTML file, so visual desktop and narrow-viewport checks remain for human review. No v1.1 release asset, tag, public version label, or `gh-pages` change was made. `REVIEW` now refers to the integrated TASK-001 work.
 
 ## ON COMPLETION
 

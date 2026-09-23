@@ -27,9 +27,9 @@ Do not silently change v1.1 arguments, claims, methods, or references while doin
 
 ## Current phase
 
-The governance phase gate passed. The active phase is **v1.2 Multi-Agent Workflow Authoring Preparation**; [`CURRENT_PHASE.md`](CURRENT_PHASE.md) is its operational state, [`DECISIONS.md`](DECISIONS.md) records durable decisions, and [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
+The governance and TASK-001 Authoring Gates passed. The active phase is **v1.2 Multi-Agent Workflow Integration and Review**; [`CURRENT_PHASE.md`](CURRENT_PHASE.md) is its operational state, [`DECISIONS.md`](DECISIONS.md) records durable decisions, and [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
 
-[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `REVIEW` for the v1.2 Authoring Gate. Its [Writing Brief](tasks/TASK-001-writing-brief.md) maps placement, claim boundaries, overlap, verification needs, and structure. Strategic / Authoring Chat and human review are next; no substantive reader-facing prose has been drafted or integrated.
+[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `REVIEW` after mechanical integration of the [approved draft](drafts/TASK-001-approved.md) into Chapter 9. Quarto render and static structural/link QA passed. Human review still needs a visual desktop/mobile check; the local browser tool blocked the generated file under its URL policy. Public labels remain v1.1 and require a separate decision before publication.
 
 ## Important future backlog
 

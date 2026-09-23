@@ -1,74 +1,72 @@
 # Current phase
 
-- **Phase:** v1.2 Multi-Agent Workflow Authoring Preparation
+- **Phase:** v1.2 Multi-Agent Workflow Integration and Review
 - **Status:** IN_PROGRESS
-- **Target publication version:** v1.2 (no release metadata or assets authorized yet)
+- **Target publication version:** v1.2 (release metadata and public version labels remain separately gated)
 
 ## Goal
 
-Prepare TASK-001's Authoring Gate package from the existing handbook, so Strategic / Authoring Chat can draft a bounded v1.2 section after review. This phase authorizes pre-authoring analysis only.
+Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9, verify the rendered reading edition, and present the work for human review. The Authoring Gate has passed; this phase does not authorize additional substantive writing.
 
 ## In Scope
 
-- Map the exact Chapter 9 insertion point and limited cross-references.
-- Prepare a Writing Brief, stable/dynamic claim map, duplication/conflict audit, structure, length estimate, and factual verification list.
-- Update TASK-001 and durable project state for gate review.
+- Insert approved §9.5 and the approved chapter-application revision from `drafts/TASK-001-approved.md`.
+- Make only necessary mechanical Markdown/Quarto adjustments and minimal cross-reference changes.
+- Render and inspect Chapter 9 and relevant site structure; review the diff and release integrity.
+- Update TASK-001 and durable phase/handoff state.
 
 ## Out of Scope
 
-- Reader-facing substantive prose, chapter edits, or authoring approval by implication.
+- New or revised substantive prose outside the approved draft.
 - Changes to v1.1 PDF/DOCX, tag, Release, license, or `gh-pages`.
-- v1.2 release metadata, merge, or deployment.
+- Public version labels, v1.2 release metadata, merge, or deployment.
 
 ## Workstreams
 
 | ID | Workstream | Current state |
 | --- | --- | --- |
-| A | Content integration and cross-reference map | REVIEW |
-| B | Stable-vs-dynamic claim and verification map | REVIEW |
-| C | Duplication/conflict audit | REVIEW |
-| D | TASK-001 Writing Brief and Authoring Gate package | REVIEW |
+| A | Approved §9.5 and chapter-application integration | REVIEW |
+| B | Quarto render and Chapter 9 structural QA | REVIEW |
+| C | Accidental-change and release-integrity check | REVIEW |
 
 ## Dependencies
 
-- The governance phase gate has passed; TASK-001 may enter `READY` for pre-authoring work.
-- The existing v1.1 chapters and Project / Harness / Workflow framing are the baseline.
-- Substantive drafting and mechanical integration depend on a separately reviewed Authoring Gate and explicitly approved draft.
+- The Authoring Gate passed, and `drafts/TASK-001-approved.md` is the authoritative text.
+- Human review remains required before merge, version-label changes, release, or deployment.
 
 ## Deliverables
 
-- Durable `tasks/TASK-001-writing-brief.md` with the integration map, audit, claim boundary, verification needs, and structure.
-- Updated TASK-001 status and concise handoff/decision records.
+- `chapters/10-automation.qmd` with approved §9.5 and revised application.
+- TASK-001 at `REVIEW`, with concise QA and integration handoff.
 
 ## Acceptance Criteria
 
-- The brief identifies the precise insertion point, adjacent text, concepts, repetition risks, terminology, reader background, and estimated length.
-- Stable method concepts and dynamic product facts are clearly separated; any claims requiring verification are listed.
-- No handbook chapter, release asset, tag, or publication output changes.
-- TASK-001 reaches `REVIEW` for the Authoring Gate, without reader-facing prose drafted.
+- The inserted section and application wording match the approved draft; prior Chapter 9 prose remains unchanged.
+- `quarto render` passes, and the rendered Chapter 9 has correct headings, anchor, TOC, blockquote, callout, table, and navigation.
+- Internal links and release downloads resolve in the local build.
+- No frozen asset, tag, `gh-pages`, or public version-label change.
 
 ## Constraints
 
-- Preserve v1.1 and CC BY 4.0 publication integrity.
-- Keep sensitive research data out of Git; keep temporary audit material under ignored `.audit/` or `.qa/`.
+- Preserve v1.1 frozen publication integrity and CC BY 4.0.
+- Keep generated `_site/` and temporary QA output ignored; do not commit them.
 - Work on `content/v1.2-multi-agent-workflow`; human approval controls merge and deployment.
 
 ## Decision Gates
 
-- Strategic / Authoring Chat and human review of the Writing Brief before substantive drafting.
-- Explicit human approval of the substantive draft before mechanical integration.
-- Separate decisions for any v1.2 release metadata, merge, and deployment.
+- Human review of the integrated text and QA findings.
+- Separate decision on v1.2 site labeling, release metadata, merge, and deployment.
 
 ## Escalation Conditions
 
-- Proposed changes to the approved scope, handbook structure, scientific claims, canonical-state design, or v1.2 target.
-- Conflicting authoritative sources, invalidated assumptions or acceptance criteria, or a need to expose restricted research material.
+- Any need to alter the approved substantive wording or change chapter structure beyond the authorized §9.5 insertion.
+- Conflicting source material, invalidated acceptance criteria, or a new release/version decision.
 
 ## Exit Criteria
 
-- The Authoring Gate package is reviewed, with scope and wording risks resolved by the human and Strategic / Authoring Chat.
-- The phase does not close merely because the brief is ready for review.
+- Integration and QA are accepted by the human; required visual viewport review is resolved.
+- This phase remains open while TASK-001 is in `REVIEW`.
 
 ## Current Status
 
-TASK-001 is `REVIEW` for the Authoring Gate package in `tasks/TASK-001-writing-brief.md`. The phase remains `IN_PROGRESS` until gate review. No handbook prose, release asset, or site file was modified.
+Approved §9.5 and the application revision are integrated verbatim. Quarto render and static Chapter 9/site checks passed. TASK-001 is `REVIEW`; browser security policy prevented visual local-file and narrow-viewport inspection, which remains for review. Public labels still describe v1.1, as instructed.
