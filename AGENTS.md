@@ -11,6 +11,34 @@ Maintain and publish the stable online reading edition of 《心理学研究的 
 - HTML-only transformations are allowed when they preserve wording and meaning (navigation, callouts, responsive tables, accessible link text).
 - Substantive edits require a new handbook version or explicit author approval.
 
+### Canonical project state
+Chat history is not a project database. Use this hierarchy:
+
+1. Release tags and assets: frozen publication snapshots.
+2. `main`: current stable repository state.
+3. `CURRENT_PHASE.md`: canonical state of the active phase.
+4. `DECISIONS.md`: durable decisions and rationale.
+5. `tasks/*.md`: executable task specifications.
+6. `HANDOFF.md`: compact project-level recovery summary.
+
+Temporary chats, agent reasoning, audit logs, and local scratch files are non-canonical. Do not move sensitive or restricted research data into Git merely to make it available to agents.
+
+## Phase-governed work
+
+- Organize substantial work into approved phases. Each active phase defines its goal, scope, workstreams, dependencies, deliverables, acceptance criteria, constraints, decision gates, escalation conditions, and exit criteria.
+- Agents should execute approved tasks within an approved phase without requesting every next action. They may inspect, implement, test, revise, and update task status, `CURRENT_PHASE.md`, and durable documentation explicitly required by the task.
+- Resolve routine execution questions from repository rules and task acceptance criteria: tests, file completeness, specified links, spec conformance, and formatting or maintenance choices.
+- Escalate strategic questions: scope or handbook structure changes; substantive claims; schema or canonical-state design; invalidated assumptions or acceptance criteria; conflicting authoritative sources; version or release strategy; or work beyond the approved phase. Stop or mark the task `BLOCKED` at an escalation condition.
+- Keep repeatable or consequential prompts as tracked task specifications under `tasks/`, rather than only in chat. Use the fields and status lifecycle in `tasks/README.md` and `tasks/TASK_TEMPLATE.md`.
+- Parallel agents should take only sufficiently independent tasks. Use separate branches or worktrees when edits may overlap. Parallelism can reduce elapsed time, but does not imply lower compute use; do not create workstreams merely because concurrency is available.
+
+### Responsibilities and authoring gate
+
+- **Human:** owns project direction, approves phase goals and substantive changes, controls merge, release, and deployment, and makes final scientific, editorial, and publication judgments.
+- **Strategic / Authoring Chat:** handles phase design, conceptual architecture, substantial handbook prose, major editorial rewriting, trade-off analysis, escalation, adversarial review, and phase review. It should not mediate routine execution.
+- **Execution agents:** inspect and implement repository work; locate content; prepare writing briefs and source evidence; operate on files; test, render, and run QA; synchronize documentation; and integrate approved prose. They must not autonomously author substantial new handbook prose unless a task explicitly grants that authority.
+- Substantial reader-facing prose passes an Authoring Gate: an execution agent prepares a Writing Brief, marks the task `REQUIRES_CHAT_AUTHORING`, obtains an explicitly approved draft through Strategic / Authoring Chat, then makes only mechanical integration changes unless further editorial authority is granted.
+
 ## Safety and privacy
 - Never commit API keys, `.env`, private research data, unpublished third-party manuscripts, account screenshots, or local credential files.
 - Before any public release, inspect `git status` and repository contents for secrets and private artifacts.
