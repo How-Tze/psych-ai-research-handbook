@@ -24,10 +24,10 @@ Establish a repository-native phase and task governance system and prepare a fut
 
 | ID | Workstream | Current state |
 | --- | --- | --- |
-| A | Repository governance infrastructure | IN_PROGRESS |
-| B | Content integration mapping | PLANNED; primary location is Chapter 9 (`chapters/10-automation.qmd`), with possible light cross-references in Chapters 8 and 10 |
-| C | Stable-vs-dynamic claim separation | PLANNED; stable method concepts belong in the handbook, changing product guidance in the Start Guide |
-| D | Task specification for the future handbook update | PLANNED; see `tasks/TASK-001-multi-agent-workflow-update.md` |
+| A | Repository governance infrastructure | REVIEW |
+| B | Content integration mapping | REVIEW; Chapter 9 (`chapters/10-automation.qmd`) is primary, with possible light cross-references in Chapters 8 and 10 |
+| C | Stable-vs-dynamic claim separation | REVIEW; stable method concepts belong in the handbook, changing product guidance in the Start Guide |
+| D | Task specification for the future handbook update | REVIEW; see `tasks/TASK-001-multi-agent-workflow-update.md` |
 
 ## Dependencies
 
@@ -70,4 +70,4 @@ Establish a repository-native phase and task governance system and prepare a fut
 
 ## Current Status
 
-Governance work is underway on `maintenance/phase-governance-2026-09`. TASK-001 is `PLANNED` and is not authorized for content execution in this phase.
+Governance deliverables are ready for review on `maintenance/phase-governance-2026-09`. The phase remains `IN_PROGRESS` until human phase review. TASK-001 is `PLANNED` and is not authorized for content execution in this phase.
