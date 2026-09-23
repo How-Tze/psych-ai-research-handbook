@@ -1,10 +1,10 @@
 # TASK: Multi-agent research workflow handbook update
 
 - **TASK ID:** TASK-001
-- **STATUS:** READY
+- **STATUS:** REVIEW
 - **PHASE:** v1.2 Multi-Agent Workflow Authoring Preparation (pre-authoring only)
 - **OWNER / EXECUTOR:** Human and Strategic / Authoring Chat for content approval; execution agent for brief, evidence, and approved integration
-- **AUTHORING GATE:** REQUIRES_CHAT_AUTHORING before substantial reader-facing prose
+- **AUTHORING GATE:** REQUIRES_CHAT_AUTHORING; Writing Brief awaits Strategic / Authoring Chat and human review
 
 ## CONTEXT
 
@@ -34,7 +34,7 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 
 ## DELIVERABLES
 
-- Writing Brief with exact placement, proposed section outline, target reader, links to existing Project / Harness / Workflow concepts, and evidence or source needs.
+- [TASK-001 Writing Brief](TASK-001-writing-brief.md) with exact placement, proposed section outline, target reader, links to existing Project / Harness / Workflow concepts, and evidence or source needs.
 - Clearly separated stable claims and optional dated product examples for the Start Guide.
 - Substantive draft reviewed and explicitly approved through Strategic / Authoring Chat.
 - Future-version handbook section, any justified cross-references, and a compact task-spec example, integrated mechanically from the approved draft.
@@ -75,9 +75,13 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 ## SUBSTANTIVE AUTHORING GATE
 
 1. The execution agent prepares the Writing Brief and marks `REQUIRES_CHAT_AUTHORING`.
-2. Mark the task `BLOCKED` if substantive drafting or approval is pending; the marker is not a task status.
-3. Strategic / Authoring Chat drafts or reviews the substantial reader-facing prose; the human explicitly approves the draft.
-4. The execution agent integrates that approved draft mechanically and runs QA. Further editorial changes require separately granted authority.
+2. Place the prepared brief in `REVIEW` for the Authoring Gate; this marker is not a task status or drafting authorization. Use `BLOCKED` if an escalation condition prevents review.
+3. After gate review and explicit authorization, return the task to `IN_PROGRESS`; Strategic / Authoring Chat drafts or reviews the substantial reader-facing prose, and the human explicitly approves the draft.
+4. In a later authorized phase, the execution agent integrates that approved draft mechanically and runs QA. Further editorial changes require separately granted authority.
+
+## PRE-AUTHORING HANDOFF
+
+The [Writing Brief](TASK-001-writing-brief.md) contains the content integration map, stable/dynamic claim map, duplication/conflict audit, cross-references, structure and length, and factual verification list. No reader-facing prose or chapter edit has been made. `REVIEW` refers to the Authoring Gate package, not final TASK-001 acceptance.
 
 ## ON COMPLETION
 

@@ -24,10 +24,10 @@ Prepare TASK-001's Authoring Gate package from the existing handbook, so Strateg
 
 | ID | Workstream | Current state |
 | --- | --- | --- |
-| A | Content integration and cross-reference map | IN_PROGRESS |
-| B | Stable-vs-dynamic claim and verification map | IN_PROGRESS |
-| C | Duplication/conflict audit | IN_PROGRESS |
-| D | TASK-001 Writing Brief and Authoring Gate package | IN_PROGRESS |
+| A | Content integration and cross-reference map | REVIEW |
+| B | Stable-vs-dynamic claim and verification map | REVIEW |
+| C | Duplication/conflict audit | REVIEW |
+| D | TASK-001 Writing Brief and Authoring Gate package | REVIEW |
 
 ## Dependencies
 
@@ -71,4 +71,4 @@ Prepare TASK-001's Authoring Gate package from the existing handbook, so Strateg
 
 ## Current Status
 
-TASK-001 is `READY` for pre-authoring analysis. No handbook prose, release asset, or site file is authorized for modification in this run.
+TASK-001 is `REVIEW` for the Authoring Gate package in `tasks/TASK-001-writing-brief.md`. The phase remains `IN_PROGRESS` until gate review. No handbook prose, release asset, or site file was modified.
