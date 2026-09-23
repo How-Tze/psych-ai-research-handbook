@@ -25,11 +25,11 @@ Do not silently change v1.1 arguments, claims, methods, or references while doin
 - Unresolved: the current Quarto installation emits non-visible `zh-CN` translation warnings for “Abstract”; monitor upstream/tooling changes unless this becomes reader-visible.
 - The website maintenance branch was merged into `main` as `78646c7`. Future merges and deployments still require human approval.
 
-## Current governance phase
+## Current phase
 
-The active phase is **Multi-Agent Workflow Governance and Handbook Update Planning**. [`CURRENT_PHASE.md`](CURRENT_PHASE.md) is its operational state; [`DECISIONS.md`](DECISIONS.md) records durable decisions; [`tasks/`](tasks/README.md) holds executable specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
+The governance phase gate passed. The active phase is **v1.2 Multi-Agent Workflow Authoring Preparation**; [`CURRENT_PHASE.md`](CURRENT_PHASE.md) is its operational state, [`DECISIONS.md`](DECISIONS.md) records durable decisions, and [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
 
-[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is the next planned substantive handbook task. It is not authorized for content execution in this governance phase and requires the Authoring Gate before substantial reader-facing prose is integrated.
+[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `READY` for pre-authoring analysis toward v1.2. Its [Writing Brief](tasks/TASK-001-writing-brief.md) will be reviewed at the Authoring Gate before substantive reader-facing prose is drafted or integrated.
 
 ## Important future backlog
 

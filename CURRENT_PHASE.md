@@ -1,73 +1,74 @@
 # Current phase
 
-- **Phase:** Multi-Agent Workflow Governance and Handbook Update Planning
+- **Phase:** v1.2 Multi-Agent Workflow Authoring Preparation
 - **Status:** IN_PROGRESS
+- **Target publication version:** v1.2 (no release metadata or assets authorized yet)
 
 ## Goal
 
-Establish a repository-native phase and task governance system and prepare a future substantive handbook update on multi-agent research workflows. This phase does not authorize substantive handbook editing.
+Prepare TASK-001's Authoring Gate package from the existing handbook, so Strategic / Authoring Chat can draft a bounded v1.2 section after review. This phase authorizes pre-authoring analysis only.
 
 ## In Scope
 
-- Establish governance, decision, task, and handoff files.
-- Map potential handbook integration points without editing reader-facing prose.
-- Separate stable conceptual claims from dynamic product advice.
-- Specify the future handbook update and its Authoring Gate.
+- Map the exact Chapter 9 insertion point and limited cross-references.
+- Prepare a Writing Brief, stable/dynamic claim map, duplication/conflict audit, structure, length estimate, and factual verification list.
+- Update TASK-001 and durable project state for gate review.
 
 ## Out of Scope
 
-- Editing substantive handbook prose or frozen v1.1 PDF/DOCX assets.
-- Changing publication version, license, release tags, or GitHub Release.
-- Merging or deploying the site.
+- Reader-facing substantive prose, chapter edits, or authoring approval by implication.
+- Changes to v1.1 PDF/DOCX, tag, Release, license, or `gh-pages`.
+- v1.2 release metadata, merge, or deployment.
 
 ## Workstreams
 
 | ID | Workstream | Current state |
 | --- | --- | --- |
-| A | Repository governance infrastructure | REVIEW |
-| B | Content integration mapping | REVIEW; Chapter 9 (`chapters/10-automation.qmd`) is primary, with possible light cross-references in Chapters 8 and 10 |
-| C | Stable-vs-dynamic claim separation | REVIEW; stable method concepts belong in the handbook, changing product guidance in the Start Guide |
-| D | Task specification for the future handbook update | REVIEW; see `tasks/TASK-001-multi-agent-workflow-update.md` |
+| A | Content integration and cross-reference map | IN_PROGRESS |
+| B | Stable-vs-dynamic claim and verification map | IN_PROGRESS |
+| C | Duplication/conflict audit | IN_PROGRESS |
+| D | TASK-001 Writing Brief and Authoring Gate package | IN_PROGRESS |
 
 ## Dependencies
 
-- Workstream D depends on the content map and stable/dynamic boundary in B and C.
-- Substantive authoring depends on human approval of a future phase and the task's Authoring Gate.
+- The governance phase gate has passed; TASK-001 may enter `READY` for pre-authoring work.
+- The existing v1.1 chapters and Project / Harness / Workflow framing are the baseline.
+- Substantive drafting and mechanical integration depend on a separately reviewed Authoring Gate and explicitly approved draft.
 
 ## Deliverables
 
-- Updated `AGENTS.md` and compact `HANDOFF.md` pointers.
-- `CURRENT_PHASE.md`, `DECISIONS.md`, `tasks/README.md`, and `tasks/TASK_TEMPLATE.md`.
-- Planned `tasks/TASK-001-multi-agent-workflow-update.md`.
+- Durable `tasks/TASK-001-writing-brief.md` with the integration map, audit, claim boundary, verification needs, and structure.
+- Updated TASK-001 status and concise handoff/decision records.
 
 ## Acceptance Criteria
 
-- Governance roles, canonical state, task lifecycle, autonomy, and escalation are clear and consistent with existing release safeguards.
-- The future task identifies placement, conceptual scope, exclusions, acceptance checks, and the substantive Authoring Gate.
-- No handbook chapter, frozen release asset, tag, or publication branch changes in this phase's governance work.
-- Markdown links and repository diff pass review.
+- The brief identifies the precise insertion point, adjacent text, concepts, repetition risks, terminology, reader background, and estimated length.
+- Stable method concepts and dynamic product facts are clearly separated; any claims requiring verification are listed.
+- No handbook chapter, release asset, tag, or publication output changes.
+- TASK-001 reaches `REVIEW` for the Authoring Gate, without reader-facing prose drafted.
 
 ## Constraints
 
 - Preserve v1.1 and CC BY 4.0 publication integrity.
-- Keep temporary QA under ignored `.audit/` or `.qa/` and keep secrets or restricted data out of Git.
-- Use a maintenance branch; human approval controls merge and deployment.
+- Keep sensitive research data out of Git; keep temporary audit material under ignored `.audit/` or `.qa/`.
+- Work on `content/v1.2-multi-agent-workflow`; human approval controls merge and deployment.
 
 ## Decision Gates
 
-- Human approval of a later substantive update phase and any version or release strategy.
-- Strategic / Authoring Chat approval of substantial reader-facing prose before integration.
+- Strategic / Authoring Chat and human review of the Writing Brief before substantive drafting.
+- Explicit human approval of the substantive draft before mechanical integration.
+- Separate decisions for any v1.2 release metadata, merge, and deployment.
 
 ## Escalation Conditions
 
-- Any proposed change to substantive claims, handbook structure, canonical-state design, or release strategy.
-- Conflicting authoritative sources, invalidated assumptions or acceptance criteria, or work beyond this phase.
+- Proposed changes to the approved scope, handbook structure, scientific claims, canonical-state design, or v1.2 target.
+- Conflicting authoritative sources, invalidated assumptions or acceptance criteria, or a need to expose restricted research material.
 
 ## Exit Criteria
 
-- Governance files and TASK-001 are reviewed and accepted, with no substantive handbook changes.
-- Future content work remains separately gated; this phase is closed only after human phase review.
+- The Authoring Gate package is reviewed, with scope and wording risks resolved by the human and Strategic / Authoring Chat.
+- The phase does not close merely because the brief is ready for review.
 
 ## Current Status
 
-Governance deliverables are ready for review on `maintenance/phase-governance-2026-09`. The phase remains `IN_PROGRESS` until human phase review. TASK-001 is `PLANNED` and is not authorized for content execution in this phase.
+TASK-001 is `READY` for pre-authoring analysis. No handbook prose, release asset, or site file is authorized for modification in this run.

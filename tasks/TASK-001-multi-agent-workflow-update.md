@@ -1,14 +1,14 @@
 # TASK: Multi-agent research workflow handbook update
 
 - **TASK ID:** TASK-001
-- **STATUS:** PLANNED
-- **PHASE:** Multi-Agent Workflow Governance and Handbook Update Planning (specification only; execution requires a later approved substantive phase)
+- **STATUS:** READY
+- **PHASE:** v1.2 Multi-Agent Workflow Authoring Preparation (pre-authoring only)
 - **OWNER / EXECUTOR:** Human and Strategic / Authoring Chat for content approval; execution agent for brief, evidence, and approved integration
 - **AUTHORING GATE:** REQUIRES_CHAT_AUTHORING before substantial reader-facing prose
 
 ## CONTEXT
 
-The frozen v1.1 handbook uses Project / Harness / Workflow and already discusses fixed work, scripts, Skills, and Agents in [Chapter 9](../chapters/10-automation.qmd). The [project maintenance chapter](../chapters/09-maintenance.qmd) and [verification / responsibility chapter](../chapters/11-safety-recovery.qmd) may support brief cross-references. This task specifies a future version's substantive update; it does not authorize editing v1.1 content now.
+The frozen v1.1 handbook uses Project / Harness / Workflow and already discusses fixed work, scripts, Skills, and Agents in [Chapter 9](../chapters/10-automation.qmd). The [project maintenance chapter](../chapters/09-maintenance.qmd) and [verification / responsibility chapter](../chapters/11-safety-recovery.qmd) may support brief cross-references. The governance phase gate has passed and v1.2 is the target version. The current phase authorizes pre-authoring analysis only.
 
 ## OBJECTIVE
 
@@ -27,7 +27,7 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 
 ## OUT OF SCOPE
 
-- Any substantive edit to v1.1 chapter files, release PDF/DOCX assets, tag, or GitHub Release in the current phase.
+- Any reader-facing chapter edit, release PDF/DOCX asset, tag, or GitHub Release change in the current phase.
 - Current model rankings or prices, subscription tactics, temporary interfaces, detailed API setup, or current ChatGPT / Claude / Gemini / DeepSeek product matrices.
 - Claims that a vendor or model is always best for planning or review; a fixed optimum number of parallel agents.
 - Dynamic product onboarding, which belongs in the separate Start Guide when appropriate.
@@ -61,8 +61,8 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 
 ## DEPENDENCIES
 
-- Human approval of a later substantive phase, scope, and version strategy; reassign this task to that phase before moving it to `READY`.
-- Content integration map and stable/dynamic claim boundary from the current phase.
+- The governance phase gate and v1.2 target are approved for pre-authoring work; the Writing Brief will document integration and stable/dynamic boundaries.
+- A later phase or explicit authorization is required before chapter edits or substantive draft integration.
 - Completion of the Authoring Gate before integrating substantial reader-facing prose.
 
 ## ESCALATION CONDITIONS
