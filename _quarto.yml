@@ -2,8 +2,8 @@ project:
   type: book
   output-dir: _site
   resources:
-    - release/psych-ai-research-handbook_v1.1_zh-CN.pdf
-    - release/psych-ai-research-handbook_v1.1_zh-CN.docx
+    - /release/psych-ai-research-handbook_v1.1_zh-CN.pdf
+    - /release/psych-ai-research-handbook_v1.1_zh-CN.docx
 lang: zh-CN
 title: 心理学研究的 AI 进阶手册
 author: Hao Xie
