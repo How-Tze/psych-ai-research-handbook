@@ -6,12 +6,14 @@
 - [x] Update v1.2 date, citation, README, changelog, homepage, and governance state.
 - [x] Render and inspect HTML, PDF, and DOCX; check content, layout, navigation, links, and mobile presentation.
 - [x] Scan tracked release contents for secrets and restricted material.
-- [ ] Mark PR #2 ready, merge to `main`, and verify the merged tree.
-- [ ] Create and push the immutable `v1.2` tag; publish GitHub Release with PDF/DOCX assets.
-- [ ] Deploy Quarto output to `gh-pages` and smoke-test the public site and downloads.
-- [ ] Verify v1.1 historical integrity, record final canonical state, and leave workspaces clean.
+- [x] Mark PR #2 ready, merge to `main`, and verify the merged tree.
+- [x] Create and push the immutable `v1.2` tag; publish GitHub Release with PDF/DOCX assets.
+- [x] Deploy Quarto output to `gh-pages` and smoke-test the public site and downloads.
+- [x] Verify v1.1 historical integrity, record final canonical state, and leave workspaces clean.
 
 The v1.2 DOCX was rendered with Quarto, then finalized in A4 with an updated table of contents. The matching PDF was exported from that DOCX. Print-only mechanical adjustments removed a duplicated homepage title/subtitle and widened two table columns; no chapter source prose changed. The final PDF is 32 A4 pages. The HTML build has 19 pages and 914 local references with no broken file or anchor target. Chapter 9's desktop/mobile preview was accepted by the human before this gate.
+
+PR #2 merged as `a8a9326`, which is the `v1.2` tag target. The v1.2 Release has two uploaded assets, and their public downloads match the repository files by SHA-256. All 19 public HTML routes returned 200; the homepage, Chapter 9, and four v1.1/v1.2 site downloads were checked. The deployed `gh-pages` tree contains only intended current and historical release files, with no `.qa` output. The unchanged v1.1 tag resolves to `175a9b4`; v1.1 PDF/DOCX SHA-256 values remain `8FA5E333C78A2DEAB19FF1DC8DDB1176D588AF153FD86CD174F95A3637C660D3` and `A14965F2B8E5C405C880627837AFD3167D9D2794ADBAA0F08F98E01AA56EF8F3`.
 
 ## Historical v1.1 public release checklist
 

@@ -1,7 +1,7 @@
 # TASK: Publish v1.2 handbook
 
 - **TASK ID:** TASK-002
-- **STATUS:** IN_PROGRESS
+- **STATUS:** DONE
 - **PHASE:** v1.2 Release Gate
 - **OWNER / EXECUTOR:** Codex under the human-approved Release Gate
 
@@ -50,3 +50,5 @@ Publish and verify v1.2 — Multi-Agent Workflow / Agent Governance — while pr
 ## ON COMPLETION
 
 - Mark `DONE`; record tag, Release, site, assets, QA, historical integrity, and clean status in `CURRENT_PHASE.md` and `HANDOFF.md`.
+
+Completed 2026-09-24: PR #2 merged as `a8a9326`; `v1.2` tag and GitHub Release published with PDF/DOCX; Pages deployed and all 19 public HTML pages, four current/historical downloads, Release assets, version labels, and v1.1 integrity verified. See `CURRENT_PHASE.md` and `docs/RELEASE_CHECKLIST.md` for the durable QA summary.

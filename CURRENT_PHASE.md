@@ -1,9 +1,9 @@
 # Current phase
 
 - **Phase:** v1.2 Release Gate
-- **Status:** IN_PROGRESS
+- **Status:** DONE — RELEASED / DEPLOYED / VERIFIED
 - **Target publication version:** v1.2 — Multi-Agent Workflow / Agent Governance
-- **Release date:** actual publication date
+- **Release date:** 2026-09-24
 
 ## Goal
 
@@ -29,9 +29,9 @@ Publish the approved v1.2 handbook source, PDF/DOCX assets, GitHub Release, and 
 | --- | --- | --- |
 | A | Release metadata, governance, and source QA | DONE |
 | B | Versioned PDF/DOCX build and visual/content QA | DONE |
-| C | PR #2 readiness, merge, v1.2 tag and GitHub Release | READY |
-| D | Pages deployment and public smoke test | READY |
-| E | Final canonical-state and clean-workspace check | READY |
+| C | PR #2 readiness, merge, v1.2 tag and GitHub Release | DONE |
+| D | Pages deployment and public smoke test | DONE |
+| E | Final canonical-state and clean-workspace check | DONE |
 
 ## Dependencies
 
@@ -78,4 +78,4 @@ Publish the approved v1.2 handbook source, PDF/DOCX assets, GitHub Release, and 
 
 ## Current Status
 
-Release metadata and versioned assets are ready on `content/v1.2-multi-agent-workflow`. Quarto HTML/DOCX render, 32-page A4 PDF export, print layout, Chapter 9, 19-page internal-link scan, asset-copy hashes, and secret-pattern scan passed. No v1.2 tag, GitHub Release, or production deployment has been made yet.
+PR #2 merged into `main` as `a8a9326`; the immutable [`v1.2` tag](https://github.com/How-Tze/psych-ai-research-handbook/tree/v1.2) resolves to that commit. The [GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2) was published with both PDF/DOCX assets on 2026-09-24. The [public site](https://How-Tze.github.io/psych-ai-research-handbook/) serves v1.2 from `gh-pages`; all 19 HTML routes returned 200, and v1.2 Release assets and both v1.1/v1.2 site downloads matched their repository SHA-256 hashes. The build has 914 valid local references, and the published `gh-pages` tree contains no temporary `.qa` files. The v1.1 tag, Release, and frozen asset hashes are unchanged. Two post-tag `main` commits corrected static-resource retention without changing substantive prose or the v1.2 assets. TASK-002 is complete. The next phase requires a new approved goal and scope.
