@@ -12,7 +12,7 @@ Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
 ## Attribution suggestion
 
-> Xie, Hao. (2026). _心理学研究的 AI 进阶手册_ (v1.1). https://How-Tze.github.io/psych-ai-research-handbook/
+> Xie, Hao. (2026). _心理学研究的 AI 进阶手册_ (v1.2). https://How-Tze.github.io/psych-ai-research-handbook/
 
 ## Scope and third-party material
 

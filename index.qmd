@@ -2,20 +2,20 @@
 title: "心理学研究的 AI 进阶手册"
 subtitle: "从零散问答到可推进、可检查、可交接的个人研究项目"
 author: "Hao Xie"
-date: "2026-09-16"
+date: "2026-09-24"
 ---
 
-**v1.1 · 2026年9月**
+**v1.2 · 2026年9月24日**
 
 这是一份面向心理学与社会科学学生、科研助理和导师的开放研究手册。它关注的不是“怎样让 AI 替你研究”，而是怎样把 AI 放进真实研究过程，减少版本比较、材料整理、项目维护、代码检查和结果一致性核对等结构性劳动，同时保留研究者对问题、方法、伦理与结论的最终判断。
 
 ::: {.callout-important appearance="simple" icon=false}
 ## 阅读版与冻结版
 
-当前网站是 **v1.1 的 HTML 阅读版**。正式发行的 PDF 与 DOCX 已冻结；HTML 以同一正文为基础，主要改变导航与网页呈现，不改变 v1.1 的方法结论。
+当前网站是 **v1.2 的 HTML 阅读版**。对应的 PDF 与 DOCX 为同版正式发行文件；v1.1 的正文、PDF 与 DOCX 保留在历史版本中。
 :::
 
-[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.pdf){.btn .btn-primary}  [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.1_zh-CN.docx){.btn .btn-outline-primary}  [**查看 GitHub Release**](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.1){.btn .btn-outline-secondary}
+[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.2_zh-CN.pdf){.btn .btn-primary}  [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.2_zh-CN.docx){.btn .btn-outline-primary}  [**查看 GitHub Release**](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2){.btn .btn-outline-secondary}
 
 ## 推荐阅读方式
 
@@ -25,8 +25,9 @@ date: "2026-09-16"
 
 ## 版本原则
 
-- **v1.1 PDF / DOCX**：冻结的正式发行文件。
-- **HTML 阅读版**：与 v1.1 正文同步的在线阅读形态。
+- **v1.2 PDF / DOCX**：当前版本的正式发行文件。
+- **HTML 阅读版**：与 v1.2 正文同步的在线阅读形态。
+- **v1.1**：保留在 [历史 Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.1) 与 tag 中，不静默改写。
 - **后续内容更新**：进入新的版本号，不静默改写已经冻结的发行文件。
 - 产品能力、套餐、界面与政策会变化；相关动态事实均应以页面标注的核查时间和官方来源为准。
 
@@ -36,6 +37,6 @@ date: "2026-09-16"
 
 建议引用：
 
-> Xie, Hao. (2026). *心理学研究的 AI 进阶手册* (v1.1). https://How-Tze.github.io/psych-ai-research-handbook/
+> Xie, Hao. (2026). *心理学研究的 AI 进阶手册* (v1.2). https://How-Tze.github.io/psych-ai-research-handbook/
 
 [查看版本记录（CHANGELOG）](https://github.com/How-Tze/psych-ai-research-handbook/blob/main/CHANGELOG.md)

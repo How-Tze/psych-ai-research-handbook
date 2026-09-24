@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: If you use this handbook, please cite it using the metadata below.
 title: 心理学研究的 AI 进阶手册
 type: book
-version: '1.1'
-date-released: '2026-09-16'
+version: '1.2'
+date-released: '2026-09-24'
 authors:
 - family-names: Xie
   given-names: Hao
