@@ -1,7 +1,7 @@
 # TASK: Multi-agent research workflow handbook update
 
 - **TASK ID:** TASK-001
-- **STATUS:** REVIEW
+- **STATUS:** BLOCKED
 - **PHASE:** v1.2 Multi-Agent Workflow Integration and Review
 - **OWNER / EXECUTOR:** Human and Strategic / Authoring Chat for content approval; execution agent for brief, evidence, and approved integration
 - **AUTHORING GATE:** PASSED; [approved draft](../drafts/TASK-001-approved.md) is authoritative for mechanical integration
@@ -81,9 +81,9 @@ Design and later implement a stable, vendor-neutral section explaining how resea
 
 ## INTEGRATION / QA HANDOFF
 
-The [Writing Brief](TASK-001-writing-brief.md) and [Authoring Packet](TASK-001-authoring-packet.md) preserve the pre-authoring map and source context. The approved §9.5 and chapter-application revision were copied verbatim into [Chapter 9](../chapters/10-automation.qmd), without additional cross-reference edits or substantive wording changes. The five two-space Markdown hard breaks in the approved six-field blockquote were preserved; Git's whitespace check flags them, but Quarto renders the six fields on separate lines.
+The [Writing Brief](TASK-001-writing-brief.md) and [Authoring Packet](TASK-001-authoring-packet.md) preserve the pre-authoring map and source context. The approved §9.5 and chapter-application revision were integrated into [Chapter 9](../chapters/10-automation.qmd); the human-approved 2026-09-24 minor editorial patches were then applied to both the chapter and [authoritative draft](../drafts/TASK-001-approved.md). No other substantive wording or cross-reference changes were made. The five two-space Markdown hard breaks in the approved six-field blockquote were preserved; Git's whitespace check flags the revised acceptance line, but Quarto renders the six fields on separate lines.
 
-`quarto render` passed. Static QA confirmed the 9.5 heading and anchor, TOC entry, existing callout and table, six-field blockquote, revised application, Chapter 8/10 navigation, all local links across 19 HTML pages, homepage download files, and references page. The known non-visible `zh-CN` “Abstract” translation warnings remain. Browser security policy blocked opening the local HTML file, so visual desktop and narrow-viewport checks remain for human review. No v1.1 release asset, tag, public version label, or `gh-pages` change was made. `REVIEW` now refers to the integrated TASK-001 work.
+`quarto render` passed after the minor revision. Static QA confirmed the seven approved replacements exactly, the draft/chapter match, the 9.5 heading and anchor, TOC entry, existing callout and table, six-field blockquote, revised application, Chapter 8/10 navigation, all local links across 19 HTML pages, homepage download files, and references page. The known non-visible `zh-CN` “Abstract” translation warnings remain. The human confirmed the mobile view was not checked; browser security policy blocks local-file visual inspection. The outstanding visual viewport acceptance check prevents `DONE`. No v1.1 release asset, tag, public version label, or `gh-pages` change was made.
 
 ## ON COMPLETION
 

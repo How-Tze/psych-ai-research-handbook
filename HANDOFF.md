@@ -29,7 +29,7 @@ Do not silently change v1.1 arguments, claims, methods, or references while doin
 
 The governance and TASK-001 Authoring Gates passed. The active phase is **v1.2 Multi-Agent Workflow Integration and Review**; [`CURRENT_PHASE.md`](CURRENT_PHASE.md) is its operational state, [`DECISIONS.md`](DECISIONS.md) records durable decisions, and [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
 
-[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `REVIEW` after mechanical integration of the [approved draft](drafts/TASK-001-approved.md) into Chapter 9. Quarto render and static structural/link QA passed. Human review still needs a visual desktop/mobile check; the local browser tool blocked the generated file under its URL policy. Public labels remain v1.1 and require a separate decision before publication.
+[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `BLOCKED` after the human-approved minor editorial revisions were applied to Chapter 9 and the [authoritative draft](drafts/TASK-001-approved.md). Quarto render and static structural/link QA pass. The human confirmed the mobile view was not checked; the local browser tool blocks that visual check under its URL policy. A human narrow/mobile viewport check is required before TASK-001 can reach `DONE`. Public labels remain v1.1 and require a separate decision before publication.
 
 ## Important future backlog
 

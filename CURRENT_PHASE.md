@@ -1,7 +1,7 @@
 # Current phase
 
 - **Phase:** v1.2 Multi-Agent Workflow Integration and Review
-- **Status:** IN_PROGRESS
+- **Status:** BLOCKED
 - **Target publication version:** v1.2 (release metadata and public version labels remain separately gated)
 
 ## Goal
@@ -25,9 +25,9 @@ Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9,
 
 | ID | Workstream | Current state |
 | --- | --- | --- |
-| A | Approved §9.5 and chapter-application integration | REVIEW |
-| B | Quarto render and Chapter 9 structural QA | REVIEW |
-| C | Accidental-change and release-integrity check | REVIEW |
+| A | Approved §9.5 and chapter-application integration | DONE; approved minor review patches applied |
+| B | Quarto render and Chapter 9 QA | BLOCKED; static checks pass, required mobile visual check remains |
+| C | Accidental-change and release-integrity check | DONE |
 
 ## Dependencies
 
@@ -37,7 +37,7 @@ Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9,
 ## Deliverables
 
 - `chapters/10-automation.qmd` with approved §9.5 and revised application.
-- TASK-001 at `REVIEW`, with concise QA and integration handoff.
+- TASK-001 at `DONE` only after all acceptance criteria pass; record any unresolved QA gate in the task handoff.
 
 ## Acceptance Criteria
 
@@ -65,8 +65,8 @@ Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9,
 ## Exit Criteria
 
 - Integration and QA are accepted by the human; required visual viewport review is resolved.
-- This phase remains open while TASK-001 is in `REVIEW`.
+- This phase remains open while TASK-001 is `BLOCKED` on an acceptance criterion.
 
 ## Current Status
 
-Approved §9.5 and the application revision are integrated verbatim. Quarto render and static Chapter 9/site checks passed. TASK-001 is `REVIEW`; browser security policy prevented visual local-file and narrow-viewport inspection, which remains for review. Public labels still describe v1.1, as instructed.
+The human's post-integration editorial review approved bounded minor revisions, now applied to Chapter 9 and the authoritative draft. Quarto render and static Chapter 9/site checks pass. The human confirmed the mobile view was not checked. Browser security policy blocks local-file visual inspection, so TASK-001 is `BLOCKED` pending a human narrow/mobile viewport check; it cannot yet be marked `DONE`. Public labels still describe v1.1, as instructed.
