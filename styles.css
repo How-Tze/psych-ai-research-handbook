@@ -1,0 +1,101 @@
+/* Stable reading edition for the handbook. */
+:root {
+  --handbook-max-width: 860px;
+}
+
+main.content {
+  max-width: var(--handbook-max-width);
+}
+
+body {
+  font-family: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  line-height: 1.78;
+  color: #2b3035;
+}
+
+p, li {
+  line-height: 1.78;
+}
+
+main.content p {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  main.content p:not(.sourceCode) {
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+}
+
+h1, h2, h3 {
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 1.35;
+  scroll-margin-top: 5rem;
+}
+
+.callout {
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.callout .callout-header {
+  font-weight: 650;
+}
+
+table {
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+table th {
+  vertical-align: middle;
+}
+
+table td {
+  vertical-align: top;
+}
+
+main.content a:not(.btn) {
+  overflow-wrap: anywhere;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.06em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #0b5ed7 !important;
+  outline-offset: 3px !important;
+  border-radius: 0.15rem;
+}
+
+pre, code {
+  font-family: "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  body, p, li {
+    line-height: 1.68;
+  }
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #quarto-margin-sidebar {
+    display: none;
+  }
+
+  main.content {
+    grid-column: body-content-start / page-end !important;
+  }
+}
