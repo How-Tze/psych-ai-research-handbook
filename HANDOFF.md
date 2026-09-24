@@ -31,6 +31,8 @@ The governance and TASK-001 Authoring Gates passed. The **v1.2 Multi-Agent Workf
 
 [`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `DONE` after the human-approved minor editorial revisions were applied to Chapter 9 and the [authoritative draft](drafts/TASK-001-approved.md). Quarto render and static structural/link QA passed; the human confirmed the separate [v1.2 preview](https://htmlpreview.github.io/?https://github.com/How-Tze/psych-ai-research-handbook/blob/preview-v1.2-task-001/chapters/10-automation.html) displays §9.5, styling, and navigation normally on desktop and mobile. The integration/review phase is complete. The preview lives on `preview-v1.2-task-001`; `main`, `gh-pages`, v1.1 assets, and public labels remain unchanged. Merge, release, public labeling, and deployment require separate human decisions.
 
+[Draft PR #2](https://github.com/How-Tze/psych-ai-research-handbook/pull/2) proposes `content/v1.2-multi-agent-workflow` against `main` for human review; it is not merged.
+
 ## Important future backlog
 
 For a later handbook version, add a section on AI-assisted open-science release workflows: maintain complete local project assets, deliberately select non-sensitive public artifacts, generate/update README/data dictionaries/code/environment metadata, scan for secrets and sensitive content, and maintain public releases when analyses change. Human review remains mandatory for anonymization, consent, and third-party data licensing.
