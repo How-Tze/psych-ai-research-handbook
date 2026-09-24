@@ -2,6 +2,10 @@
 
 This file records decisions that should be made deliberately rather than inferred by an agent.
 
+## v1.2 Release Gate — APPROVED 2026-09-24
+
+The human froze v1.2 scope around PR #2 and TASK-001, confirmed the theme Multi-Agent Workflow / Agent Governance, and authorized Codex to complete QA, metadata, PR readiness and merge, tag, GitHub Release and PDF/DOCX assets, Pages deployment, smoke tests, and canonical-state updates without stepwise approval. Use the actual release date and preserve the v1.1 snapshot. Escalate only the conditions in `AGENTS.md` and `CURRENT_PHASE.md`.
+
 ## 1. License — COMPLETE
 
 Author confirmed on **2026-09-16** that v1.1 continues under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.

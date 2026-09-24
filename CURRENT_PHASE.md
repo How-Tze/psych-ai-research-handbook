@@ -1,72 +1,81 @@
 # Current phase
 
-- **Phase:** v1.2 Multi-Agent Workflow Integration and Review
-- **Status:** DONE
-- **Target publication version:** v1.2 (release metadata and public version labels remain separately gated)
+- **Phase:** v1.2 Release Gate
+- **Status:** IN_PROGRESS
+- **Target publication version:** v1.2 — Multi-Agent Workflow / Agent Governance
+- **Release date:** actual publication date
 
 ## Goal
 
-Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9, verify the rendered reading edition, and present the work for human review. The Authoring Gate has passed; this phase does not authorize additional substantive writing.
+Publish the approved v1.2 handbook source, PDF/DOCX assets, GitHub Release, and public HTML site; verify every published route and preserve the frozen v1.1 snapshot.
 
 ## In Scope
 
-- Insert approved §9.5 and the approved chapter-application revision from `drafts/TASK-001-approved.md`.
-- Make only necessary mechanical Markdown/Quarto adjustments and minimal cross-reference changes.
-- Render and inspect Chapter 9 and relevant site structure; review the diff and release integrity.
-- Update TASK-001 and durable phase/handoff state.
+- Final release QA of PR #2 and its approved Chapter 9 prose.
+- Version/date metadata, README, CHANGELOG, citation, homepage, and release-state updates.
+- Generate and verify versioned PDF/DOCX assets; advance, merge, tag, and release PR #2.
+- Deploy the rendered site to GitHub Pages and smoke-test pages, downloads, and labels.
+- Record the result in canonical project state.
 
 ## Out of Scope
 
-- New or revised substantive prose outside the approved draft.
-- Changes to v1.1 PDF/DOCX, tag, Release, license, or `gh-pages`.
-- Public version labels, v1.2 release metadata, merge, or deployment.
+- New substantive handbook content or a change to TASK-001's approved prose.
+- Rewriting the v1.1 tag, GitHub Release, PDF/DOCX, or historical site snapshot.
+- A new schema, framework, publication strategy, or version target.
 
 ## Workstreams
 
 | ID | Workstream | Current state |
 | --- | --- | --- |
-| A | Approved §9.5 and chapter-application integration | DONE; approved minor review patches applied |
-| B | Quarto render and Chapter 9 QA | DONE; static checks and human desktop/mobile visual review pass |
-| C | Accidental-change and release-integrity check | DONE |
+| A | Release metadata, governance, and source QA | DONE |
+| B | Versioned PDF/DOCX build and visual/content QA | DONE |
+| C | PR #2 readiness, merge, v1.2 tag and GitHub Release | READY |
+| D | Pages deployment and public smoke test | READY |
+| E | Final canonical-state and clean-workspace check | READY |
 
 ## Dependencies
 
-- The Authoring Gate passed, and `drafts/TASK-001-approved.md` is the authoritative text.
-- Human review remains required before merge, version-label changes, release, or deployment.
+- TASK-001 is `DONE`; its approved text and human desktop/mobile preview review are recorded.
+- PR #2 contains the frozen primary v1.2 content range.
+- The human approved end-to-end execution of this Release Gate in D-009 and D-010.
 
 ## Deliverables
 
-- `chapters/10-automation.qmd` with approved §9.5 and revised application.
-- TASK-001 at `DONE` only after all acceptance criteria pass; record any unresolved QA gate in the task handoff.
+- Updated v1.2 source, metadata, governance, and release checklist on `main`.
+- `release/psych-ai-research-handbook_v1.2_zh-CN.pdf` and `.docx` attached to the v1.2 GitHub Release.
+- Immutable `v1.2` tag and an updated public GitHub Pages reading edition.
+- Verified public links and a concise release report.
 
 ## Acceptance Criteria
 
-- The inserted section and application wording match the approved draft; prior Chapter 9 prose remains unchanged.
-- `quarto render` passes, and the rendered Chapter 9 has correct headings, anchor, TOC, blockquote, callout, table, and navigation.
-- Internal links and release downloads resolve in the local build.
-- No frozen asset, tag, `gh-pages`, or public version-label change.
+- The frozen TASK-001 prose and other substantive chapters are unchanged by release preparation.
+- Quarto HTML and DOCX renders pass; a matching PDF is exported from the finalized DOCX; layout, headings, tables, links, downloads, and mobile presentation are checked.
+- v1.2 metadata, publication date, citation, README, homepage, assets, tag, and Release agree.
+- PR #2 is merged to `main`; the tag resolves to the intended release commit; Pages serves that version.
+- v1.1 tag, historical Release, and frozen asset hashes remain unchanged.
+- Final local workspaces are clean and release state is recorded.
 
 ## Constraints
 
-- Preserve v1.1 frozen publication integrity and CC BY 4.0.
-- Keep generated `_site/` and temporary QA output ignored; do not commit them.
-- Work on `content/v1.2-multi-agent-workflow`; human approval controls merge and deployment.
+- Use `main` as source and `gh-pages` only for rendered output; keep `_site/` ignored on `main`.
+- Preserve CC BY 4.0 and do not commit secrets or restricted research data.
+- Follow `AGENTS.md` approved-release autonomy and escalation rules.
 
 ## Decision Gates
 
-- Human review of the integrated text and QA findings.
-- Separate decision on v1.2 site labeling, release metadata, merge, and deployment.
+- The human has approved this Release Gate, frozen scope, version target, merge, tag, assets, Release, and deployment. Routine steps require no additional approval.
+- New strategic or substantive decisions require escalation under `AGENTS.md`.
 
 ## Escalation Conditions
 
-- Any need to alter the approved substantive wording or change chapter structure beyond the authorized §9.5 insertion.
-- Conflicting source material, invalidated acceptance criteria, or a new release/version decision.
+- Substantive content or scope changes, an invalid version strategy, or conflict with approved prose/governance.
+- Merge, build, deployment, or QA failure that cannot be safely resolved mechanically.
+- Risk to historical release assets/tags or need for a new schema, framework, or publication-strategy decision.
 
 ## Exit Criteria
 
-- Integration and QA are accepted by the human; required visual viewport review is resolved.
-- TASK-001 is `DONE`; merge, release, public labeling, and deployment remain separate human-controlled decisions.
+- v1.2 is RELEASED / DEPLOYED / VERIFIED, with public smoke tests and canonical-state updates complete.
 
 ## Current Status
 
-The human-approved minor editorial revisions are applied to Chapter 9 and the authoritative draft. Quarto render and static Chapter 9/site checks passed. A separate temporary [v1.2 preview](https://htmlpreview.github.io/?https://github.com/How-Tze/psych-ai-research-handbook/blob/preview-v1.2-task-001/chapters/10-automation.html) was published from `preview-v1.2-task-001` without changing `main` or `gh-pages`; the human confirmed §9.5, styling, and navigation display normally on desktop and mobile. TASK-001 and this integration/review phase are complete. Public labels still describe v1.1; merge, release metadata, and production deployment remain separate decisions.
+Release metadata and versioned assets are ready on `content/v1.2-multi-agent-workflow`. Quarto HTML/DOCX render, 32-page A4 PDF export, print layout, Chapter 9, 19-page internal-link scan, asset-copy hashes, and secret-pattern scan passed. No v1.2 tag, GitHub Release, or production deployment has been made yet.

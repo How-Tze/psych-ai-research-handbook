@@ -6,8 +6,8 @@ These instructions apply to the entire repository.
 Maintain and publish the stable online reading edition of 《心理学研究的 AI 进阶手册》. The repository is a publication project, not a sandbox for adding new AI frameworks or product catalogs.
 
 ## Source-of-truth rules
-- `release/*.pdf` and `release/*.docx` are frozen v1.1 artifacts. Do not modify them.
-- `chapters/*.qmd` is the HTML reading representation of the frozen v1.1 text.
+- The existing `release/*_v1.1_*` PDF/DOCX files are frozen v1.1 artifacts. Never modify or replace them. Once a later release is published, its tagged source and assets are likewise frozen.
+- `chapters/*.qmd` is the source for the current HTML reading edition; the `v1.1` tag preserves the historical v1.1 text.
 - HTML-only transformations are allowed when they preserve wording and meaning (navigation, callouts, responsive tables, accessible link text).
 - Substantive edits require a new handbook version or explicit author approval.
 
@@ -32,9 +32,15 @@ Temporary chats, agent reasoning, audit logs, and local scratch files are non-ca
 - Keep repeatable or consequential prompts as tracked task specifications under `tasks/`, rather than only in chat. Use the fields and status lifecycle in `tasks/README.md` and `tasks/TASK_TEMPLATE.md`.
 - Parallel agents should take only sufficiently independent tasks. Use separate branches or worktrees when edits may overlap. Parallelism can reduce elapsed time, but does not imply lower compute use; do not create workstreams merely because concurrency is available.
 
+### Approved release gates
+
+- Once a human has approved a phase gate, frozen scope, and defined acceptance criteria for a routine release, Codex has end-to-end execution authority for that release: final QA, version metadata, PR readiness and merge, tag, GitHub Release and assets, site deployment, smoke tests, and canonical-state updates. Do not request approval for each mechanical step.
+- The phase gate or explicit instruction is the human authorization for these actions; it does not transfer scientific, editorial, or strategic judgment to an agent.
+- Stop and escalate if substantive content or scope changes; the version strategy must change; approved prose or governing rules conflict; merge, build, deployment, or QA fails without a safe mechanical fix; historical tags, releases, or frozen assets might change; or a new schema, framework, or publication-strategy decision is needed. Fix routine technical problems within the approved scope and continue.
+
 ### Responsibilities and authoring gate
 
-- **Human:** owns project direction, approves phase goals and substantive changes, controls merge, release, and deployment, and makes final scientific, editorial, and publication judgments.
+- **Human:** owns project direction, approves phase goals and substantive changes, authorizes merge, release, and deployment through a phase gate or explicit decision, and makes final scientific, editorial, and publication judgments.
 - **Strategic / Authoring Chat:** handles phase design, conceptual architecture, substantial handbook prose, major editorial rewriting, trade-off analysis, escalation, adversarial review, and phase review. It should not mediate routine execution.
 - **Execution agents:** inspect and implement repository work; locate content; prepare writing briefs and source evidence; operate on files; test, render, and run QA; synchronize documentation; and integrate approved prose. They must not autonomously author substantial new handbook prose unless a task explicitly grants that authority.
 - Substantial reader-facing prose passes an Authoring Gate: an execution agent prepares a Writing Brief, marks the task `REQUIRES_CHAT_AUTHORING`, obtains an explicitly approved draft through Strategic / Authoring Chat, then makes only mechanical integration changes unless further editorial authority is granted.
@@ -57,11 +63,11 @@ Temporary chats, agent reasoning, audit logs, and local scratch files are non-ca
 - Create a dedicated branch for audits, frontend changes, refactors, or automated fixes. Use prefixes such as `maintenance/`, `fix/`, or `docs/`.
 - Never modify, move, delete, or recreate existing release tags without explicit user approval.
 - Never alter the published v1.1 frozen PDF/DOCX release assets as part of website maintenance.
-- Do not merge a maintenance branch into `main` without explicit human approval.
+- Do not merge a branch into `main` without a human-approved release/merge gate or explicit approval.
 - Prefer small, coherent commits.
 
 ### Content freeze
-For the current maintenance cycle:
+Within a frozen release scope:
 - Do not expand substantive handbook content.
 - Do not introduce new tools, frameworks, examples, arguments, or references.
 - Do not silently rewrite prose or change methodological or factual claims.
@@ -82,7 +88,7 @@ For the current maintenance cycle:
 - Handle future substantive content changes separately.
 
 ### Deployment
-- Do not run a production deployment or `quarto publish gh-pages` unless explicitly instructed by the user.
+- Do not run a production deployment or `quarto publish gh-pages` without a human-approved release gate or explicit instruction. Once authorized, complete deployment and smoke tests under the approved scope.
 
 ## Style
 - Chinese is the primary reader language.
