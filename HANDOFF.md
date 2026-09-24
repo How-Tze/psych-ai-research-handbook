@@ -27,9 +27,9 @@ Do not silently change v1.1 arguments, claims, methods, or references while doin
 
 ## Current phase
 
-The governance and TASK-001 Authoring Gates passed. The active phase is **v1.2 Multi-Agent Workflow Integration and Review**; [`CURRENT_PHASE.md`](CURRENT_PHASE.md) is its operational state, [`DECISIONS.md`](DECISIONS.md) records durable decisions, and [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
+The governance and TASK-001 Authoring Gates passed. The **v1.2 Multi-Agent Workflow Integration and Review** phase is complete; [`CURRENT_PHASE.md`](CURRENT_PHASE.md) records its operational state, [`DECISIONS.md`](DECISIONS.md) records durable decisions, and [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
 
-[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `BLOCKED` after the human-approved minor editorial revisions were applied to Chapter 9 and the [authoritative draft](drafts/TASK-001-approved.md). Quarto render and static structural/link QA pass. The human confirmed the mobile view was not checked; the local browser tool blocks that visual check under its URL policy. A human narrow/mobile viewport check is required before TASK-001 can reach `DONE`. Public labels remain v1.1 and require a separate decision before publication.
+[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) is `DONE` after the human-approved minor editorial revisions were applied to Chapter 9 and the [authoritative draft](drafts/TASK-001-approved.md). Quarto render and static structural/link QA passed; the human confirmed the separate [v1.2 preview](https://htmlpreview.github.io/?https://github.com/How-Tze/psych-ai-research-handbook/blob/preview-v1.2-task-001/chapters/10-automation.html) displays §9.5, styling, and navigation normally on desktop and mobile. The integration/review phase is complete. The preview lives on `preview-v1.2-task-001`; `main`, `gh-pages`, v1.1 assets, and public labels remain unchanged. Merge, release, public labeling, and deployment require separate human decisions.
 
 ## Important future backlog
 

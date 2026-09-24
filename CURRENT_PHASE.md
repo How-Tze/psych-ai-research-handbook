@@ -1,7 +1,7 @@
 # Current phase
 
 - **Phase:** v1.2 Multi-Agent Workflow Integration and Review
-- **Status:** BLOCKED
+- **Status:** DONE
 - **Target publication version:** v1.2 (release metadata and public version labels remain separately gated)
 
 ## Goal
@@ -26,7 +26,7 @@ Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9,
 | ID | Workstream | Current state |
 | --- | --- | --- |
 | A | Approved §9.5 and chapter-application integration | DONE; approved minor review patches applied |
-| B | Quarto render and Chapter 9 QA | BLOCKED; static checks pass, required mobile visual check remains |
+| B | Quarto render and Chapter 9 QA | DONE; static checks and human desktop/mobile visual review pass |
 | C | Accidental-change and release-integrity check | DONE |
 
 ## Dependencies
@@ -65,8 +65,8 @@ Mechanically integrate the authoritative approved TASK-001 prose into Chapter 9,
 ## Exit Criteria
 
 - Integration and QA are accepted by the human; required visual viewport review is resolved.
-- This phase remains open while TASK-001 is `BLOCKED` on an acceptance criterion.
+- TASK-001 is `DONE`; merge, release, public labeling, and deployment remain separate human-controlled decisions.
 
 ## Current Status
 
-The human's post-integration editorial review approved bounded minor revisions, now applied to Chapter 9 and the authoritative draft. Quarto render and static Chapter 9/site checks pass. The human confirmed the mobile view was not checked. Browser security policy blocks local-file visual inspection, so TASK-001 is `BLOCKED` pending a human narrow/mobile viewport check; it cannot yet be marked `DONE`. Public labels still describe v1.1, as instructed.
+The human-approved minor editorial revisions are applied to Chapter 9 and the authoritative draft. Quarto render and static Chapter 9/site checks passed. A separate temporary [v1.2 preview](https://htmlpreview.github.io/?https://github.com/How-Tze/psych-ai-research-handbook/blob/preview-v1.2-task-001/chapters/10-automation.html) was published from `preview-v1.2-task-001` without changing `main` or `gh-pages`; the human confirmed §9.5, styling, and navigation display normally on desktop and mobile. TASK-001 and this integration/review phase are complete. Public labels still describe v1.1; merge, release metadata, and production deployment remain separate decisions.
