@@ -1,81 +1,47 @@
 # Current phase
 
-- **Phase:** v1.2 Release Gate
-- **Status:** DONE — RELEASED / DEPLOYED / VERIFIED
-- **Target publication version:** v1.2 — Multi-Agent Workflow / Agent Governance
-- **Release date:** 2026-09-24
+- Phase: v1.3 capability teaching preparation
+- Status: REVIEW — preparation complete; Authoring Gate next
+- Approval: 2026-10-13 — human accepted the strategic audit and authorized the next iteration.
+- Target: future v1.3; current published edition remains v1.2.
+- Branch: docs/v1.3-authoring-preparation.
 
-## Goal
+## Goal and scope
 
-Publish the approved v1.2 handbook source, PDF/DOCX assets, GitHub Release, and public HTML site; verify every published route and preserve the frozen v1.1 snapshot.
+Turn stable principles into teachable research capabilities. This phase prepares three bounded teaching cases, chapter-level writing briefs and an integration map. The companion Start Guide independently targets a v0.11 practical candidate.
 
-## In Scope
+Approved direction: add method learning and theory development; deepen literature, design, analysis and writing; consolidate repeated project-maintenance material; keep product/price/onboarding information in the Start Guide.
 
-- Final release QA of PR #2 and its approved Chapter 9 prose.
-- Version/date metadata, README, CHANGELOG, citation, homepage, and release-state updates.
-- Generate and verify versioned PDF/DOCX assets; advance, merge, tag, and release PR #2.
-- Deploy the rendered site to GitHub Pages and smoke-test pages, downloads, and labels.
-- Record the result in canonical project state.
+## Workstreams and deliverables
 
-## Out of Scope
+- TASK-003: reproducible synthetic teaching materials, inputs/specifications/reference outputs/checks.
+- TASK-004: authoring briefs for method learning, theory and analysis, whole-book chapter map and precise correction candidates.
+- Deliver a reviewable branch; maintain durable task state and concise handoff.
 
-- New substantive handbook content or a change to TASK-001's approved prose.
-- Rewriting the v1.1 tag, GitHub Release, PDF/DOCX, or historical site snapshot.
-- A new schema, framework, publication strategy, or version target.
+## Acceptance criteria
 
-## Workstreams
+- Case A realizes the 24-row / 21-vs-15 specification without claiming to recover a missing historical dataset.
+- Cases B/C have concrete synthetic inputs, intended learning outcomes and appropriate review criteria.
+- Briefs identify source chapter, reader capability, example, necessary evidence, failure case and acceptance.
+- No product pricing in the handbook; no replacement of substantive published prose before Authoring Gate.
+- Historical tags/assets, published chapter source and untracked pre-existing audit file remain unchanged.
 
-| ID | Workstream | Current state |
-| --- | --- | --- |
-| A | Release metadata, governance, and source QA | DONE |
-| B | Versioned PDF/DOCX build and visual/content QA | DONE |
-| C | PR #2 readiness, merge, v1.2 tag and GitHub Release | DONE |
-| D | Pages deployment and public smoke test | DONE |
-| E | Final canonical-state and clean-workspace check | DONE |
+## Dependencies and responsibilities
 
-## Dependencies
+Human approval above supersedes the closed v1.2 phase for this new work only. Codex may prepare/verify cases and briefs. Strategic / Authoring Chat writes substantial chapter drafts; approved drafts return for mechanical integration. TASK-003 feeds TASK-004's worked examples.
 
-- TASK-001 is `DONE`; its approved text and human desktop/mobile preview review are recorded.
-- PR #2 contains the frozen primary v1.2 content range.
-- The human approved end-to-end execution of this Release Gate in D-009 and D-010.
+## Constraints and decision gates
 
-## Deliverables
+The proposed architecture is the writing direction, not an authorization to silently renumber published URLs. The integration map preserves old paths where possible. New chapter prose and final scientific judgment require Authoring Gate; merge/release/deployment require a reviewed release gate. No purchases or real participant data.
 
-- Updated v1.2 source, metadata, governance, and release checklist on `main`.
-- `release/psych-ai-research-handbook_v1.2_zh-CN.pdf` and `.docx` attached to the v1.2 GitHub Release.
-- Immutable `v1.2` tag and an updated public GitHub Pages reading edition.
-- Verified public links and a concise release report.
+## Escalation and exit
 
-## Acceptance Criteria
+Escalate changes to scope, scientific claims beyond approved preparation, historical snapshots or publication strategy. Exit this preparation phase when materials and briefs are verified and submitted in REVIEW; it does not mean v1.3 is released.
 
-- The frozen TASK-001 prose and other substantive chapters are unchanged by release preparation.
-- Quarto HTML and DOCX renders pass; a matching PDF is exported from the finalized DOCX; layout, headings, tables, links, downloads, and mobile presentation are checked.
-- v1.2 metadata, publication date, citation, README, homepage, assets, tag, and Release agree.
-- PR #2 is merged to `main`; the tag resolves to the intended release commit; Pages serves that version.
-- v1.1 tag, historical Release, and frozen asset hashes remain unchanged.
-- Final local workspaces are clean and release state is recorded.
+## Previous phase
 
-## Constraints
+The v1.2 Release Gate completed on 2026-09-24. TASK-002, HANDOFF.md and docs/RELEASE_CHECKLIST.md retain release/QA evidence; tag v1.2 is frozen at a8a9326.
 
-- Use `main` as source and `gh-pages` only for rendered output; keep `_site/` ignored on `main`.
-- Preserve CC BY 4.0 and do not commit secrets or restricted research data.
-- Follow `AGENTS.md` approved-release autonomy and escalation rules.
+## Completion evidence
 
-## Decision Gates
-
-- The human has approved this Release Gate, frozen scope, version target, merge, tag, assets, Release, and deployment. Routine steps require no additional approval.
-- New strategic or substantive decisions require escalation under `AGENTS.md`.
-
-## Escalation Conditions
-
-- Substantive content or scope changes, an invalid version strategy, or conflict with approved prose/governance.
-- Merge, build, deployment, or QA failure that cannot be safely resolved mechanically.
-- Risk to historical release assets/tags or need for a new schema, framework, or publication-strategy decision.
-
-## Exit Criteria
-
-- v1.2 is RELEASED / DEPLOYED / VERIFIED, with public smoke tests and canonical-state updates complete.
-
-## Current Status
-
-PR #2 merged into `main` as `a8a9326`; the immutable [`v1.2` tag](https://github.com/How-Tze/psych-ai-research-handbook/tree/v1.2) resolves to that commit. The [GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2) was published with both PDF/DOCX assets on 2026-09-24. The [public site](https://How-Tze.github.io/psych-ai-research-handbook/) serves v1.2 from `gh-pages`; all 19 HTML routes returned 200, and v1.2 Release assets and both v1.1/v1.2 site downloads matched their repository SHA-256 hashes. The build has 914 valid local references, and the published `gh-pages` tree contains no temporary `.qa` files. The v1.1 tag, Release, and frozen asset hashes are unchanged. Two post-tag `main` commits corrected static-resource retention without changing substantive prose or the v1.2 assets. TASK-002 is complete. The next phase requires a new approved goal and scope.
+TASK-003 and TASK-004 are in REVIEW. The read-only teaching checks pass; the writing package covers every current chapter and gives three detailed briefs. Published source and frozen assets are unchanged against main. No R analysis, real-data analysis, merge, tag or deployment was performed.
