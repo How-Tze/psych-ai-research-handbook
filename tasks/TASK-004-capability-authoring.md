@@ -1,10 +1,10 @@
 # TASK: 能力导向章节写作包
 
 - **TASK ID:** TASK-004
-- **STATUS:** REVIEW
+- **STATUS:** DONE
 - **PHASE:** v1.3 capability teaching preparation
 - **OWNER / EXECUTOR:** Codex 准备；Strategic / Authoring Chat 写作
-- **AUTHORING GATE:** REQUIRES_CHAT_AUTHORING
+- **AUTHORING GATE:** Brief 已批准；实质作者稿由 TASK-005 接续
 
 ## CONTEXT
 审查已经获批：新增方法学习和理论发展；深化核心研究章节，减少重复治理语言。
@@ -38,3 +38,5 @@ Brief 完成进入 REVIEW，Authoring Gate 标记保持；作者给出明确批�
 
 ## COMPLETION EVIDENCE
 2026-10-13：briefs/v1.3-authoring-package.md 已给出逐章迁移、三个完整 Brief、其他章节任务、风险三问纠错候选、作者/执行任务及集中验收标准。没有将候选措辞写入公开正文。
+
+2026-10-13：用户批准当前候选及 v1.3 写作方向，本准备任务验收完成；完整作者稿由 TASK-005 接续。

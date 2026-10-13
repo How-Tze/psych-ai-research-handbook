@@ -1,7 +1,7 @@
 # TASK: 三个可检查的教学案例
 
 - **TASK ID:** TASK-003
-- **STATUS:** REVIEW
+- **STATUS:** DONE
 - **PHASE:** v1.3 capability teaching preparation
 - **OWNER / EXECUTOR:** Codex
 
@@ -37,3 +37,5 @@ A：24 行，正确规则保留21、错误规则保留15；反向分哨兵及模
 
 ## COMPLETION EVIDENCE
 2026-10-13：Python 离线检查通过。A 的样本21/15、反向分与公式偏差分别识别；B 两份列表均衡且各刺激跨条件；C 只检查输入结构，解释质量交作者判断。本包不拟合回归，不含未经执行的 R 分析。
+
+2026-10-13：用户批准当前候选及 v1.3 写作方向，本准备任务验收完成；完整作者稿由 TASK-005 接续。

@@ -1,47 +1,31 @@
 # Current phase
 
-- Phase: v1.3 capability teaching preparation
-- Status: REVIEW — preparation complete; Authoring Gate next
-- Approval: 2026-10-13 — human accepted the strategic audit and authorized the next iteration.
-- Target: future v1.3; current published edition remains v1.2.
+- Phase: v1.3 capability chapter authoring
+- Status: REVIEW — three complete author candidates and reproducible examples ready
+- Approval: 2026-10-13 — human approved the current candidate and v1.3 writing direction.
+- Target: future v1.3; published edition remains v1.2.
 - Branch: docs/v1.3-authoring-preparation.
 
-## Goal and scope
+## Goal, scope and responsibilities
 
-Turn stable principles into teachable research capabilities. This phase prepares three bounded teaching cases, chapter-level writing briefs and an integration map. The companion Start Guide independently targets a v0.11 practical candidate.
+TASK-003/004 preparation is accepted. Execute TASK-005: Strategic / Authoring Chat writes complete method-learning, theory-development and data-analysis candidates, with reproducible synthetic calculations, sources and an editorial review entry. Codex tools perform file operations, calculations and QA. This is explicit bounded authoring authority for drafts, not approval of unseen prose for publication.
 
-Approved direction: add method learning and theory development; deepen literature, design, analysis and writing; consolidate repeated project-maintenance material; keep product/price/onboarding information in the Start Guide.
+## Deliverables and acceptance
 
-## Workstreams and deliverables
+Three complete drafts under drafts/v1.3/, executable teaching examples with checked reference outputs, and source/claim notes. Meet each Brief's capability, example, counterexample and exercise requirements. Product onboarding stays in the independently released Start Guide.
 
-- TASK-003: reproducible synthetic teaching materials, inputs/specifications/reference outputs/checks.
-- TASK-004: authoring briefs for method learning, theory and analysis, whole-book chapter map and precise correction candidates.
-- Deliver a reviewable branch; maintain durable task state and concise handoff.
+## Dependencies and constraints
 
-## Acceptance criteria
+Use the approved teaching materials and briefs. Keep chapters/, release/, index.qmd, _quarto.yml, historical tags/assets and the pre-existing untracked audit file unchanged. No private data, paid API calls or new publication architecture.
 
-- Case A realizes the 24-row / 21-vs-15 specification without claiming to recover a missing historical dataset.
-- Cases B/C have concrete synthetic inputs, intended learning outcomes and appropriate review criteria.
-- Briefs identify source chapter, reader capability, example, necessary evidence, failure case and acceptance.
-- No product pricing in the handbook; no replacement of substantive published prose before Authoring Gate.
-- Historical tags/assets, published chapter source and untracked pre-existing audit file remain unchanged.
+## Gates, escalation and exit
 
-## Dependencies and responsibilities
+Exit when TASK-005 is in REVIEW with complete checked drafts. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. Escalate scope/version changes or unresolved source conflicts; solve routine editorial and computational questions within the approved briefs.
 
-Human approval above supersedes the closed v1.2 phase for this new work only. Codex may prepare/verify cases and briefs. Strategic / Authoring Chat writes substantial chapter drafts; approved drafts return for mechanical integration. TASK-003 feeds TASK-004's worked examples.
+## Previous phases
 
-## Constraints and decision gates
-
-The proposed architecture is the writing direction, not an authorization to silently renumber published URLs. The integration map preserves old paths where possible. New chapter prose and final scientific judgment require Authoring Gate; merge/release/deployment require a reviewed release gate. No purchases or real participant data.
-
-## Escalation and exit
-
-Escalate changes to scope, scientific claims beyond approved preparation, historical snapshots or publication strategy. Exit this preparation phase when materials and briefs are verified and submitted in REVIEW; it does not mean v1.3 is released.
-
-## Previous phase
-
-The v1.2 Release Gate completed on 2026-09-24. TASK-002, HANDOFF.md and docs/RELEASE_CHECKLIST.md retain release/QA evidence; tag v1.2 is frozen at a8a9326.
+The preparation phase completed and was approved on 2026-10-13. The v1.2 Release Gate completed on 2026-09-24; tag v1.2 remains frozen at a8a9326.
 
 ## Completion evidence
 
-TASK-003 and TASK-004 are in REVIEW. The read-only teaching checks pass; the writing package covers every current chapter and gives three detailed briefs. Published source and frozen assets are unchanged against main. No R analysis, real-data analysis, merge, tag or deployment was performed.
+TASK-005 delivered three complete candidates (about 11,000 Chinese characters), two teaching figures, checked CSV/reference results and source notes. Four-page isolated Quarto preview rendered; 124 local references and image alternatives passed. Desktop and 390px checks passed after splitting a long equation. Published sources and frozen assets remain unchanged against main. Start Guide v0.11 is independently published.

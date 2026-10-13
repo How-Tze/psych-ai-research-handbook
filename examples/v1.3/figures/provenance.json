@@ -1,0 +1,35 @@
+{
+  "purpose": "Chinese handbook web teaching figures; no journal submission target",
+  "matplotlib": "3.11.2",
+  "font": "Microsoft YaHei",
+  "dpi": 300,
+  "within_between": {
+    "source": "method-six-rows.csv",
+    "rows": 6,
+    "people": 2,
+    "transformation": "raw points and arithmetic person means; no uncertainty inference",
+    "excluded": 0,
+    "missing": 0,
+    "size_inches": [
+      7.2,
+      3.5
+    ]
+  },
+  "diagnostics": {
+    "source": "reference/diary-diagnostics.csv",
+    "rows": 840,
+    "people": 60,
+    "transformation": "conditional residuals; normal quantiles (rank-.5)/n; quartile reference line",
+    "excluded": 0,
+    "missing": 0,
+    "uncertainty": "none shown",
+    "size_inches": [
+      7.6,
+      3.5
+    ]
+  },
+  "input_sha256": {
+    "method-six-rows.csv": "a288da21b9b3f3cda064123ec820de26424e9de6656fae48a52288947285a76a",
+    "diary-diagnostics.csv": "6a1da012360cae98afd3fcdf1b3ad2711efc83b64c629941d6e24913ce1e915b"
+  }
+}
