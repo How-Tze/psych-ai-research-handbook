@@ -37,3 +37,17 @@
 | [PRISMA 2020 官方说明](https://www.prisma-statement.org/prisma-2020) | 官方报告指南定位与清单入口 | 用于区分探索与正式综述报告；不是研究质量认证，也不证明 AI 检索或提取可靠 |
 
 研究设计章的背景谈话实验是新的教学构造，并非三篇音乐论文的复现或研究结论。S01—S08 短文、十六道题及试做反馈都由作者编写；没有真实参与者、有效性数据或伪装成实测结果的 AI 对话。既有 counterbalance.csv 未改变。两列表各 4/4、每项跨条件的性质由文件检查；固定交替与奇偶位置绑定的限制由逐行核查确认。列表检查不验证操纵、难度、测量或因果识别。
+
+## 工作流与开篇（TASK-008）
+
+2026-10-16 核查以下原始来源；中文编辑复用前述 Humanizer-zh 本地副本。
+
+| 来源 | 实际核查范围 | 使用与限制 |
+|---|---|---|
+| Wilson 等（2017），[Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510) | Author Summary、Overview、Box 1，数据、项目组织及变化记录部分 | 支持个人及小团队保存原始材料、处理步骤、成果与项目说明的实践建议；本包一页入口是教学简化，不是该文统一格式，也不是 AI 效率实验 |
+| Sandve 等（2013），[Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) | Rules 1—3、8—10，重点 Rule 9 的文字主张与具体结果对应 | 支持输入、处理与结果可追溯；不能由此推导全部真实材料均可公开，分享资格另作判断 |
+| Anthropic（2024-12-19），[Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) | workflows/agents 定义、何时使用、框架及常见模式 | 仅借用预定步骤与模型动态选择动作的工程区分，以及复杂度取舍；不是心理学效度证据，不作现行产品配置或模型效果比较 |
+
+新章复用已计算的 `reference/survey-sensitivity.csv`。21/15、压力 0.364/1.081、反刍 0.343/0.720 均从原始精度值舍入。`workflow/build_report.py` 实际执行 main 与 compare 两种模式：第一次整理主规则，第二次加入同表已有比较结果。没有重新拟合分析，没有调用模型或付费 API。生成文件记录实际读取字节的 SHA-256；换行符变化也会影响指纹，指纹不证明研究有效。
+
+两轮报告是实际生成的教材产物；项目情境、示范对话、恢复与交接安排和解释候选均为作者设计。初稿遗漏比较仅用于教学次序，最终候选保留两行，不允许按结果喜好选择。脚本检验格式及有限数值，不判断输入是否来自正确模型。没有把文件存在、脚本成功或多 Agent 一致当作科学核验充分条件。

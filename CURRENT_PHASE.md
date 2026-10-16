@@ -1,8 +1,8 @@
 # Current phase
 
 - Phase: v1.3 capability chapter authoring
-- Status: REVIEW — six complete candidates, including TASK-007 literature exploration and research design
-- Approval: 2026-10-13 — human approved the candidate and v1.3 writing direction; 2026-10-14 feedback authorizes draft revision and explicitly prioritizes literature exploration and research design in the same style.
+- Status: REVIEW — TASK-008 prose and computational/link QA complete; new-page visual QA pending
+- Approval: 2026-10-13 — candidate and v1.3 writing direction; 2026-10-14 — Chinese revision and literature/design priority; 2026-10-16 — continue complete chapter writing, prioritizing the workflow spine and opening sequence.
 - Target: future v1.3; published edition remains v1.2.
 - Branch: docs/v1.3-authoring-preparation.
 
@@ -12,9 +12,11 @@ TASK-003/004 preparation is accepted. TASK-005 delivered the first three complet
 
 2026-10-14 follow-up: the human accepts this writing direction and explicitly prioritizes complete literature-exploration and research-design chapters. Execute TASK-007 with detailed examples, natural Chinese and practical AI use throughout; expand the review package to six candidates.
 
+2026-10-16 follow-up: the human authorizes continued complete chapter writing after the progress review. TASK-008 prioritizes project continuity and repeatable workflows/Agents, then the opening sequence and necessary bridges across the existing six chapters. This remains candidate authoring authority, without integration or release approval.
+
 ## Deliverables and acceptance
 
-Six complete drafts under drafts/v1.3/, a consolidated review entry and concise editorial requirements for later chapters. Literature exploration includes three real, openly readable papers, concrete searches and follow-ups, comparison and the next reading decision. Research design includes proposal comparison, eight unvalidated teaching texts with sixteen questions, the existing two lists and an error exercise, hypothetical pilot revisions and sample-planning boundaries. Preserve the checked earlier examples and scientific qualifications. Product onboarding stays in the independently released Start Guide.
+Eleven complete candidates under drafts/v1.3/: a reading guide and chapters 1–10. TASK-008 adds the guide, work environment, first complete task, project continuity and repeatable workflows/Agents. Six existing chapters receive short bridges while retaining all original lines, numerical tables and teaching inputs. A compact project entry links two actually generated reports to the unchanged confirmed results and a separate authored interpretation. Changes of report scope are distinguished from statistical reanalysis. Preserve the earlier literature/design and computational work. Product onboarding stays in the independently released Start Guide.
 
 ## Dependencies and constraints
 
@@ -22,7 +24,7 @@ Use the approved teaching materials and briefs. Keep chapters/, release/, index.
 
 ## Gates, escalation and exit
 
-TASK-005/006/007 are in REVIEW with complete checked drafts. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. Continue remaining authoring work under the approved briefs, next addressing the introduction, first task and project continuity. Escalate scope/version changes or unresolved source conflicts; solve routine editorial and computational questions within the approved briefs.
+TASK-005/006/007/008 are in REVIEW. TASK-008 prose and automatic QA are complete, but new-page visual QA remains pending after browser URL-policy rejection. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. Remaining writing includes qualitative teaching, verification/privacy/recovery, conclusion, appendices and source/collaboration notes, followed by whole-book editing. Escalate scope/version changes or unresolved source conflicts; solve routine editorial and computational questions within the approved briefs.
 
 ## Previous phases
 
@@ -30,4 +32,4 @@ The preparation phase completed and was approved on 2026-10-13. The v1.2 Release
 
 ## Completion evidence
 
-TASK-007 delivered the two prioritized chapters and reader materials. Primary sources were checked on 2026-10-14; paper findings, authored conversations and unvalidated experiment materials are distinguished. The prose list matches the unchanged CSV; all eight material IDs and sixteen question/answer pairs are present, and the inline S01 matches the download. Existing teaching checks pass; the previous four drafts and their data/scripts are unchanged. Seven-page isolated Quarto preview rendered; 258 local references and image alternatives passed. Desktop and 390px checks covered tables, navigation and expandable answers, with no page overflow observed. Existing non-visible Quarto zh-CN/Abstract translation warnings remain. Published sources and frozen assets are unchanged against main. PR #3 remains a draft; no merge or deployment. Start Guide v0.11 is independently published.
+TASK-008 checked three primary workflow sources on 2026-10-16 and distinguishes engineering guidance from scientific evidence. Both reports reproduced exactly; existing-output refusal preserves files, missing fields and nonfinite values stop without a report. Existing case checks pass. All earlier six chapter lines are retained in order, with only bridges added; original teaching data/scripts/results are unchanged. Twelve-page isolated Quarto preview rendered; 560 local references/image alternatives and 74 relative source links passed. New desktop/mobile visual QA could not run because the browser URL-policy gate refused access; no new visual pass is claimed. Existing non-visible Quarto zh-CN/Abstract warnings remain. Published sources and frozen assets are unchanged against main. PR #3 remains a draft; no merge or deployment. Start Guide v0.11 is independently published.

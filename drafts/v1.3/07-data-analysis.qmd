@@ -157,6 +157,8 @@ $$
 
 当计分规则或输入改变时，重新运行脚本，先更新表，再更新段落中的对应值。AI 可以查找哪些句子引用旧数字，并提出修改；确认时应回到新表，而不是凭聊天记忆重写一遍。科学代码审查也应兼顾程序与学科含义，Rokem（2024）的原文提供了相关实践建议。[原文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375)
 
+工作结束时，把采用的规格、实际输入与结果位置一起保留，明确哪些比较已经完成、哪些仍只是计划。[两轮报告例子](../../examples/v1.3/workflow/README.md)继续使用本章问卷结果，展示怎样从已有表生成不同阶段的数字稿；报告生成不等于重新分析。[项目连续性章](09-project-continuity.qmd)进一步说明，变化怎样传递到正文与下一次工作。
+
 ## 亲自复现与迁移
 
 配套材料的[运行说明](../../examples/v1.3/analysis-worked-example.md)列出依赖、命令、数据生成过程和全部参考文件。你可以先读表和手算，不必先配置环境；希望练习文件操作时，动态指南的[数据处理教程](https://How-Tze.github.io/psych-ai-start-guide/chapters/data-analysis.html)和[代码代理起步](https://How-Tze.github.io/psych-ai-start-guide/chapters/10-code-agent.html)提供入口。

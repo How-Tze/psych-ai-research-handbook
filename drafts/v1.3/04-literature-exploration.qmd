@@ -141,6 +141,8 @@ AI 很适合帮助整理英文表达，尤其当你知道中文意思，却不�
 
 完成这次练习后，你得到的不只是一组论文摘要，还应该有一个比最初更准确的问题。下一章的[理论发展](05-theory-development.qmd)讨论怎样从问题走向可比较的解释；[研究设计](06-research-design.qmd)则继续说明，如何让 AI 协助把一个想法变成可以试做、能够检查的方案。
 
+进入下一次讨论前，保存当前问题、最有关的原文位置，以及这次为什么改变了阅读方向。这样，设计讨论可以直接使用已经核对的发现。若后来读到反例，也能找到需要重新判断的那一步。[项目连续性章](09-project-continuity.qmd)会展示怎样保留这些联系，而不依赖整段聊天。
+
 ## 本章文献
 
 - Lehmann, J. A. M., & Seufert, T. (2017). The influence of background music on learning in the light of different theoretical perspectives and the role of working memory capacity. *Frontiers in Psychology, 8*, 1902. [全文与 DOI](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.01902/full)
