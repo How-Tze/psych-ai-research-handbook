@@ -1,0 +1,61 @@
+---
+title: "参考来源与教学材料说明"
+subtitle: "v1.3 作者候选稿 · 2026-10-16"
+---
+
+本页汇总候选正文实际使用的主要来源，按你可能继续追问的问题排列。正文中的链接对应具体论述；这里帮助你找到下一步值得读的原文。方法文献支持相关研究做法和概念区分，本书围绕它们设计的 AI 问法与练习则是教学编写。
+
+## 学方法、发展理论与选择分析
+
+在[方法学习](03-method-learning.qmd)和[数据分析](07-data-analysis.qmd)之后，若想进一步理解个体内与个体间的区别，可以从 Curran 与 Bauer 的方法综述进入；软件文档用于理解相应实现。理论章提到的两篇文章分别提供理论建设讨论和已有失眠模型的回查入口。
+
+- Curran, P. J., & Bauer, D. J. (2011). The disaggregation of within-person and between-person effects in longitudinal models of change. *Annual Review of Psychology, 62*, 583–619. [DOI: 10.1146/annurev.psych.093008.100356](https://doi.org/10.1146/annurev.psych.093008.100356)；[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/)。
+- Eronen, M. I., & Bringmann, L. F. (2021). The theory crisis in psychology: How to move forward. *Perspectives on Psychological Science, 16*(4), 779–788. [DOI: 10.1177/1745691620970586](https://doi.org/10.1177/1745691620970586)。
+- Harvey, A. G. (2002). A cognitive model of insomnia. *Behaviour Research and Therapy, 40*(8), 869–893. [DOI: 10.1016/S0005-7967(01)00061-4](https://doi.org/10.1016/S0005-7967(01)00061-4)。本次核查限摘要与元数据，用于说明相关认知模型已有研究来源。
+- statsmodels. [Linear Mixed Effects Models 官方文档](https://www.statsmodels.org/stable/mixed_linear.html)。文档核查于 2026-10-13；本书实际分析使用的版本为 0.15.0，完整参数和运行说明见[分析教学包](../../examples/v1.3/analysis-worked-example.md)。
+
+## 文献探索与研究设计
+
+下面前三篇论文构成[文献探索章](04-literature-exploration.qmd)的教学选文。[配套阅读笔记](../../examples/v1.3/literature-reading-notes.md)标明使用的样本、任务与回查位置。样本量论证和正式综述报告另有对应入口。
+
+- Lehmann, J. A. M., & Seufert, T. (2017). The influence of background music on learning in the light of different theoretical perspectives and the role of working memory capacity. *Frontiers in Psychology, 8*, 1902. [DOI: 10.3389/fpsyg.2017.01902／全文](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.01902/full)。
+- Goltz, F., & Sadakata, M. (2021). Do you listen to music while studying? A portrait of how people use music to optimize their cognitive performance. *Acta Psychologica, 220*, 103417. [DOI: 10.1016/j.actpsy.2021.103417](https://doi.org/10.1016/j.actpsy.2021.103417)；[作者机构全文](https://pure.uva.nl/ws/files/67791313/1_s2.0_S0001691821001670_main.pdf)。
+- Souza, A. S., & Barbosa, L. C. L. (2023). Should we turn off the music? Music with lyrics interferes with cognitive tasks. *Journal of Cognition, 6*(1), 24. [DOI: 10.5334/joc.273／全文](https://journalofcognition.org/articles/10.5334/joc.273)。
+- Lakens, D. (2022). Sample size justification. *Collabra: Psychology, 8*(1), 33267. [DOI: 10.1525/collabra.33267／原文](https://online.ucpress.edu/collabra/article/8/1/33267/120491/Sample-Size-Justification)。
+- PRISMA. [PRISMA 2020 官方说明与清单](https://www.prisma-statement.org/prisma-2020)。核查于 2026-10-14，用于正式系统综述的报告；清单不提供研究质量认证。
+
+## 质性阅读与资料处理
+
+[质性章](11-qualitative-research.qmd)区分解释发展与规则分类，也区分不同主题分析取向的目标。下面的文献可继续帮助你选择与研究问题一致的做法。文字资料的处理还需要结合[隐私章节](12-verification-privacy-recovery.qmd#privacy)中的具体情境。
+
+- Braun, V., & Clarke, V. (2023). Toward good practice in thematic analysis: Avoiding common problems and be(com)ing a knowing researcher. *International Journal of Transgender Health, 24*(1), 1–6. [DOI: 10.1080/26895269.2022.2129597／全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC9879167/)。在线发表为 2022 年，卷期为 2023 年。
+- Braun 与 Clarke 的作者网站：[主题分析问答](https://www.thematicanalysis.net/faqs/)、[理解主题分析](https://www.thematicanalysis.net/understanding-ta/)。本次使用可读取的作者说明，并以以上论文全文核对主要方法区分。
+- Gale, N. K., Heath, G., Cameron, E., Rashid, S., & Redwood, S. (2013). Using the framework method for the analysis of qualitative data in multi-disciplinary health research. *BMC Medical Research Methodology, 13*, 117. [DOI: 10.1186/1471-2288-13-117／全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3848812/)。
+- UK Data Service. [Anonymisation for text data](https://ukdataservice.ac.uk/learning-hub/data-producer-support/preparing-data-for-sharing-and-reuse/anonymising-data-and-protecting-participants/anonymisationfortextdata/)。核查于 2026-10-16；用于理解间接识别、替换与概括，以及处理后保留分析意义的问题。
+
+## 项目、重复工作与检查
+
+这些资料对应[项目连续性](09-project-continuity.qmd)、[重复工作](10-repeatable-workflows.qmd)及[核验与恢复](12-verification-privacy-recovery.qmd)。前三篇讨论科研计算实践；最后一篇是解释 Agent 工作安排的工程文章。
+
+- Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., & Teal, T. K. (2017). Good enough practices in scientific computing. *PLOS Computational Biology, 13*(6), e1005510. [DOI: 10.1371/journal.pcbi.1005510／全文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)。
+- Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten simple rules for reproducible computational research. *PLOS Computational Biology, 9*(10), e1003285. [DOI: 10.1371/journal.pcbi.1003285／全文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)。
+- Rokem, A. (2024). Ten simple rules for scientific code review. *PLOS Computational Biology, 20*(9), e1012375. [DOI: 10.1371/journal.pcbi.1012375／全文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375)。
+- Anthropic. (2024, December 19). [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)。核查于 2026-10-16，用于解释预先规定步骤与根据中间结果选择动作的区别。
+
+## AI 输出进入研究数据时
+
+[附录 C](appendix-c.qmd)使用下列来源说明模型评分、模拟调查与研究报告的具体问题。研究结论按原文的任务、模型和时间理解；它们不提供今天所有产品的统一表现估计。
+
+- Zheng, L., et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*. arXiv:2306.05685，v4. [论文及完整作者名单](https://arxiv.org/abs/2306.05685)；[全文](https://arxiv.org/html/2306.05685v4)。
+- Bisbee, J., Clinton, J. D., Dorff, C., Kenkel, B., & Larson, J. M. (2024). Synthetic replacements for human survey data? The perils of large language models. *Political Analysis, 32*(4), 401–416. [DOI: 10.1017/pan.2024.5](https://doi.org/10.1017/pan.2024.5)。
+- Feuerriegel, S., et al. (2026). A reporting checklist for large language models in behavioural science. *Nature Human Behaviour, 10*, 1182–1186. [DOI: 10.1038/s41562-026-02492-7](https://doi.org/10.1038/s41562-026-02492-7)；[论文信息与完整作者名单](https://pubmed.ncbi.nlm.nih.gov/42265331/)；[GUIDE-LLM 作者清单](https://llm-checklist.com/checklist/)。
+
+以上三项核查于 2026-10-16。附录的六段分类例子是新编教学演示，未调用模型，不来源于这些研究的数据。
+
+## 产品资料、配套文件与进一步回查
+
+具体产品名称和功能对应的官方来源集中在[工具章末](01-work-environment.qmd#产品资料)，核查日期为 2026-10-16；账户、价格和操作进入[动态指南](https://How-Tze.github.io/psych-ai-start-guide/)。中文编辑所用的技能及本书协作过程见 [AI 协作说明](ai-collaboration.qmd)。
+
+[附录 A](appendix-a.qmd)连接各项教学材料。[分析运行说明](../../examples/v1.3/analysis-worked-example.md)给出合成数据、脚本和实际结果；[工作流材料](../../examples/v1.3/workflow/README.md)给出已生成的报告与恢复练习。教学对话、设计材料、理论比较和质性解释按各章说明使用，不能合并成一项真实研究。
+
+需要核对某个来源究竟支持哪句话时，可查[作者稿的来源记录](source-notes.md)。其中分清已读全文部分、摘要或元数据，也记录实际计算与教学编写的范围。

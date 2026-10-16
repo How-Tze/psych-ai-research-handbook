@@ -1,8 +1,8 @@
 # Current phase
 
 - Phase: v1.3 capability chapter authoring
-- Status: REVIEW — TASK-011 qualitative and verification/privacy/recovery candidates complete
-- Approval: 2026-10-13 — candidate and v1.3 writing direction; 2026-10-14 — Chinese revision and literature/design priority; 2026-10-16 — complete workflow/opening, revise entry and prose, then prioritize qualitative research and verification/privacy/recovery.
+- Status: REVIEW — complete nineteen-part authoring package and whole-candidate edit
+- Approval: 2026-10-13 — candidate and v1.3 writing direction; 2026-10-14 — Chinese revision and literature/design priority; 2026-10-16 — workflow/opening, reader entry and prose, qualitative and verification chapters, then completion of all remaining candidate material.
 - Target: future v1.3; published edition remains v1.2.
 - Branch: docs/v1.3-authoring-preparation.
 
@@ -22,7 +22,9 @@ TASK-003/004 preparation is accepted. TASK-005 delivered the first three complet
 
 ## Deliverables and acceptance
 
-Thirteen complete candidates under drafts/v1.3/: a reading guide and chapters 1–12. TASK-011 adds qualitative research from excerpts through competing readings, a reflexive memo and a paragraph; a separate rule-based exercise distinguishes codebook use from coding-reliability goals. Verification/privacy/recovery connects checks to actual tasks, explains material handling and demonstrates a valid-format wrong input followed by report restoration. New reading notes and a repeatable recovery exercise accompany the prose. TASK-008 through010 established the workflow spine, beginner entry, natural expression and balanced product examples; those requirements continue. Prices, onboarding and volatile account details stay in the separate guide.
+2026-10-16 completion authorization: the human asks to finish the remaining material. TASK-012 covers the conclusion, appendices A/B/C, reader references and AI collaboration statement, usable templates and a whole-candidate editorial pass. The same candidate-only authority and publication boundaries apply.
+
+Nineteen complete candidates under drafts/v1.3/: a reading guide, chapters 1–12, conclusion, appendices A/B/C, references and AI collaboration. TASK-012 adds the last six files, a task-based exercise index and three downloadable templates with filled examples. Appendix C uses the unchanged six fictional excerpts and hypothetical labels to explain classification errors, validation, scoring, synthetic responses and reporting; no model evaluation is claimed. All candidates were read for continuity and natural Chinese, preserving detailed examples and scientific limits. Prior qualitative and recovery exercises, actual calculations and workflow material remain. Prices, onboarding and volatile account details stay in the separate guide.
 
 ## Dependencies and constraints
 
@@ -30,7 +32,7 @@ Use the approved teaching materials and briefs. Keep chapters/, release/, index.
 
 ## Gates, escalation and exit
 
-TASK-005 through TASK-011 are in REVIEW. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. Remaining writing includes conclusion, appendices and source/collaboration notes, followed by whole-book editing. Apply the beginner-entry, direct-prose and balanced-example requirements to that work. Escalate scope/version changes or unresolved source conflicts; solve routine editorial and computational questions within the approved briefs.
+TASK-005 through TASK-012 are in REVIEW. The approved candidate-writing scope and whole-candidate edit are complete. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. After review, establish the integration task with approved path mapping, old-link compatibility, navigation, metadata and full publication QA. Apply the existing beginner-entry, direct-prose and balanced-example standards to any requested revisions. No remaining writing placeholder is treated as completed publication.
 
 ## Previous phases
 
@@ -38,4 +40,4 @@ The preparation phase completed and was approved on 2026-10-13. The v1.2 Release
 
 ## Completion evidence
 
-TASK-011 used Humanizer-zh and checked primary methodological sources plus UK Data Service guidance on 2026-10-16. All six quotations and speaker IDs match the original CSV; thirty existing teaching data, specification, script and reference files are unchanged. Existing chapter numerical rows, formulas, figures and code remain. The recovery exercise ran against a temporary wrong input and then the confirmed input; the restored report matches the reference text, with no statistical refit or model call. Fourteen-page isolated Quarto preview rendered; 715 local references and image alternatives pass, with 17 new source-relative links additionally checked. Desktop and 390px checks cover both new chapters, quotation and recovery tables, the analytic-memo callout and review navigation; checked narrow pages have no overflow. Existing non-visible Quarto zh-CN/Abstract warnings remain. Published sources and frozen assets are unchanged; PR #3 stays draft. No merge or deployment. Start Guide v0.11 remains independently published.
+TASK-012 used Humanizer-zh and checked Appendix C's primary sources on 2026-10-16; reading extent is recorded in source-notes.md. Thirty-two pre-existing teaching files other than the updated index are unchanged. Existing numerical table rows, formulas, code and figures remain; the appendix's six full quotations match the original CSV. Twenty-page isolated Quarto preview rendered (nineteen candidates plus index); 1,176 local references and image alternatives pass, and 196 source-relative links resolve. All three rendered downloads match their source templates. Desktop and 390px checks cover navigation, template callouts, appendix tables and references; checked narrow pages have no overflow. Existing non-visible Quarto zh-CN/Abstract warnings remain. The previously verified report recovery and statistical results are preserved, with no new model calls or refits. Published sources and frozen assets are unchanged; PR #3 stays draft. No merge or deployment. Start Guide v0.11 remains independently published.

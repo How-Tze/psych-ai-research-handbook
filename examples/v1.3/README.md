@@ -25,3 +25,9 @@
 ## 质性与恢复练习（2026-10-16，TASK-011）
 
 [质性阅读记录](qualitative-reading-sheet.md)将既有六段虚构访谈、解释修改及下一步问题接起来；按规则定位的练习在对应章节中另行说明。[恢复练习](workflow/recovery-exercise.md)实际用改错的临时副本与原确认表各生成一份报告，展示格式检查为何发现不了来源错误，以及恢复后怎样对照。原访谈、数据、脚本和参考结果保留不变；临时运行文件放在忽略的 `.qa/`。
+
+## 可复制模板与全书练习入口（2026-10-16，TASK-012）
+
+[附录 A](../../drafts/v1.3/appendix-a.qmd)按任务连接全部练习与参考结果。[附录 B](../../drafts/v1.3/appendix-b.qmd)有填写示范，可复制的空白文件为[项目说明](templates/project-entry.md)、[任务说明](templates/task-note.md)和[变更记录](templates/change-note.md)。按需使用，也可合并到已有项目文档。
+
+[附录 C](../../drafts/v1.3/appendix-c.qmd)复用原六段话说明分类评价；表中的模型标签是假设输出，未调用模型，未改变原访谈或增加实测数据。
