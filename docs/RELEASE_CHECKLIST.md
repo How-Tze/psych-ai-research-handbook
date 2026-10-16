@@ -11,11 +11,23 @@
 - [x] Check desktop and 390px viewport; homepage, navigation, case presentation, wide tables, formulas, images, references and current/historical downloads remain usable.
 - [x] Match 34 teaching downloads and ZIP entries to source; run extracted exercises and reproduce both reports without changing original data, analysis programs or results.
 - [x] Check tracked source and delivery scope for credentials/private artifacts; no temporary output, review changes, comments or macros in deliverables. The pre-existing untracked audit report is excluded.
-- [ ] Merge PR #3 and verify the merged tree; create immutable v1.3 tag.
-- [ ] Publish GitHub Release with PDF, DOCX and teaching ZIP; deploy `gh-pages`.
-- [ ] Verify public routes/download hashes and historical integrity; record final project state.
+- [x] Merge PR #3 and verify the merged tree; create immutable v1.3 tag.
+- [x] Publish GitHub Release with PDF, DOCX and teaching ZIP; deploy `gh-pages`.
+- [x] Verify public routes/download hashes and historical integrity; record final project state.
 
 Print generation is documented in `publication/README.md`. Word exports the checked DOCX directly to PDF, retaining navigable contents and PDF bookmarks. A second render after title-line balancing changed only seven page images; those were reinspected, and the other 96 images matched the already inspected pages byte for byte. Existing non-visible Quarto zh-CN translation warnings remain; they do not affect the checked Chinese text.
+
+Publication completed: PR #3 merged as `029e41406b4248de1d1bd552559d3118f4ce245a`, the immutable v1.3 tag target. [Release v1.3](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.3) is ID `415120365`. Pages commit `014e79d5081b99abc5cb9a539630a60c2b487c35` deployed successfully in [run 38926095603](https://github.com/How-Tze/psych-ai-research-handbook/actions/runs/38926095603).
+
+All 63 public site pages/files and three Release downloads returned successfully. PDF/DOCX/ZIP files match source artifacts byte for byte; public text resources match after Git newline normalization. Compatibility HTML is identical to the locally checked redirect logic (query and fragment preserved); all 48 old content IDs and three home IDs remain in public HTML. Browser rechecking of the remote redirects timed out, so public redirect acceptance uses the verified published code and target content, together with the earlier successful local browser test.
+
+| v1.3 artifact | SHA-256 |
+|---|---|
+| PDF | `825bbe293f469cd9293c83c0f1214862952bd9c95fc2c088927422c433a59c1c` |
+| DOCX | `0585a71b8713de7ec44da722fdd79dcafd9df3069ca747d866c2e30c8430fe1f` |
+| Teaching ZIP | `dd852ab0687ab44dd86bcb91189abf7cba9e9b24a4dfb6819046f863ff73582e` |
+
+Historical integrity: v1.1 still resolves to `175a9b4`, v1.2 to `a8a9326`; their Release IDs, publication dates and asset identities/digests match baseline. All four old site files match frozen repository bytes. v1.2 PDF/DOCX hashes remain `b86103904ff4395cc11feca605574ca7f6aab8068fe74106ccf041368d352349` and `e6703dbeee683634af7d9444a1e67b028302c9e82e45a232ba770ab29a0b1f05`; v1.1 hashes are recorded below. The deployed tree excludes temporary outputs and private audit material.
 
 ## v1.2 Release Gate — 2026-09-24
 

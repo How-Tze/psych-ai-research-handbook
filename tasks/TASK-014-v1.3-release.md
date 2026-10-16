@@ -1,7 +1,7 @@
 # TASK: 生成正式发行文件并发布 v1.3
 
 - **TASK ID:** TASK-014
-- **STATUS:** IN_PROGRESS
+- **STATUS:** DONE
 - **PHASE:** v1.3 Release Gate
 - **OWNER / EXECUTOR:** Codex under the human-approved Release Gate
 
@@ -39,3 +39,11 @@ main 与 v1.3 tag 中的发行源码；正式 PDF/DOCX；完整教学 ZIP；GitH
 
 ## ON COMPLETION
 完成公开验收后标为 DONE，更新 CURRENT_PHASE、HANDOFF 和 RELEASE_CHECKLIST，记录发行提交、tag、Release、部署与历史完整性。
+
+## COMPLETION — 2026-10-16
+
+全部验收条件通过。PR #3 合并提交及 v1.3 标签为 `029e41406b4248de1d1bd552559d3118f4ce245a`；Release `415120365` 发布 PDF、DOCX、ZIP 三项资产。网站部署提交 `014e79d5081b99abc5cb9a539630a60c2b487c35`，Pages 运行 `38926095603` 成功。
+
+正式纸面版 103 页逐页检查完成，33 张表、两幅图、28 个原生公式及目录/链接完整。十九篇正文仅有已列明的发行状态差异。全站 22 页、1,266 项本地引用及 50 项材料链接通过；兼容入口、旧锚点、桌面与窄屏检查通过。材料包解压后的练习和两轮报告复现通过，未改原始数据、分析程序和结果。
+
+公开读取 63 个网站页面/文件和三个 Release 附件，所有请求成功；二进制交付物逐字节一致，文本资源仅允许 Git 换行规范化。历史标签、Release 身份/日期/资产及四个冻结文件校验值保持不变。临时文件与预存审查报告没有进入发布。最终证据见 `docs/RELEASE_CHECKLIST.md`。

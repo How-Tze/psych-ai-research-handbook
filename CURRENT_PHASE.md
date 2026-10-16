@@ -1,11 +1,11 @@
 # Current phase
 
 - Phase: v1.3 Release Gate
-- Status: IN_PROGRESS — TASK-014
+- Status: DONE — TASK-014; released and publicly verified 2026-10-16
 - Approval: 2026-10-16 — human approves the complete integrated edition and authorizes PDF/DOCX generation and inspection, final QA, publication of v1.3, historical preservation and legacy-link compatibility.
 - Frozen content input: `2271f1cbf9a122b56894edb63c9d01fbf63b237a`; PR #3.
-- Target: v1.3 HTML, PDF, DOCX and teaching materials; public edition remains v1.2 until deployment completes.
-- Branch: docs/v1.3-authoring-preparation.
+- Published: v1.3 HTML, PDF, DOCX and teaching materials. Release source/tag: `029e41406b4248de1d1bd552559d3118f4ce245a`; gh-pages: `014e79d5081b99abc5cb9a539630a60c2b487c35`.
+- Source: main; PR #3 merged. Publication records are completed separately without changing the frozen tag.
 
 ## Goal, scope and responsibilities
 
@@ -25,4 +25,8 @@ Human release authorization is complete; do not request approval for routine rel
 
 ## Previous phases
 
-TASK-003–013 are DONE. v1.3 authoring was accepted at db54a0b and integration at 2271f1c on 2026-10-16. v1.2 was released on 2026-09-24 at a8a9326; historical snapshots remain frozen.
+TASK-003–014 are DONE. v1.3 authoring was accepted at db54a0b and integration at 2271f1c on 2026-10-16. v1.2 was released on 2026-09-24 at a8a9326; historical snapshots remain frozen.
+
+## Completion evidence
+
+PR #3 merged; tag v1.3 points to 029e414. GitHub Release 415120365 was published on 2026-10-16 with three matching assets. Pages workflow 38926095603 succeeded. Public verification checked 63 site pages/files and all three Release downloads; six current/historical print files and the teaching ZIP match local artifacts byte for byte. All 34 teaching resources match after normalizing text line endings. v1.1/v1.2 tags, Release identities/dates/assets and four frozen-file hashes match the pre-release baseline. Final QA details and checksums are in `docs/RELEASE_CHECKLIST.md`. No further implementation is authorized by this completed phase.

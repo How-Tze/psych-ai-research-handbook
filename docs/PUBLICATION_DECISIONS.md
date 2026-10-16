@@ -39,3 +39,5 @@ Recommended after the GitHub repository is public and v1.1 release assets are fi
 ## 4. Start Guide link — COMPLETE
 
 Current public URL: <https://How-Tze.github.io/psych-ai-start-guide/>.
+
+- 2026-10-16: v1.3 release completed at tag/source `029e414`; Release `415120365`, Pages `014e79d`, public downloads verified. The frozen snapshot remains unchanged while main records completion. Historical v1.1/v1.2 tags and assets are preserved.

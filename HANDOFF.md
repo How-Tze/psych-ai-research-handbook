@@ -3,12 +3,12 @@
 ## Current state
 
 - Artifact: 《心理学研究的 AI 进阶手册》
-- Current published edition: v1.2, 2026-09-24 — Multi-Agent Workflow / Agent Governance
-- Historical frozen edition: v1.1, 2026-09-16
+- Current published edition: v1.3, 2026-10-16 — complete AI research workflows and teaching materials
+- Historical frozen editions: v1.1 (2026-09-16), v1.2 (2026-09-24)
 - Author: Hao Xie / GitHub: How-Tze
 - License: CC BY 4.0 (confirmed 2026-09-16)
-- Versioned PDF and DOCX under `release/` are frozen release artifacts; preserve both v1.1 and v1.2.
-- This branch prepares the approved v1.3 release in `chapters/`; see the current phase below for publication status. Historical source remains in v1.1/v1.2 tags.
+- Versioned PDF and DOCX under `release/` are frozen release artifacts; preserve v1.1, v1.2 and v1.3.
+- `chapters/` is the published v1.3 source; all historical snapshots remain in their release tags. Historical source remains in v1.1/v1.2 tags.
 - The manually authored DOCX table of contents was removed from HTML because Quarto supplies navigation.
 - One-cell case/example tables from Word were converted to Quarto callouts for web readability; wording is preserved.
 
@@ -28,7 +28,7 @@ Do not silently change frozen v1.1 or v1.2 arguments, claims, methods, or refere
 
 ## Current phase
 
-As of 2026-10-16, TASK-014 is IN_PROGRESS under the human-approved v1.3 Release Gate. The integrated edition at `2271f1c` is accepted; TASK-003–013 are DONE. Authorization covers matching HTML/PDF/DOCX, final QA, PR #3 readiness and merge, tag, Release assets, Pages deployment and public verification. Do not ask for repeated mechanical approvals. Substantial text is frozen.
+As of 2026-10-16, TASK-014 is DONE under the human-approved v1.3 Release Gate. The integrated edition at `2271f1c` is accepted; TASK-003–014 are DONE. Authorization covers matching HTML/PDF/DOCX, final QA, PR #3 readiness and merge, tag, Release assets, Pages deployment and public verification. Do not ask for repeated mechanical approvals. Substantial text is frozen. PR #3 merged as `029e414`, also the v1.3 tag target. Release `415120365` carries PDF/DOCX/ZIP; gh-pages `014e79d` deployed successfully (run `38926095603`). Public checks passed for 63 site pages/files and all three Release downloads. See `docs/RELEASE_CHECKLIST.md` for hashes, historical integrity and the bounded browser-check limitation.
 
 The nineteen texts and 34 teaching files are integrated. Preserve two legacy routes, 48 content anchors and three home anchors; see `docs/v1.3-integration.md`. The ZIP contains the 34 files, an entry README and license. Explicit Quarto resources avoid copying temporary outputs. Data, scripts, figures and numerical results are unchanged.
 
