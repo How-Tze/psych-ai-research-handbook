@@ -22,7 +22,7 @@
 
 ## 中文编辑参考
 
-[op7418/Humanizer-zh 的 SKILL.md](https://github.com/op7418/Humanizer-zh/blob/main/SKILL.md)，2026-10-14读取。仅采用保留原意、减少套话、改善中文句法等编辑建议；不把技能当作学术依据，不承诺通过任何文本检测。外部文件保存在忽略的临时目录，未执行或全局安装。
+[op7418/Humanizer-zh 的 SKILL.md](https://github.com/op7418/Humanizer-zh/blob/main/SKILL.md)，2026-10-14读取，2026-10-16按用户要求再次用于全稿润色。重点采用保留原意、删除自我辩护、合并重复限定、改善中文句法等编辑建议；不把技能当作学术依据，不承诺通过任何文本检测。外部文件保存在忽略的临时目录，未执行或全局安装。
 
 ## 文献探索与研究设计（TASK-007）
 
@@ -63,4 +63,19 @@
 | Anthropic [Claude Code Overview](https://code.claude.com/docs/en/overview) | 概览及可用界面说明；仅使用读取文件、编辑代码、执行命令的能力，不写安装命令、套餐或地区建议 |
 | Google [Use chat in Gemini Notebook](https://support.google.com/gemininotebook/answer/16179559?hl=en) | 上传资料、选择来源、引用与返回原文。当前帮助页使用 Gemini Notebook 名称；与[较早的 NotebookLM 官方入门](https://blog.google/innovation-and-ai/products/notebooklm-beginner-tips/)并列标明名称线索，不把引用功能写成可靠性保证，不概括实验性功能或额度 |
 
-豆包作为用户提出的熟悉聊天起点，不据此限制其能力。查阅其官方模型说明及桌面产品索引，桌面页正文抓取不完整，因此未据其撰写具体附件、分析或账号功能承诺。导读中的三类用法和追问是作者编写的教学说明，接续本书已具备的章节与材料，不声称测得学习收益或某产品科研表现。
+TASK-009 曾以豆包作为熟悉聊天的例子。其桌面页正文抓取不完整，当时未据其撰写具体附件、分析或账号功能。TASK-010 改为多种常见应用的读者入口。导读中的三类用法和追问仍为作者编写的教学说明；本包没有测量 AI 学习收益或各产品科研表现。
+
+## 全稿润色与新增产品例子（TASK-010）
+
+核查日期：2026-10-16。下列官方来源用于新增产品事实；研究任务的问法为作者设计，未冒充产品实测。价格、地区与安装步骤未在手册扩写。
+
+| 官方来源 | 阅读范围与使用 |
+|---|---|
+| [千问官网](https://www.qianwen.com/) | 确认千问应用入口与名称；页面正文抓取有限，具体文件能力使用下列独立产品文档 |
+| 阿里云[千问办公：文件、网盘与交付物](https://www.alibabacloud.com/help/zh/qwenwork/documents-web-trays-and-deliverables)（页面更新2026-08-25） | 文件上传后可读取、分析、总结与转换；可预览、下载并继续修改生成文件。正文明确名称为“千问办公”，不把其文件/网盘功能归给全部千问聊天入口 |
+| [Qwen Code 官方概览](https://qwenlm.github.io/qwen-code-docs/zh/users/overview/)、“Qwen Code 能为你做什么”与“采取行动”段落；[官方仓库](https://github.com/QwenLM/qwen-code) | 支持读取项目、编辑文件与运行命令；用于代码助手实例。没有把模型能生成代码当成聊天窗口能执行，也未采用宣传页的速度或可靠性评价 |
+| [DeepSeek 官网](https://www.deepseek.com/)与[DeepSeek Harness 官方页](https://www.deepseek.com/harness/) | 确认对话入口以及独立的 Harness 预览版；官方页列出文件整理、代码修改、脚本执行与持续完善成果。正文保留预览状态，不把这些能力归给所有 DeepSeek 对话入口 |
+
+读过的 DeepSeek 2025年 App 公告与 Files API 资料没有用于推断当前 App 的文件格式、额度或代码执行能力。千问、DeepSeek 的普通对话例子用于方法讨论和读表练习；国内外产品在适合的任务中均可出现，没有作能力等同或优劣排名。
+
+删除编辑自辩不改变科学来源与适用范围：方法章仍为新编练习，理论章仍为假设比较，设计材料仍未验证，分析和报告仍来自既有合成数据及实际执行。数值表、公式、图、教学文件与科学引用全部保留。
