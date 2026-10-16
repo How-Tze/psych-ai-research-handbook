@@ -1,0 +1,14 @@
+project:
+  output-dir: .qa/publication/docx
+book:
+  output-file: psych-ai-research-handbook_v1.3_zh-CN
+format:
+  docx:
+    toc: true
+    toc-title: 目录
+    toc-depth: 1
+    number-sections: false
+    reference-doc: release/psych-ai-research-handbook_v1.2_zh-CN.docx
+filters:
+  - publication/print.lua
+  - quarto

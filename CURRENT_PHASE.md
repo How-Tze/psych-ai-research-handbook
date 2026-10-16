@@ -1,32 +1,28 @@
 # Current phase
 
-- Phase: v1.3 integration preview
-- Status: REVIEW — TASK-013 integration and checks complete
-- Approval: 2026-10-16 — human accepts the complete candidate and authorizes formal-source integration, unified navigation/cross-references/downloads, legacy-link compatibility and a checked local preview; explicitly no publication.
-- Approved input: `db54a0baee935c863290122712bbf1c2db90ae4f`, nineteen candidate QMD files under `drafts/v1.3/` and existing teaching materials.
-- Target: integrated v1.3 preview; published edition remains v1.2.
-- Branch: docs/v1.3-authoring-preparation; draft PR #3.
+- Phase: v1.3 Release Gate
+- Status: IN_PROGRESS — TASK-014
+- Approval: 2026-10-16 — human approves the complete integrated edition and authorizes PDF/DOCX generation and inspection, final QA, publication of v1.3, historical preservation and legacy-link compatibility.
+- Frozen content input: `2271f1cbf9a122b56894edb63c9d01fbf63b237a`; PR #3.
+- Target: v1.3 HTML, PDF, DOCX and teaching materials; public edition remains v1.2 until deployment completes.
+- Branch: docs/v1.3-authoring-preparation.
 
 ## Goal, scope and responsibilities
 
-Integrate the accepted guide, chapters 1–12, conclusion, appendices A/B/C, references and AI disclosure into `chapters/`. Unify navigation, paths, downloads and lifecycle metadata. Keep existing web addresses and content fragments usable. Codex handles mechanical integration, compatibility, packaging, presentation fixes and checks. Substantial prose has passed the Authoring Gate; scientific claims are not independently rewritten. Keep accepted drafts as the baseline. The final mapping and allowed differences are recorded in `docs/v1.3-integration.md`.
+TASK-013 is accepted. Codex executes TASK-014 end to end under the approved release gate: final metadata, print exports and inspection, final checks, PR readiness/merge, tag, Release/assets, gh-pages deployment, public smoke tests and recovery documentation. Substantial prose is frozen; no new scientific content or product facts.
 
-## Dependencies, deliverables and acceptance
+## Dependencies and deliverables
 
-TASK-003 through TASK-012 are DONE. Use existing teaching cases and checked results; do not refit or replace them. Deliver integrated source, teaching download pack, preserved legacy links and a local preview. Compare prose with approved input, verify local links and downloads, render the full book, and inspect desktop/narrow layouts including navigation, callouts, tables, references and frozen downloads. Exact acceptance criteria are in TASK-013.
+Use the nineteen integrated texts and 34 teaching resources from the frozen commit. Deliver matching HTML/PDF/DOCX, teaching ZIP, immutable v1.3 tag and Release, working current and historical downloads and legacy entries. Preserve original source data, programs, numerical results, candidate files, CC BY 4.0 and the pre-existing untracked audit report.
 
-## Constraints and gates
+## Acceptance and constraints
 
-This is integration authority, not a release gate. No merge, tag, Release, deployment, new official PDF/DOCX or historical-asset replacement. Preserve `release/`, tags, candidate prose and the pre-existing untracked audit report. Start Guide v0.11 remains independently published. Escalate substantive content/structure/version changes, conflicting approved inputs or an unresolved build/compatibility failure.
+Follow TASK-014. Verify print content, native equations, navigation, tables, figures, pagination and final page images; full HTML build, local links, resources and narrow layout; clean tracked scope; public downloads and Release asset hashes. Baseline v1.1/v1.2 tags, Release metadata and frozen file hashes before mutation. Use actual publication date. Temporary files remain ignored. No changes to Start Guide.
 
-## Exit and next step
+## Gates, escalation and exit
 
-After implementation and checks, enter REVIEW and deliver the preview for author inspection. A later explicit release gate is required before publication. Update task evidence and HANDOFF; do not treat preview completion as a release.
+Human release authorization is complete; do not request approval for routine release actions. Escalate scientific/scope/version changes, conflicting authority, risks to historical snapshots or unfixable technical failures. Mark DONE only after merge, tag, Release, deployment and public verification, then record final evidence and leave a recoverable clean state.
 
 ## Previous phases
 
-v1.3 authoring (TASK-005–012) was accepted on 2026-10-16 at the exact input above. Preparation (TASK-003/004) was accepted on 2026-10-13. v1.2 was published on 2026-09-24; its tag at a8a9326 and all historical assets remain frozen.
-
-## Completion evidence
-
-Twenty book pages plus two legacy entry pages render. Nineteen approved texts match after documented mechanical changes. All 1,262 HTML local references/resources, 50 teaching Markdown links, 48 legacy content fragments and three home fragments pass. All 34 teaching downloads and ZIP entries match source; four historical PDF/DOCX files are unchanged. Extracted exercises pass their stated input/structural checks; both report modes reproduce reference text and input fingerprints. Desktop/390px checks pass, including query-plus-fragment legacy navigation. Existing non-visible Quarto translation warnings remain. No refit, merge, tag, Release or deployment. Preview: http://127.0.0.1:4274/ while its local server runs. See TASK-013 and docs/v1.3-integration.md.
+TASK-003–013 are DONE. v1.3 authoring was accepted at db54a0b and integration at 2271f1c on 2026-10-16. v1.2 was released on 2026-09-24 at a8a9326; historical snapshots remain frozen.

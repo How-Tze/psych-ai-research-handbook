@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'downloads/psych-ai-research-handbook_v1.3_materials.zip'
 README = '''# v1.3 教学材料
 
-本包配套《心理学研究的 AI 进阶手册》v1.3 整合预览。
+本包配套《心理学研究的 AI 进阶手册》v1.3 正式版（2026-10-16）。
 
 解压后先打开 examples/v1.3/README.md，再选择练习。保留目录结构，
 以便程序找到数据和参考结果。三份空白模板位于 examples/v1.3/templates/。

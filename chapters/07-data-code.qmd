@@ -1,6 +1,6 @@
 ---
 title: "用 AI 做数据分析：从研究问题到读懂结果"
-subtitle: "v1.3 整合预览 · 未发布"
+subtitle: "v1.3 · 2026-10-16"
 lang: zh-CN
 ---
 

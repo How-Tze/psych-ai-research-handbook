@@ -8,6 +8,8 @@ project:
     - /release/psych-ai-research-handbook_v1.1_zh-CN.docx
     - /release/psych-ai-research-handbook_v1.2_zh-CN.pdf
     - /release/psych-ai-research-handbook_v1.2_zh-CN.docx
+    - /release/psych-ai-research-handbook_v1.3_zh-CN.pdf
+    - /release/psych-ai-research-handbook_v1.3_zh-CN.docx
     - /examples/v1.3/README.md
     - /examples/v1.3/analysis-spec.md
     - /examples/v1.3/analysis-worked-example.md
@@ -51,6 +53,7 @@ book:
   title: 心理学研究的 AI 进阶手册
   subtitle: 从零散问答到可推进、可检查、可交接的个人研究项目
   author: Hao Xie
+  date: 2026-10-16
   site-url: https://How-Tze.github.io/psych-ai-research-handbook/
   repo-url: https://github.com/How-Tze/psych-ai-research-handbook
   repo-actions:
@@ -103,7 +106,7 @@ book:
           text: AI 协作说明
   license: CC BY 4.0
   page-footer:
-    left: © 2026 Hao Xie · v1.3 整合预览（未发布）
+    left: © 2026 Hao Xie · v1.3
     right: '[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 format:
   html:
