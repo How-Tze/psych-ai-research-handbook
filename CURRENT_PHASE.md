@@ -1,43 +1,32 @@
 # Current phase
 
-- Phase: v1.3 capability chapter authoring
-- Status: REVIEW — complete nineteen-part authoring package and whole-candidate edit
-- Approval: 2026-10-13 — candidate and v1.3 writing direction; 2026-10-14 — Chinese revision and literature/design priority; 2026-10-16 — workflow/opening, reader entry and prose, qualitative and verification chapters, then completion of all remaining candidate material.
-- Target: future v1.3; published edition remains v1.2.
-- Branch: docs/v1.3-authoring-preparation.
+- Phase: v1.3 integration preview
+- Status: REVIEW — TASK-013 integration and checks complete
+- Approval: 2026-10-16 — human accepts the complete candidate and authorizes formal-source integration, unified navigation/cross-references/downloads, legacy-link compatibility and a checked local preview; explicitly no publication.
+- Approved input: `db54a0baee935c863290122712bbf1c2db90ae4f`, nineteen candidate QMD files under `drafts/v1.3/` and existing teaching materials.
+- Target: integrated v1.3 preview; published edition remains v1.2.
+- Branch: docs/v1.3-authoring-preparation; draft PR #3.
 
 ## Goal, scope and responsibilities
 
-TASK-003/004 preparation is accepted. TASK-005 delivered the first three complete candidates and reproducible examples. TASK-006 refocuses method learning on how to learn with AI, polishes theory and analysis, and adds the writing chapter already specified in the approved authoring package. Strategic / Authoring Chat owns prose; Codex tools handle integration and QA. This is bounded draft authoring authority, not approval of unseen prose for publication.
+Integrate the accepted guide, chapters 1–12, conclusion, appendices A/B/C, references and AI disclosure into `chapters/`. Unify navigation, paths, downloads and lifecycle metadata. Keep existing web addresses and content fragments usable. Codex handles mechanical integration, compatibility, packaging, presentation fixes and checks. Substantial prose has passed the Authoring Gate; scientific claims are not independently rewritten. Keep accepted drafts as the baseline. The final mapping and allowed differences are recorded in `docs/v1.3-integration.md`.
 
-2026-10-14 follow-up: the human accepts this writing direction and explicitly prioritizes complete literature-exploration and research-design chapters. Execute TASK-007 with detailed examples, natural Chinese and practical AI use throughout; expand the review package to six candidates.
+## Dependencies, deliverables and acceptance
 
-2026-10-16 follow-up: the human authorizes continued complete chapter writing after the progress review. TASK-008 prioritizes project continuity and repeatable workflows/Agents, then the opening sequence and necessary bridges across the existing six chapters. This remains candidate authoring authority, without integration or release approval.
+TASK-003 through TASK-012 are DONE. Use existing teaching cases and checked results; do not refit or replace them. Deliver integrated source, teaching download pack, preserved legacy links and a local preview. Compare prose with approved input, verify local links and downloads, render the full book, and inspect desktop/narrow layouts including navigation, callouts, tables, references and frozen downloads. Exact acceptance criteria are in TASK-013.
 
-2026-10-16 reader feedback: TASK-009 revises the opening for researchers whose experience is ordinary Doubao chat. Explain concrete research possibilities, identifiable products/actions and terms in context; audit the same entry barrier across candidates. Keep product onboarding in the guide and scientific content unchanged.
+## Constraints and gates
 
-2026-10-16 further feedback: TASK-010 removes editorial self-defence and repeated disclaimers across all eleven candidates using Humanizer-zh; diversify examples and give Qwen/千问 and DeepSeek equal editorial consideration. Doubao was an example of reader experience, not the default brand for the book. Preserve scientific qualifications, detailed teaching and original calculations; verify new product facts against official sources.
+This is integration authority, not a release gate. No merge, tag, Release, deployment, new official PDF/DOCX or historical-asset replacement. Preserve `release/`, tags, candidate prose and the pre-existing untracked audit report. Start Guide v0.11 remains independently published. Escalate substantive content/structure/version changes, conflicting approved inputs or an unresolved build/compatibility failure.
 
-2026-10-16 next authorization: TASK-011 completes qualitative research and verification/privacy/recovery as full chapters, keeping detailed examples and connected AI workflows. The qualitative candidate is chapter 11 and the safety candidate follows as chapter 12; published paths and numbering stay unchanged. Use the existing six fictional excerpts and report script; distinguish methodological interpretation from rule-based retrieval and actually demonstrate report recovery.
+## Exit and next step
 
-## Deliverables and acceptance
-
-2026-10-16 completion authorization: the human asks to finish the remaining material. TASK-012 covers the conclusion, appendices A/B/C, reader references and AI collaboration statement, usable templates and a whole-candidate editorial pass. The same candidate-only authority and publication boundaries apply.
-
-Nineteen complete candidates under drafts/v1.3/: a reading guide, chapters 1–12, conclusion, appendices A/B/C, references and AI collaboration. TASK-012 adds the last six files, a task-based exercise index and three downloadable templates with filled examples. Appendix C uses the unchanged six fictional excerpts and hypothetical labels to explain classification errors, validation, scoring, synthetic responses and reporting; no model evaluation is claimed. All candidates were read for continuity and natural Chinese, preserving detailed examples and scientific limits. Prior qualitative and recovery exercises, actual calculations and workflow material remain. Prices, onboarding and volatile account details stay in the separate guide.
-
-## Dependencies and constraints
-
-Use the approved teaching materials and briefs. Keep chapters/, release/, index.qmd, _quarto.yml, historical tags/assets and the pre-existing untracked audit file unchanged. No private data, paid API calls or new publication architecture.
-
-## Gates, escalation and exit
-
-TASK-005 through TASK-012 are in REVIEW. The approved candidate-writing scope and whole-candidate edit are complete. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. After review, establish the integration task with approved path mapping, old-link compatibility, navigation, metadata and full publication QA. Apply the existing beginner-entry, direct-prose and balanced-example standards to any requested revisions. No remaining writing placeholder is treated as completed publication.
+After implementation and checks, enter REVIEW and deliver the preview for author inspection. A later explicit release gate is required before publication. Update task evidence and HANDOFF; do not treat preview completion as a release.
 
 ## Previous phases
 
-The preparation phase completed and was approved on 2026-10-13. The v1.2 Release Gate completed on 2026-09-24; tag v1.2 remains frozen at a8a9326.
+v1.3 authoring (TASK-005–012) was accepted on 2026-10-16 at the exact input above. Preparation (TASK-003/004) was accepted on 2026-10-13. v1.2 was published on 2026-09-24; its tag at a8a9326 and all historical assets remain frozen.
 
 ## Completion evidence
 
-TASK-012 used Humanizer-zh and checked Appendix C's primary sources on 2026-10-16; reading extent is recorded in source-notes.md. Thirty-two pre-existing teaching files other than the updated index are unchanged. Existing numerical table rows, formulas, code and figures remain; the appendix's six full quotations match the original CSV. Twenty-page isolated Quarto preview rendered (nineteen candidates plus index); 1,176 local references and image alternatives pass, and 196 source-relative links resolve. All three rendered downloads match their source templates. Desktop and 390px checks cover navigation, template callouts, appendix tables and references; checked narrow pages have no overflow. Existing non-visible Quarto zh-CN/Abstract warnings remain. The previously verified report recovery and statistical results are preserved, with no new model calls or refits. Published sources and frozen assets are unchanged; PR #3 stays draft. No merge or deployment. Start Guide v0.11 remains independently published.
+Twenty book pages plus two legacy entry pages render. Nineteen approved texts match after documented mechanical changes. All 1,262 HTML local references/resources, 50 teaching Markdown links, 48 legacy content fragments and three home fragments pass. All 34 teaching downloads and ZIP entries match source; four historical PDF/DOCX files are unchanged. Extracted exercises pass their stated input/structural checks; both report modes reproduce reference text and input fingerprints. Desktop/390px checks pass, including query-plus-fragment legacy navigation. Existing non-visible Quarto translation warnings remain. No refit, merge, tag, Release or deployment. Preview: http://127.0.0.1:4274/ while its local server runs. See TASK-013 and docs/v1.3-integration.md.

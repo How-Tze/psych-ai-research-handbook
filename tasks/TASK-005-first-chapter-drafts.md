@@ -1,7 +1,7 @@
 # TASK: v1.3 首批完整作者稿
 
 - **TASK ID:** TASK-005
-- **STATUS:** REVIEW
+- **STATUS:** DONE
 - **PHASE:** v1.3 capability chapter authoring
 - **OWNER / EXECUTOR:** 本轮 Strategic / Authoring Chat 负责实质写作；Codex 工具负责计算、文件与 QA。
 
@@ -38,3 +38,7 @@ drafts/v1.3/ 下三份完整稿及一个集中审阅入口；examples/v1.3/ 下�
 ## COMPLETION EVIDENCE
 
 2026-10-13：三份完整稿见 drafts/v1.3/README.md。24行计分、两规则回归及60×14纵向模型实际运行，模型收敛无警告；独立算式复核通过。两幅图实际查看并修复图例位置；全部观测保留。四页隔离预览构建、124处内部引用和图片替代文字通过；桌面与390px窄屏检查通过，长公式已分行。来源说明区分原文、摘要预览和新编示范。未改正式正文、历史发布物或未跟踪旧审计文件。
+
+## 作者验收（2026-10-16）
+
+用户批准提交 `db54a0baee935c863290122712bbf1c2db90ae4f` 的完整候选。此任务完成；正式正文整合转入 TASK-013，发布仍需后续授权。

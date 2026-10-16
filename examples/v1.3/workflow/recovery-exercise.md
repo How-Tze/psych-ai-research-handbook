@@ -39,4 +39,4 @@ python build_report.py --source ../reference/survey-sensitivity.csv --mode compa
 
 迁移到真实项目时，加上材料位置、已查到的影响范围，以及尚待检查的正文或图表。若原始输入或方法本身有问题，应先处理相应问题，再重做后续步骤。
 
-详细解释见[核验、隐私与恢复章](../../../drafts/v1.3/12-verification-privacy-recovery.qmd#recovery)。
+详细解释见[核验、隐私与恢复章](../../../chapters/11-safety-recovery.html#recovery)。

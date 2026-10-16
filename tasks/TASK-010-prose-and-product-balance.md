@@ -1,7 +1,7 @@
 # TASK: 全稿润色与产品示例调整
 
 - **TASK ID:** TASK-010
-- **STATUS:** REVIEW
+- **STATUS:** DONE
 - **PHASE:** v1.3 capability chapter authoring
 - **OWNER / EXECUTOR:** Strategic / Authoring Chat 负责编辑；Codex 工具负责核查、文件与 QA
 
@@ -42,3 +42,7 @@ TASK-005至009候选，用户本轮明确的编辑授权，Humanizer-zh 本地�
 千问、DeepSeek 进入学习和读表练习，豆包与 Claude 用于材料起草示例；文件与执行介绍加入千问办公、Qwen Code、DeepSeek Harness（预览版）。新增事实有官方来源与核查日期，来源移至第1章末尾。共同编辑要求写入写作包和 D-018。
 
 数值表、行内/独立公式、图、代码块及科学来源链接对照通过，全部教学文件和正式出版源未改。十二页隔离预览构建成功，580处本地引用及图片替代文字通过。桌面/390px检查覆盖产品表、执行工具、展开术语及工作流正文；所查窄屏无整页横向溢出。原有非可见 zh-CN/Abstract 警告保留。候选仍待作者审阅，未合并或发布。
+
+## 作者验收（2026-10-16）
+
+用户批准提交 `db54a0baee935c863290122712bbf1c2db90ae4f` 的完整候选。此任务完成；正式正文整合转入 TASK-013，发布仍需后续授权。

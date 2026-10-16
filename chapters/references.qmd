@@ -1,85 +1,63 @@
-# 参考文献与动态来源说明
+---
+title: "参考来源与教学材料说明"
+subtitle: "v1.3 整合预览 · 未发布"
+---
 
-事实与时效核查日期：2026-09-14。以下学术与标准来源支持本手册关于可复现研究、项目状态、代码审查、人机协作、AI 风险和 LLM 研究边界的主要论述。产品能力、项目记忆、权限、订阅和期刊 AI 政策变化较快，因此另列当前官方动态来源。正文尽量按“能做什么”组织，避免绑定具体按钮名称。
+本页汇总候选正文实际使用的主要来源，按你可能继续追问的问题排列。正文中的链接对应具体论述；这里帮助你找到下一步值得读的原文。方法文献支持相关研究做法和概念区分，本书围绕它们设计的 AI 问法与练习则是教学编写。
 
-National Academies of Sciences, Engineering, and Medicine. (2019). Reproducibility and Replicability in Science. National Academies Press. <https://doi.org/10.17226/25303>
+## 学方法、发展理论与选择分析
 
-W3C Provenance Working Group. (2013). PROV-O: The PROV Ontology. W3C Recommendation. <https://www.w3.org/TR/prov-o/>
+在[方法学习](method-learning.qmd)和[数据分析](07-data-code.qmd)之后，若想进一步理解个体内与个体间的区别，可以从 Curran 与 Bauer 的方法综述进入；软件文档用于理解相应实现。理论章提到的两篇文章分别提供理论建设讨论和已有失眠模型的回查入口。
 
-Wilkinson, M. D., Dumontier, M., Aalbersberg, I. J., et al. (2016). The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data, 3, 160018. <https://doi.org/10.1038/sdata.2016.18>
+- Curran, P. J., & Bauer, D. J. (2011). The disaggregation of within-person and between-person effects in longitudinal models of change. *Annual Review of Psychology, 62*, 583–619. [DOI: 10.1146/annurev.psych.093008.100356](https://doi.org/10.1146/annurev.psych.093008.100356)；[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/)。
+- Eronen, M. I., & Bringmann, L. F. (2021). The theory crisis in psychology: How to move forward. *Perspectives on Psychological Science, 16*(4), 779–788. [DOI: 10.1177/1745691620970586](https://doi.org/10.1177/1745691620970586)。
+- Harvey, A. G. (2002). A cognitive model of insomnia. *Behaviour Research and Therapy, 40*(8), 869–893. [DOI: 10.1016/S0005-7967(01)00061-4](https://doi.org/10.1016/S0005-7967(01)00061-4)。本次核查限摘要与元数据，用于说明相关认知模型已有研究来源。
+- statsmodels. [Linear Mixed Effects Models 官方文档](https://www.statsmodels.org/stable/mixed_linear.html)。文档核查于 2026-10-13；本书实际分析使用的版本为 0.15.0，完整参数和运行说明见[分析教学包](../examples/v1.3/analysis-worked-example.md)。
 
-Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., & Teal, T. K. (2017). Good enough practices in scientific computing. PLOS Computational Biology, 13(6), e1005510. <https://doi.org/10.1371/journal.pcbi.1005510>
+## 文献探索与研究设计
 
-Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten Simple Rules for Reproducible Computational Research. PLOS Computational Biology, 9(10), e1003285. <https://doi.org/10.1371/journal.pcbi.1003285>
+下面前三篇论文构成[文献探索章](05-literature.qmd)的教学选文。[配套阅读笔记](../examples/v1.3/literature-reading-notes.md)标明使用的样本、任务与回查位置。样本量论证和正式综述报告另有对应入口。
 
-Parasuraman, R., & Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. Human Factors, 52(3), 381–410. <https://doi.org/10.1177/0018720810376055>
+- Lehmann, J. A. M., & Seufert, T. (2017). The influence of background music on learning in the light of different theoretical perspectives and the role of working memory capacity. *Frontiers in Psychology, 8*, 1902. [DOI: 10.3389/fpsyg.2017.01902／全文](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.01902/full)。
+- Goltz, F., & Sadakata, M. (2021). Do you listen to music while studying? A portrait of how people use music to optimize their cognitive performance. *Acta Psychologica, 220*, 103417. [DOI: 10.1016/j.actpsy.2021.103417](https://doi.org/10.1016/j.actpsy.2021.103417)；[作者机构全文](https://pure.uva.nl/ws/files/67791313/1_s2.0_S0001691821001670_main.pdf)。
+- Souza, A. S., & Barbosa, L. C. L. (2023). Should we turn off the music? Music with lyrics interferes with cognitive tasks. *Journal of Cognition, 6*(1), 24. [DOI: 10.5334/joc.273／全文](https://journalofcognition.org/articles/10.5334/joc.273)。
+- Lakens, D. (2022). Sample size justification. *Collabra: Psychology, 8*(1), 33267. [DOI: 10.1525/collabra.33267／原文](https://online.ucpress.edu/collabra/article/8/1/33267/120491/Sample-Size-Justification)。
+- PRISMA. [PRISMA 2020 官方说明与清单](https://www.prisma-statement.org/prisma-2020)。核查于 2026-10-14，用于正式系统综述的报告；清单不提供研究质量认证。
 
-National Institute of Standards and Technology. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. <https://doi.org/10.6028/NIST.AI.100-1> （截至 2026-09-14，1.0 仍为公开现行框架，NIST 正在修订。）
+## 质性阅读与资料处理
 
-Autio, C., Schwartz, R., Dunietz, J., Jain, S., Stanley, M., Tabassi, E., Hall, P., & Roberts, K. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile. NIST AI 600-1. <https://doi.org/10.6028/NIST.AI.600-1>
+[质性章](qualitative-research.qmd)区分解释发展与规则分类，也区分不同主题分析取向的目标。下面的文献可继续帮助你选择与研究问题一致的做法。文字资料的处理还需要结合[隐私章节](11-safety-recovery.qmd#privacy)中的具体情境。
 
-National Institute of Standards and Technology. (2020). NIST Privacy Framework: A Tool for Improving Privacy Through Enterprise Risk Management, Version 1.0. NIST CSWP 10. <https://doi.org/10.6028/NIST.CSWP.10> （截至 2026-09-14，1.1 仍为 Initial Public Draft / “Coming soon”。）
+- Braun, V., & Clarke, V. (2023). Toward good practice in thematic analysis: Avoiding common problems and be(com)ing a knowing researcher. *International Journal of Transgender Health, 24*(1), 1–6. [DOI: 10.1080/26895269.2022.2129597／全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC9879167/)。在线发表为 2022 年，卷期为 2023 年。
+- Braun 与 Clarke 的作者网站：[主题分析问答](https://www.thematicanalysis.net/faqs/)、[理解主题分析](https://www.thematicanalysis.net/understanding-ta/)。本次使用可读取的作者说明，并以以上论文全文核对主要方法区分。
+- Gale, N. K., Heath, G., Cameron, E., Rashid, S., & Redwood, S. (2013). Using the framework method for the analysis of qualitative data in multi-disciplinary health research. *BMC Medical Research Methodology, 13*, 117. [DOI: 10.1186/1471-2288-13-117／全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3848812/)。
+- UK Data Service. [Anonymisation for text data](https://ukdataservice.ac.uk/learning-hub/data-producer-support/preparing-data-for-sharing-and-reuse/anonymising-data-and-protecting-participants/anonymisationfortextdata/)。核查于 2026-10-16；用于理解间接识别、替换与概括，以及处理后保留分析意义的问题。
 
-Souppaya, M., Scarfone, K., & Dodson, D. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities. NIST SP 800-218. <https://doi.org/10.6028/NIST.SP.800-218> （截至 2026-09-14，Version 1.2 仍为 Initial Public Draft。）
+## 项目、重复工作与检查
 
-Rokem, A. (2024). Ten simple rules for scientific code review. PLOS Computational Biology, 20(9), e1012375. <https://doi.org/10.1371/journal.pcbi.1012375>
+这些资料对应[项目连续性](02-project.qmd)、[重复工作](10-automation.qmd)及[核验与恢复](11-safety-recovery.qmd)。前三篇讨论科研计算实践；最后一篇是解释 Agent 工作安排的工程文章。
 
-Walters, W. H., & Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. Scientific Reports, 13, 14045. <https://doi.org/10.1038/s41598-023-41032-5> （该研究评估的是当时的 GPT-3.5 / GPT-4；用于说明“引用必须核验”，不用于估计 2026 年模型的当前错误率。）
+- Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., & Teal, T. K. (2017). Good enough practices in scientific computing. *PLOS Computational Biology, 13*(6), e1005510. [DOI: 10.1371/journal.pcbi.1005510／全文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)。
+- Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten simple rules for reproducible computational research. *PLOS Computational Biology, 9*(10), e1003285. [DOI: 10.1371/journal.pcbi.1003285／全文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)。
+- Rokem, A. (2024). Ten simple rules for scientific code review. *PLOS Computational Biology, 20*(9), e1012375. [DOI: 10.1371/journal.pcbi.1012375／全文](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375)。
+- Anthropic. (2024, December 19). [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)。核查于 2026-10-16，用于解释预先规定步骤与根据中间结果选择动作的区别。
 
-Eronen, M. I., & Bringmann, L. F. (2021). The Theory Crisis in Psychology: How to Move Forward. Perspectives on Psychological Science, 16(4), 779–788. <https://doi.org/10.1177/1745691620970586>
+## AI 输出进入研究数据时
 
-Appelbaum, M., Cooper, H., Kline, R. B., Mayo-Wilson, E., Nezu, A. M., & Rao, S. M. (2018). Journal article reporting standards for quantitative research in psychology: The APA Publications and Communications Board task force report. American Psychologist, 73(1), 3–25. <https://doi.org/10.1037/amp0000191>
+[附录 C](appendix-c.qmd)使用下列来源说明模型评分、模拟调查与研究报告的具体问题。研究结论按原文的任务、模型和时间理解；它们不提供今天所有产品的统一表现估计。
 
-Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing Transparency Through a Multiverse Analysis. Perspectives on Psychological Science, 11(5), 702–712. <https://doi.org/10.1177/1745691616658637>
+- Zheng, L., et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*. arXiv:2306.05685，v4. [论文及完整作者名单](https://arxiv.org/abs/2306.05685)；[全文](https://arxiv.org/html/2306.05685v4)。
+- Bisbee, J., Clinton, J. D., Dorff, C., Kenkel, B., & Larson, J. M. (2024). Synthetic replacements for human survey data? The perils of large language models. *Political Analysis, 32*(4), 401–416. [DOI: 10.1017/pan.2024.5](https://doi.org/10.1017/pan.2024.5)。
+- Feuerriegel, S., et al. (2026). A reporting checklist for large language models in behavioural science. *Nature Human Behaviour, 10*, 1182–1186. [DOI: 10.1038/s41562-026-02492-7](https://doi.org/10.1038/s41562-026-02492-7)；[论文信息与完整作者名单](https://pubmed.ncbi.nlm.nih.gov/42265331/)；[GUIDE-LLM 作者清单](https://llm-checklist.com/checklist/)。
 
-Hernán, M. A. (2018). The C-Word: Scientific Euphemisms Do Not Improve Causal Inference From Observational Data. American Journal of Public Health, 108(5), 616–619. <https://doi.org/10.2105/AJPH.2018.304337>
+以上三项核查于 2026-10-16。附录的六段分类例子是新编教学演示，未调用模型，不来源于这些研究的数据。
 
-Maxwell, S. E., & Cole, D. A. (2007). Bias in cross-sectional analyses of longitudinal mediation. Psychological Methods, 12(1), 23–44. <https://doi.org/10.1037/1082-989X.12.1.23>
+<div id="动态产品与政策来源核查日期2026-09-14" class="legacy-anchor" aria-hidden="true"></div>
 
-Feuerriegel, S., Barrie, C., Crockett, M. J., et al. (2026). A reporting checklist for large language models in behavioural science. Nature Human Behaviour, 10, 1182–1186. <https://doi.org/10.1038/s41562-026-02492-7>
+## 产品资料、配套文件与进一步回查
 
-Gallifant, J., Afshar, M., Ameen, S., et al. (2025). The TRIPOD-LLM reporting guideline for studies using large language models. Nature Medicine, 31, 60–69. <https://doi.org/10.1038/s41591-024-03425-5>
+具体产品名称和功能对应的官方来源集中在[工具章末](03-work-environment.qmd#产品资料)，核查日期为 2026-10-16；账户、价格和操作进入[动态指南](https://How-Tze.github.io/psych-ai-start-guide/)。中文编辑所用的技能及本书协作过程见 [AI 协作说明](ai-collaboration.qmd)。
 
-Mitchell, M., Wu, S., Zaldivar, A., et al. (2019). Model Cards for Model Reporting. Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT\* ’19), 220–229. <https://doi.org/10.1145/3287560.3287596>
+[附录 A](appendix-a.qmd)连接各项教学材料。[分析运行说明](../examples/v1.3/analysis-worked-example.md)给出合成数据、脚本和实际结果；[工作流材料](../examples/v1.3/workflow/README.md)给出已生成的报告与恢复练习。教学对话、设计材料、理论比较和质性解释按各章说明使用，不能合并成一项真实研究。
 
-Dillion, D., Tandon, N., Gu, Y., & Gray, K. (2023). Can AI language models replace human participants? Trends in Cognitive Sciences, 27(7), 597–600. <https://doi.org/10.1016/j.tics.2023.04.008>
-
-Bisbee, J., Clinton, J. D., Dorff, C., Kenkel, B., & Larson, J. M. (2024). Synthetic Replacements for Human Survey Data? The Perils of Large Language Models. Political Analysis, 32(4), 401–416. <https://doi.org/10.1017/pan.2024.5>
-
-Zheng, L., Chiang, W.-L., Sheng, Y., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. Advances in Neural Information Processing Systems, 36, 46595–46623. <https://doi.org/10.52202/075280-2020>
-
-Amershi, S., Weld, D., Vorvoreanu, M., et al. (2019). Guidelines for Human-AI Interaction. Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems, Paper 3, 1–13. <https://doi.org/10.1145/3290605.3300233>
-
-## 动态产品与政策来源（核查日期：2026-09-14）
-
-以下条目用于核查正文中容易变化的产品能力、运行框架、项目空间、Skill、标准版本与投稿政策。它们不是产品推荐，也不代表功能会长期保持不变。正式发布或实际使用前，凡涉及按钮入口、跨聊天记忆、权限模式、可用数据源、订阅范围、期刊政策与标准版本，都应重新核查官方来源。
-
-OpenAI. (n.d.). Projects in ChatGPT. OpenAI Help Center. 核查于 2026-09-14. <https://help.openai.com/en/articles/10169521-projects-in-chatgpt>
-
-OpenAI. (n.d.). Deep research in ChatGPT. OpenAI Help Center. 核查于 2026-09-14. <https://help.openai.com/en/articles/10500283-deep-research-faq>
-
-OpenAI. (2026, September 10). Introducing the Agents API. <https://openai.com/index/introducing-the-agents-api/>
-
-OpenAI. (2026, April 10). Using skills. OpenAI Academy. <https://openai.com/academy/skills/>
-
-Anthropic. (n.d.). How can I create and manage projects? Claude Help Center. 核查于 2026-09-14. <https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects>
-
-Anthropic. (2026, March 24). Harness design for long-running application development. <https://www.anthropic.com/engineering/harness-design-long-running-apps>
-
-Google. (n.d.). Use Deep Research in Gemini Apps. Gemini Apps Help. 核查于 2026-09-14. <https://support.google.com/gemini/answer/15719111>
-
-American Psychological Association. (n.d.). APA Publishing Policies: Policy on the use of generative artificial intelligence (AI) in scholarly materials. 核查于 2026-09-14. <https://www.apa.org/pubs/journals/resources/publishing-policies>
-
-Anthropic. (2025, October 16). Equipping agents for the real world with Agent Skills. Anthropic Engineering. 核查于 2026-09-14. <https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills>
-
-Anthropic. (2026, March 25). How we built Claude Code auto mode: a safer way to skip permissions. <https://www.anthropic.com/engineering/claude-code-auto-mode>
-
-OpenAI. (2026, February 2; updated March 4). Introducing the Codex app. <https://openai.com/index/introducing-the-codex-app/>
-
-Google. (2026, June 22). Measuring What Matters with Jules. Google Developers Blog. <https://developers.googleblog.com/measuring-what-matters-with-jules/>
-
-National Institute of Standards and Technology. (n.d.). AI Risk Management Framework. 核查于 2026-09-14. <https://www.nist.gov/itl/ai-risk-management-framework>
-
-National Institute of Standards and Technology. (n.d.). Privacy Framework 1.1. 核查于 2026-09-14. <https://www.nist.gov/privacy-framework/new-projects/privacy-framework-version-11>
-
-National Institute of Standards and Technology. (2025, December 17). SP 800-218 Rev. 1 (Initial Public Draft): Secure Software Development Framework (SSDF) Version 1.2. 核查于 2026-09-14. <https://csrc.nist.gov/pubs/sp/800/218/r1/ipd>
+需要核对某个来源究竟支持哪句话时，可查[作者稿的来源记录](../drafts/v1.3/source-notes.md)。其中分清已读全文部分、摘要或元数据，也记录实际计算与教学编写的范围。

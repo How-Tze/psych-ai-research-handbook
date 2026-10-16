@@ -38,4 +38,4 @@ python build_report.py --source ../reference/survey-sensitivity.csv --mode compa
 
 这里 `main` 与 `compare` 只改变报告中呈现哪些行；分析本身仍来自原运行包。若数据或分析规则发生实质变化，应先在明确的分析规格下重新运行分析、检查结果，再生成新报告。不要修改确认结果表以“试出”喜欢的文字。
 
-这些材料在[第一次任务](../../../drafts/v1.3/02-first-workflow.qmd)、[项目连续性](../../../drafts/v1.3/09-project-continuity.qmd)和[重复工作](../../../drafts/v1.3/10-repeatable-workflows.qmd)中使用。
+这些材料在[第一次任务](../../../chapters/04-quick-start.html)、[项目连续性](../../../chapters/02-project.html)和[重复工作](../../../chapters/10-automation.html)中使用。
