@@ -51,3 +51,16 @@
 新章复用已计算的 `reference/survey-sensitivity.csv`。21/15、压力 0.364/1.081、反刍 0.343/0.720 均从原始精度值舍入。`workflow/build_report.py` 实际执行 main 与 compare 两种模式：第一次整理主规则，第二次加入同表已有比较结果。没有重新拟合分析，没有调用模型或付费 API。生成文件记录实际读取字节的 SHA-256；换行符变化也会影响指纹，指纹不证明研究有效。
 
 两轮报告是实际生成的教材产物；项目情境、示范对话、恢复与交接安排和解释候选均为作者设计。初稿遗漏比较仅用于教学次序，最终候选保留两行，不允许按结果喜好选择。脚本检验格式及有限数值，不判断输入是否来自正确模型。没有把文件存在、脚本成功或多 Agent 一致当作科学核验充分条件。
+
+## 具体产品与读者入口（TASK-009）
+
+核查日期：2026-10-16。产品名称帮助读者把名词对应到具体功能；只介绍本章所需的有限用途，不复制价格、开通步骤或推断所有账号均可用。官方功能说明不是独立的产品效果研究。
+
+| 官方来源 | 阅读范围与正文使用 |
+|---|---|
+| OpenAI [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) | Choose how you want to work、What ChatGPT Work can do、项目与附件说明；支持聊天、文件/程序操作和持续工作可有重叠。保留计划、平台、地区及设置差异；不按品牌划分“只聊天”和“只执行” |
+| OpenAI [Clean and prepare messy data](https://learn.chatgpt.com/use-cases/clean-messy-data) | 表格输入、整理要求、新文件与检查步骤；作为具体文件任务入口，不引用页面的完成时间作保证 |
+| Anthropic [Claude Code Overview](https://code.claude.com/docs/en/overview) | 概览及可用界面说明；仅使用读取文件、编辑代码、执行命令的能力，不写安装命令、套餐或地区建议 |
+| Google [Use chat in Gemini Notebook](https://support.google.com/gemininotebook/answer/16179559?hl=en) | 上传资料、选择来源、引用与返回原文。当前帮助页使用 Gemini Notebook 名称；与[较早的 NotebookLM 官方入门](https://blog.google/innovation-and-ai/products/notebooklm-beginner-tips/)并列标明名称线索，不把引用功能写成可靠性保证，不概括实验性功能或额度 |
+
+豆包作为用户提出的熟悉聊天起点，不据此限制其能力。查阅其官方模型说明及桌面产品索引，桌面页正文抓取不完整，因此未据其撰写具体附件、分析或账号功能承诺。导读中的三类用法和追问是作者编写的教学说明，接续本书已具备的章节与材料，不声称测得学习收益或某产品科研表现。
