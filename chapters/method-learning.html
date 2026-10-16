@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hao Xie">
+
+<title>用 AI 学研究方法：从一个没弄懂的问题开始 – 心理学研究的 AI 进阶手册</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/05-literature.html" rel="next">
+<link href="../chapters/04-quick-start.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5630e6732664d48c7cde3b526013eeb9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-work-environment.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/method-learning.html"><span class="chapter-title">第3章 用 AI 学习研究方法</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">心理学研究的 AI 进阶手册</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/How-Tze/psych-ai-research-handbook" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">首页与下载</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">导读：AI 还能怎样帮你做研究？</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">主体</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-work-environment.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 从聊天开始，认识 AI 工具</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-quick-start.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 第一次完整任务</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/method-learning.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第3章 用 AI 学习研究方法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-literature.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 文献探索</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/theory-development.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 用 AI 推进理论思考</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 研究设计</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-data-code.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 数据分析</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-writing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第8章 学术写作与修订</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-project.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第9章 让研究继续下去</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-automation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章 重复工作与 Agent</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/qualitative-research.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第11章 质性研究</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-safety-recovery.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章 核验、隐私与恢复</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-conclusion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">结语</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">附录与来源</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendix-a.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录A 练习与材料下载</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendix-b.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录B 可直接使用的协作模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendix-c.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录C 当 AI 的回答成为研究数据</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考来源与教学材料说明</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ai-collaboration.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">AI 协作说明</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#先告诉-ai你会什么卡在哪里" id="toc-先告诉-ai你会什么卡在哪里" class="nav-link active" data-scroll-target="#先告诉-ai你会什么卡在哪里">先告诉 AI，你会什么、卡在哪里</a></li>
+  <li><a href="#让它举小例子再用数字追问" id="toc-让它举小例子再用数字追问" class="nav-link" data-scroll-target="#让它举小例子再用数字追问">让它举小例子，再用数字追问</a></li>
+  <li><a href="#看懂例子后再请它解释图和公式" id="toc-看懂例子后再请它解释图和公式" class="nav-link" data-scroll-target="#看懂例子后再请它解释图和公式">看懂例子后，再请它解释图和公式</a></li>
+  <li><a href="#让它改一个条件看看你的理解能否跟着变化" id="toc-让它改一个条件看看你的理解能否跟着变化" class="nav-link" data-scroll-target="#让它改一个条件看看你的理解能否跟着变化">让它改一个条件，看看你的理解能否跟着变化</a></li>
+  <li><a href="#请它出一道新题先别给答案" id="toc-请它出一道新题先别给答案" class="nav-link" data-scroll-target="#请它出一道新题先别给答案">请它出一道新题，先别给答案</a></li>
+  <li><a href="#回到自己的论文和方法课" id="toc-回到自己的论文和方法课" class="nav-link" data-scroll-target="#回到自己的论文和方法课">回到自己的论文和方法课</a></li>
+  <li><a href="#方法来源" id="toc-方法来源" class="nav-link" data-scroll-target="#方法来源">方法来源</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/How-Tze/psych-ai-research-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>反馈问题</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-work-environment.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/method-learning.html"><span class="chapter-title">第3章 用 AI 学习研究方法</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">用 AI 学研究方法：从一个没弄懂的问题开始</span></h1>
+<p class="subtitle lead">v1.3 · 2026-10-16</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hao Xie </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>本章问题：读论文遇到不熟悉的方法时，怎样让 AI 帮我学会，而不只是得到一段解释？</strong></p>
+<p>读方法部分时，你可能认识每个词，却不明白作者为什么要这样分析。请 AI 解释之后，似乎懂了；换一篇论文，又不知道该怎样判断。问题有时出在对话只停留于“请解释”和“解释完了”，没有让你动手比较、作出判断，也没有暴露你究竟卡在哪里。</p>
+<p>本章会示范怎样把这样的对话继续下去：告诉 AI 自己会什么，请它举一个能手算的小例子；看不懂时，要求它换一种讲法；觉得懂了，再让它改变条件、出一道新题。我们用“同一个人的变化”和“不同人之间的差异”贯穿讲解。你不必先学会多层模型，可以把这套问法用于自己正在学习的其他方法。</p>
+<p>以下数据和示范对话均为教学编写。练习时，可以在千问中粘贴问题和小表，按自己的回答继续追问。</p>
+<section id="先告诉-ai你会什么卡在哪里" class="level2">
+<h2 class="anchored" data-anchor-id="先告诉-ai你会什么卡在哪里">先告诉 AI，你会什么、卡在哪里</h2>
+<p>“给我讲讲多层模型”当然可以作为开头，但范围太大。你可能收到一份包含十几个术语的课程提纲，而眼前的问题仍未解决。不妨从读论文时的一个具体疑问开始：</p>
+<blockquote class="blockquote">
+<p>我学过相关和普通回归，还没学过多层模型。这篇研究让同一个人连续多天报告压力和睡眠。我不明白：为什么不能把每天的记录都放在一起，直接算相关？请先解释这个问题，暂时不要介绍完整的多层模型。</p>
+</blockquote>
+<p>如果手边有论文，可以附上相关方法段落，请 AI 先根据原文解释，并把补充知识与作者实际做的分析分开。你的已有知识和具体困惑，比“通俗一点”更能帮助它调整回答。</p>
+<p>假设它回答：“重复测量数据同时包含个体内变异与个体间变异，两者需要区分。”这句话可以是正确的，但如果你不懂这两个术语，它还没有帮上忙。接着问：</p>
+<blockquote class="blockquote">
+<p>我还是不太明白。请用两个人、每人三天的数据举例，数字要能手算。让我看见：比较不同的人，和比较同一个人的不同日子，为什么可能得到不同答案。</p>
+</blockquote>
+<p>你发给 AI 的这类问题和要求，常被叫作“提示词”。第一轮没讲懂时，指出哪一句不懂、希望用什么来说明，就可以继续。</p>
+</section>
+<section id="让它举小例子再用数字追问" class="level2">
+<h2 class="anchored" data-anchor-id="让它举小例子再用数字追问">让它举小例子，再用数字追问</h2>
+<p>假设 AI 给出下面这张表。压力和睡眠困难都是用于演示的指标，数值越高表示程度越高；它们没有对应真实参与者或经过验证的量表。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>人</th>
+<th style="text-align: right;">日</th>
+<th style="text-align: right;">压力</th>
+<th style="text-align: right;">睡眠困难</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+<p>这时先别让它一次讲完。你可以要求：“先问我两个问题，等我回答后再解释。”例如：</p>
+<ol type="1">
+<li>平均压力较高的人，平均睡眠困难是否较高？</li>
+<li>对同一个人而言，压力比自己平常高的日子，睡眠困难是否也较高？</li>
+</ol>
+<p>试着分别写出所比较的数字。A 的压力均值为 2，睡眠困难均值为 3；B 的对应均值为 5 和 6。从 A 到 B，两个均值各增加 3，两个均值点之间的斜率是 +1。平均压力较高的 B，平均睡眠困难也较高。</p>
+<p>再只看 A：压力从 1 增至 3，睡眠困难从 4 降至 2。B 自己的三天也如此，每个人内部的斜率都是 −1。原来，同一张表中的两种关系可以方向相反。</p>
+<p>如果你最初以为两问答案应当一致，可以把自己的想法交给 AI：</p>
+<blockquote class="blockquote">
+<p>我原以为“压力越高，睡眠困难越高”对这两种比较都成立。请指出我把哪两个问题混在了一起，并用表中的数字解释。暂时不要增加新的术语。</p>
+</blockquote>
+<p>有帮助的回答应该回到你刚才的误解：第一问比较 A 和 B 的均值，第二问比较 A 自己的三天、再比较 B 自己的三天。前者称为<strong>个体间关系</strong>，后者称为<strong>个体内关系</strong>。如果它只是换一种方式重复定义，你还可以要求：“先只看 A 的三天，我说明白之后再加入 B。”</p>
+<p>这样，术语就有了可以对应的例子。Curran 与 Bauer（2011）详细讨论了这两类关系及其在纵向模型中的表达；其中一类的结果，不能直接替代另一类。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/">方法原文</a></p>
+</section>
+<section id="看懂例子后再请它解释图和公式" class="level2">
+<h2 class="anchored" data-anchor-id="看懂例子后再请它解释图和公式">看懂例子后，再请它解释图和公式</h2>
+<p>表格能手算，图则有助于同时看见两种方向。你可以接着要求：</p>
+<blockquote class="blockquote">
+<p>请用同一份数据画两幅图：一幅画每个人三天的记录，连接同一个人的点；另一幅只画两个人的均值。两幅图使用相同的坐标范围，说明每个点代表什么。请保留原始表，让我能核对。</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../examples/v1.3/figures/within-between.png" class="img-fluid figure-img" alt="六行合成数据。A的三点为(1,4)、(2,3)、(3,2)，B为(4,7)、(5,6)、(6,5)，各自斜率均为负1。均值点A为(2,3)、B为(5,6)，均值间斜率为正1。"></p>
+<figcaption>同一份六行合成数据的两种比较：左图保留两人的原始观测并连接同一个人的三点，两条线向下；右图只画两人的均值，连线向上。</figcaption>
+</figure>
+</div>
+<p>这里的连线帮助我们看清给定数字的关系，没有抽样置信区间，也不能据此推断总体中的关系。检查时，逐点核对图与表是否一致，再看两幅图各自在比较什么。</p>
+<p>接下来，公式才有需要解释的对象。你可以问：</p>
+<blockquote class="blockquote">
+<p>怎样用一个数表示“今天的压力比自己平常高多少”？请先算出 A 和 B 每天的这个数，再给公式，并把公式里的每个符号对应到表格。</p>
+</blockquote>
+<p>A 的压力均值是 2，因此三个偏离是 −1、0、+1；B 的均值是 5，偏离也是 −1、0、+1。A 的压力 3 和 B 的压力 6 虽然不同，却都比各自均值高 1。“相对自己的平常水平”指的就是这个差。</p>
+<p>用符号写出来：</p>
+<p><span class="math display">\[
+x_{it}^{W}=x_{it}-\bar{x}_i.
+\]</span></p>
+<p><span class="math inline">\(x_{it}\)</span> 是第 <span class="math inline">\(i\)</span> 个人第 <span class="math inline">\(t\)</span> 天的压力，<span class="math inline">\(\bar{x}_i\)</span> 是这个人在观测期内的压力均值；上标 <span class="math inline">\(W\)</span> 提醒我们关注 within-person，也就是个体内部分。如果符号仍然让你困惑，就让 AI 把 A 第三天的数字代进去：<span class="math inline">\(3-2=1\)</span>。先把这一行说清楚，再去看一般形式。</p>
+<p>把睡眠困难也减去各自均值，两个人得到的都是 +1、0、−1。因此，在这份例子中，压力越高于自己的均值，睡眠困难越低于自己的均值。个体均值告诉我们人与人之间的差异；减去个人均值后，剩下的是每个人相对自身均值的变化。</p>
+<p>把六行一起放进普通回归，仍然能算出一个系数，但它同时受到这两类差异的影响。研究问题若是“同一个人压力高于平常时发生什么”，就需要在分析中明确表达这项比较。<a href="../chapters/07-data-code.html">数据分析章</a>会进一步演示相应模型。</p>
+</section>
+<section id="让它改一个条件看看你的理解能否跟着变化" class="level2">
+<h2 class="anchored" data-anchor-id="让它改一个条件看看你的理解能否跟着变化">让它改一个条件，看看你的理解能否跟着变化</h2>
+<p>看懂一个例子之后，可以请 AI 做一个很小的改动，并暂时不揭示答案：</p>
+<blockquote class="blockquote">
+<p>保持每个人三天的变化幅度不变，只把 B 的三个睡眠困难分数都减去 5。请先让我预测个体内、个体间关系分别会怎样变化，再给出新数据核对。</p>
+</blockquote>
+<p>此时 B 的睡眠困难为 2、1、0，均值为 1；A 仍为 4、3、2，均值为 3。B 的平均压力仍比 A 高 3，平均睡眠困难却低了 2，均值点之间的斜率变为 <span class="math inline">\(-2/3\)</span>。每个人内部的斜率仍是 −1。</p>
+<p>给 B 的每个结果值减去同一个常数，只移动了 B 的整体位置，没有改变 B 各天之间的差值。因此，人与人的比较改变了，每个人内部的变化没有改变。如果你能自己说出这个理由，就比仅仅记住“两类关系可能不同”多理解了一步。</p>
+<p>检查例子时也要留意取值是否合理。这里的 0 是允许出现的教学指标值；若你要求用真实的 1–5 量表演示，就不能接受越界的数字，应让 AI 重新构造范围内的例子。</p>
+<p>再追问一次：“这个例子有什么不能说明的？”我们的六行数字按天依次变化，压力变化与时间顺序混在了一起，所以它不能识别压力与睡眠困难的独立关系。现实数据若有时间趋势、缺失或不等间隔记录，也需要继续考虑这些问题。减去个人均值不会自动解决所有纵向分析难题。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/">Curran 与 Bauer 的讨论</a></p>
+<p>AI 的解释如果跳到你尚未学过的模型，可以让它先指出“现有例子少了什么信息”，再带着这个问题查教材或课程。学会识别自己的知识缺口，也比再读一段无法核查的推导有用。</p>
+</section>
+<section id="请它出一道新题先别给答案" class="level2">
+<h2 class="anchored" data-anchor-id="请它出一道新题先别给答案">请它出一道新题，先别给答案</h2>
+<p>你可以让 AI 换一个情境，检验自己能否认出相同问题：</p>
+<blockquote class="blockquote">
+<p>请围绕刚才的概念出一道新题，换成学习或工作场景。先只给题目。等我说明比较对象和理由后，再检查我的答案；如果有误，先给一个提示，不要立即给完整解答。</p>
+</blockquote>
+<p>例如，两名学生各在三次测验前记录练习时长。甲的时长为 1、2、3 小时，成绩为 8、9、10 分；乙的时长为 4、5、6 小时，成绩为 3、4、5 分。</p>
+<p>平均练习更久的学生成绩更低，但每位学生自己练习更久的测验成绩更高。这能否支持“增加练习会降低成绩”？先写出理由，再展开下面的解释。</p>
+<details>
+<summary>
+查看参考解释
+</summary>
+<p>甲与乙的均值比较，同时带入了两名学生的其他差异，不能代表同一个学生增加练习后的变化。每位学生内部的正关系，也可能混有测验难度、时间趋势或准备程度。两种关系都可以描述；增加练习的因果效果还需要相应的研究设计和识别依据。</p>
+<p>如果你只写了“相关不等于因果”，可以继续请 AI 问你：具体是哪一种比较？可能混入什么因素？这些因素为什么会影响结论？</p>
+</details>
+<p>再换一个概念。下面这张完全合成的表，用来练习理解“交互作用”：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>任务难度</th>
+<th style="text-align: right;">无提示的平均正确数</th>
+<th style="text-align: right;">有提示的平均正确数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>容易</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td>困难</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<p>请计算：提示带来的差异在两种难度下是否一样？如果把“困难且有提示”的均值从 6 改为 4，其他数字不变，你的判断会怎样改变？</p>
+<details>
+<summary>
+查看参考解释
+</summary>
+<p>容易任务中，有提示减无提示是 <span class="math inline">\(9-8=1\)</span>；困难任务中是 <span class="math inline">\(6-3=3\)</span>。两种差异相减为 <span class="math inline">\(3-1=2\)</span>。在“正确数”的加法尺度上，提示的差异随难度而变，这是一个交互模式。</p>
+<p>把 6 改成 4 后，两种难度下的差异都为 +1，差异之差变为 0。对照这两个例子，可以具体看见“有交互”和“无交互”差在哪里。</p>
+<p>题目没有样本量、误差或分配方式，所以这里只能描述给定均值的模式，不能断言总体交互显著，也不能直接赋予因果含义。交互还依赖结果尺度；换成比值或其他尺度，需要重新说明问题。</p>
+</details>
+<p>练习后，别只让 AI 给一个分数。请它指出你哪句话说清了比较、哪一步计算有误、哪项结论超出了题目提供的信息。如果它只说“完全正确”，可以要求它引用你的具体推理并逐项核对；有争议的判断则回到计算、教材或原文。</p>
+</section>
+<section id="回到自己的论文和方法课" class="level2">
+<h2 class="anchored" data-anchor-id="回到自己的论文和方法课">回到自己的论文和方法课</h2>
+<p>这套做法可以用在不同的学习障碍上。读不懂论文为什么选某个模型，就提供方法段落和研究问题；公式看不懂，就要求把每个符号代入一个小例子；两个概念总是混淆，就让 AI 构造只改变一个条件的对照例子；做题卡住，就要求它每次只给一个提示。</p>
+<p>练习结束，用半页写下自己原来混淆了什么、哪个例子使你理解发生变化，以及这个解释适用于什么条件。隔一段时间，再关掉答案做一道新题。能否独立说明理由，可以帮助你发现哪里还没学懂。</p>
+<p>准备把学到的方法用于项目时，再请 AI 对照研究问题、数据结构和方法条件，指出还缺哪些判断。把这些问题带到分析讨论中，并在<a href="../chapters/02-project.html">项目说明</a>里标明哪些只是学习所得、哪些已经成为分析决定，避免把“听懂了一个例子”直接当作采用方法的依据。</p>
+<p>如果 AI 给出的公式、文献或解释互相矛盾，或者无法对应到原文与计算，就把争议点记下来，回查教材、课程或请教方法专家。你可以请它先整理“哪一步对不上、需要查什么”，带着具体问题继续学习。</p>
+<p>怎样开始普通对话、使用一份表格，可以参照动态指南的<a href="https://How-Tze.github.io/psych-ai-start-guide/chapters/method-learning.html">方法学习操作页</a>。本章的练习不要求付费订阅或编程经验。</p>
+</section>
+<section id="方法来源" class="level2">
+<h2 class="anchored" data-anchor-id="方法来源">方法来源</h2>
+<p>Curran, P. J., &amp; Bauer, D. J. (2011). The disaggregation of within-person and between-person effects in longitudinal models of change. <em>Annual Review of Psychology, 62</em>, 583–619. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/">原文与 DOI</a>。该文用于解释两类关系的方法基础；本章数值、反例和练习为另行编写的教学材料。</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/How-Tze\.github\.io\/psych-ai-research-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/04-quick-start.html" class="pagination-link" aria-label="第2章 第一次完整任务">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第2章 第一次完整任务</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/05-literature.html" class="pagination-link" aria-label="第4章 文献探索">
+        <span class="nav-page-text"><span class="chapter-title">第4章 文献探索</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Hao Xie · v1.3</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/How-Tze/psych-ai-research-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>反馈问题</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

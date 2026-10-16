@@ -8,7 +8,7 @@
 
 <meta name="author" content="Hao Xie">
 
-<title>第6章 数据、代码与统计分析 – 心理学研究的 AI 进阶手册</title>
+<title>用 AI 做数据分析：从研究问题到读懂结果 – 心理学研究的 AI 进阶手册</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -91,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/02-project.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/07-data-code.html"><span class="chapter-title">第6章 数据、代码与统计分析</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-work-environment.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/07-data-code.html"><span class="chapter-title">第7章 数据分析</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
@@ -121,17 +150,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">首页</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">首页与下载</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/00-usage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">使用说明</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">导读：为什么值得重新认识科研中的 AI</span></a>
+  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">导读：AI 还能怎样帮你做研究？</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -145,52 +169,62 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-project.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 你做的其实是一个项目</span></a>
+  <a href="../chapters/03-work-environment.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 从聊天开始，认识 AI 工具</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-work-environment.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 AI 已经从聊天框进入工作环境</span></a>
+  <a href="../chapters/04-quick-start.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 第一次完整任务</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-quick-start.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 快速开始</span></a>
+  <a href="../chapters/method-learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 用 AI 学习研究方法</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-literature.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 文献、阅读与理论整理</span></a>
+  <a href="../chapters/05-literature.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 文献探索</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 研究问题、设计与材料</span></a>
+  <a href="../chapters/theory-development.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 用 AI 推进理论思考</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-data-code.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第6章 数据、代码与统计分析</span></a>
+  <a href="../chapters/06-design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 研究设计</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-writing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 写作、修订与投稿</span></a>
+  <a href="../chapters/07-data-code.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第7章 数据分析</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-maintenance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第8章 让 AI 帮你维护研究项目</span></a>
+  <a href="../chapters/08-writing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第8章 学术写作与修订</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-automation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第9章 固定重复工作</span></a>
+  <a href="../chapters/02-project.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第9章 让研究继续下去</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-safety-recovery.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章 核验、权限与恢复</span></a>
+  <a href="../chapters/10-automation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章 重复工作与 Agent</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/qualitative-research.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第11章 质性研究</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-safety-recovery.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章 核验、隐私与恢复</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -211,22 +245,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/appendix-a.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录A 心理学研究常见 AI 场景速查</span></a>
+  <a href="../chapters/appendix-a.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录A 练习与材料下载</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/appendix-b.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录B 最小个人项目模板</span></a>
+  <a href="../chapters/appendix-b.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录B 可直接使用的协作模板</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/appendix-c.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录C 当 LLM 本身进入研究设计</span></a>
+  <a href="../chapters/appendix-c.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录C 当 AI 的回答成为研究数据</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考文献与动态来源说明</span></a>
+  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考来源与教学材料说明</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -246,21 +280,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#从原始数据到正文数字是一条链" id="toc-从原始数据到正文数字是一条链" class="nav-link active" data-scroll-target="#从原始数据到正文数字是一条链">6.1 从原始数据到正文数字是一条链</a></li>
-  <li><a href="#非程序员需要看懂六件事" id="toc-非程序员需要看懂六件事" class="nav-link" data-scroll-target="#非程序员需要看懂六件事">6.2 非程序员需要看懂六件事</a></li>
-  <li><a href="#运行成功与方法有效至少隔着两层" id="toc-运行成功与方法有效至少隔着两层" class="nav-link" data-scroll-target="#运行成功与方法有效至少隔着两层">6.3 “运行成功”与“方法有效”至少隔着两层</a></li>
-  <li><a href="#要求-ai-汇报研究影响而不只汇报代码-diff" id="toc-要求-ai-汇报研究影响而不只汇报代码-diff" class="nav-link" data-scroll-target="#要求-ai-汇报研究影响而不只汇报代码-diff">6.4 要求 AI 汇报“研究影响”，而不只汇报代码 diff</a></li>
-  <li><a href="#ai-可以帮助数据清洗但规则先由研究者确认" id="toc-ai-可以帮助数据清洗但规则先由研究者确认" class="nav-link" data-scroll-target="#ai-可以帮助数据清洗但规则先由研究者确认">6.5 AI 可以帮助数据清洗，但规则先由研究者确认</a></li>
-  <li><a href="#操作演示先做只读审查再决定是否修改" id="toc-操作演示先做只读审查再决定是否修改" class="nav-link" data-scroll-target="#操作演示先做只读审查再决定是否修改">6.6 操作演示：先做只读审查，再决定是否修改</a></li>
+  <li><a href="#写代码之前先说清想比较什么" id="toc-写代码之前先说清想比较什么" class="nav-link active" data-scroll-target="#写代码之前先说清想比较什么">写代码之前，先说清想比较什么</a></li>
+  <li><a href="#先用24行问卷检查-ai-是否理解了计分要求" id="toc-先用24行问卷检查-ai-是否理解了计分要求" class="nav-link" data-scroll-target="#先用24行问卷检查-ai-是否理解了计分要求">先用24行问卷，检查 AI 是否理解了计分要求</a></li>
+  <li><a href="#再问一次换一种有理由的规则结果会怎样" id="toc-再问一次换一种有理由的规则结果会怎样" class="nav-link" data-scroll-target="#再问一次换一种有理由的规则结果会怎样">再问一次：换一种有理由的规则，结果会怎样</a></li>
+  <li><a href="#换成连续多天的数据怎样和-ai-讨论模型" id="toc-换成连续多天的数据怎样和-ai-讨论模型" class="nav-link" data-scroll-target="#换成连续多天的数据怎样和-ai-讨论模型">换成连续多天的数据，怎样和 AI 讨论模型</a></li>
+  <li><a href="#实际运行后三个数各说什么" id="toc-实际运行后三个数各说什么" class="nav-link" data-scroll-target="#实际运行后三个数各说什么">实际运行后，三个数各说什么</a></li>
+  <li><a href="#结果出来以后继续检查什么" id="toc-结果出来以后继续检查什么" class="nav-link" data-scroll-target="#结果出来以后继续检查什么">结果出来以后，继续检查什么</a></li>
+  <li><a href="#让结果表与文字来自同一次计算" id="toc-让结果表与文字来自同一次计算" class="nav-link" data-scroll-target="#让结果表与文字来自同一次计算">让结果表与文字来自同一次计算</a></li>
+  <li><a href="#亲自复现与迁移" id="toc-亲自复现与迁移" class="nav-link" data-scroll-target="#亲自复现与迁移">亲自复现与迁移</a></li>
+  <li><a href="#方法与软件来源" id="toc-方法与软件来源" class="nav-link" data-scroll-target="#方法与软件来源">方法与软件来源</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/How-Tze/psych-ai-research-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>反馈问题</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/02-project.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/07-data-code.html"><span class="chapter-title">第6章 数据、代码与统计分析</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-work-environment.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/07-data-code.html"><span class="chapter-title">第7章 数据分析</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">第6章 数据、代码与统计分析</span></h1>
+<h1 class="title"><span class="chapter-title">用 AI 做数据分析：从研究问题到读懂结果</span></h1>
+<p class="subtitle lead">v1.3 · 2026-10-16</p>
 </div>
 
 
@@ -283,160 +321,213 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>本章问题：当 AI 已经能写和改代码时，研究者至少要看见哪些“研究含义”？</p>
-<p>当代代码代理在获得相应权限后，可以读取代码目录、修改文件并运行命令或测试，获得代码帮助的操作门槛因此降低了。随之而来的问题是：代码能跑，并不代表研究者知道它改了什么。对非程序员来说，更重要的是看见这些改动对样本、变量、测量和模型意味着什么。</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<p><strong>本章问题：怎样借助 AI 完成一项分析，并且知道代码和结果回答了什么问题？</strong></p>
+<p>拿到一份数据后，很容易直接把文件交给 AI：“帮我分析一下。”它也许会很快给出描述统计、回归和几幅图。但如果你还没说清想比较什么，就很难判断这些分析是否有用。</p>
+<p>可以先和 AI 讨论研究问题，请它解释不同分析各自能回答什么；确定之后，再让它写代码、整理输出、帮助你读懂结果。遇到不熟悉的方法时，也可以要求它说明模型如何对应到自己的数据。这样，你在完成分析的同时，有机会补上以前没有理解的环节。</p>
+<p>本章有两个例子。先用24行合成问卷，说明怎样让 AI 按研究要求计分和分析；再用60个合成人各14次记录，演示怎样理解纵向模型。所有结果都来自配套脚本的实际运行。这些数据为教学构造，不能作为压力、反刍或睡眠的经验结论。没有编程经验的读者，也可以先跟着表格和解释理解分析过程。</p>
+<p>这里的“代码”是让计算机完成处理和计算的指令，“脚本”是保存这些指令、可以运行的程序文件。你可以用中文说明要求，请 Qwen Code 等代码助手协助写出和执行程序。把原始数据交给程序，称为提供“输入”；得到新表或图，就是“输出”。相关工具及用法见<a href="../chapters/03-work-environment.html#让-ai-做分析为什么会出现代码">工具章中的分析例子</a>。</p>
+<div id="非程序员需要看懂六件事" class="legacy-anchor" aria-hidden="true">
+
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">注记</span>第一次使用 Code Agent 时，你应该看到什么：
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>1. 它先告诉你当前工作目录里有哪些相关文件，而不是直接开始改；</p>
-<p>2. 它能说明准备读取和修改哪些文件，并把“方法问题”标成需要你决定；</p>
-<p>3. 修改后能给出 diff、运行记录或测试结果，而不是只说“已经修好”；</p>
-<p>4. 优先选择或配置能够限制只读、工作副本或关键动作确认的环境。</p>
-<p>如果当前工具不提供清楚的权限控制，也可以让它只生成候选改动，再由研究者手工应用和运行；关键是不要把不可见的自动修改当成能力升级。</p>
-</div>
-</div>
-<section id="从原始数据到正文数字是一条链" class="level2">
-<h2 class="anchored" data-anchor-id="从原始数据到正文数字是一条链">6.1 从原始数据到正文数字是一条链</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>阶段</strong></th>
-<th><strong>研究者至少需要知道什么</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>原始数据</td>
-<td>来源、导出日期、原件是否只读</td>
-</tr>
-<tr class="even">
-<td>清洗与计分</td>
-<td>纳排、缺失、异常、反向计分、合成规则</td>
-</tr>
-<tr class="odd">
-<td>分析数据</td>
-<td>当前样本和变量版本</td>
-</tr>
-<tr class="even">
-<td>模型规格</td>
-<td>因变量、自变量、交互、协变量、估计方法</td>
-</tr>
-<tr class="odd">
-<td>代码实现</td>
-<td>实际读取了什么、实现了哪份规格</td>
-</tr>
-<tr class="even">
-<td>输出与表图</td>
-<td>由哪个模型/脚本产生</td>
-</tr>
-<tr class="odd">
-<td>正文</td>
-<td>哪些句子和数字引用了这些输出</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="非程序员需要看懂六件事" class="level2">
-<h2 class="anchored" data-anchor-id="非程序员需要看懂六件事">6.2 非程序员需要看懂六件事</h2>
+<section id="写代码之前先说清想比较什么" class="level2">
+<h2 class="anchored" data-anchor-id="写代码之前先说清想比较什么">写代码之前，先说清想比较什么</h2>
+<p>“分析压力与睡眠”可能有不同意思：你想知道压力较高的人是否睡得较差，想知道同一个人压力高于平常的日子有什么变化，还是想预测未来一晚的睡眠？这些问题需要的比较不同，判断分析好坏的依据也不同。第一步就是把自己想知道的那个关系说清楚。方法文献常把需要估计的具体对象称为“估计目标”；你可以先用日常语言说明它，再讨论正式表达。</p>
+<p>例如，本章问卷练习想问：“在能够计算三个指标的记录中，反刍得分相同时，压力得分不同的记录，其睡眠困难得分平均相差多少？”我们将用线性模型描述这项关系。这里的“反刍得分相同”对应模型中的条件比较，不能据此认为已经隔离出压力的因果作用。</p>
+<p>可以这样开始：</p>
 <blockquote class="blockquote">
-<p>1. 输入是什么，哪些文件不得修改；</p>
-<p>2. 样本如何进入、保留或排除；</p>
-<p>3. 原始变量怎样变成分析变量；</p>
-<p>4. 代码实现的是哪一份设计与模型规格；</p>
-<p>5. 生成了哪些表、图和文字输入；</p>
-<p>6. 改动失败或未经确认时回到哪里。</p>
+<p>根据我的研究问题和变量说明，判断我可能想回答哪两种不同问题。请用普通语言说明它们的区别：每一行数据代表什么、要比较谁、现有数据还缺什么。先让我确认要回答的问题，再建议分析步骤。</p>
 </blockquote>
-<p>代码可以交给工具生成，但研究含义要保持可见。方法负责人检查构念、变量和模型，代码审查者检查实现，自动测试检查已经写明的不变量；三者覆盖的问题不同。科研代码审查也强调让实现、假设、测试和研究含义可以被外部检查（Rokem, 2024）。</p>
+<p>讨论清楚后，用半页记下分析约定即可：使用哪个文件，变量是什么意思，怎样计分和处理缺失，哪些记录进入分析，使用什么主模型，以及准备比较哪一种替代做法。让 AI 据此写代码。遇到尚未决定的问题，先让它解释选择会带来什么变化，再由你确定。</p>
+<div id="ai-可以帮助数据清洗但规则先由研究者确认" class="legacy-anchor" aria-hidden="true">
+
+</div>
+<div id="操作演示先做只读审查再决定是否修改" class="legacy-anchor" aria-hidden="true">
+
+</div>
 </section>
-<section id="运行成功与方法有效至少隔着两层" class="level2">
-<h2 class="anchored" data-anchor-id="运行成功与方法有效至少隔着两层">6.3 “运行成功”与“方法有效”至少隔着两层</h2>
+<section id="先用24行问卷检查-ai-是否理解了计分要求" class="level2">
+<h2 class="anchored" data-anchor-id="先用24行问卷检查-ai-是否理解了计分要求">先用24行问卷，检查 AI 是否理解了计分要求</h2>
+<p><a href="../examples/v1.3/survey24.csv">survey24.csv</a> 包含24个合成记录，每个记录有压力、反刍、睡眠困难各三题，题值为1–5。CSV 是用文本保存行列数据的表格文件，Excel 等表格软件也能打开；这里一行是一条记录，一列是一道题或一个标识。这些题目专供练习，没有对应一套已经验证的真实量表。</p>
+<p>本练习采用的规则是：反刍第3题按 <span class="math inline">\(6-x\)</span> 反向；每个三题指标至少有两题有效才计算有效题均值；三项指标都能计分的记录进入模型。真实量表应依据具体计分规范和缺失处理论证，不能把“至少两题”当作通用心理测量规则。</p>
+<p>可以先给 AI 一个容易核对的任务：</p>
+<blockquote class="blockquote">
+<p>请先只处理 S01：列出反刍三题原值、反向后的值和最终均值。暂时不要跑回归。等我确认这行计算后，再按相同规则处理全部记录，并列出哪些记录无法计分及原因。</p>
+</blockquote>
+<p>S01 的反刍三题为2、3、1，反向后的第3题为5，所以均值是 <span class="math inline">\((2+3+5)/3=3.3333\)</span>。若 AI 写成 <span class="math inline">\(5-x\)</span>，反向值会成为4，均值变为3.0000。代码仍可能顺利运行，但计算已经不符合题目的计分要求。这一行手算能帮你发现只看最终回归表看不出的错误。</p>
+<p>再预测样本量。S01–S15 九题完整；S16–S21 各缺一题，仍能形成全部三个指标；S22–S24 分别有某一指标缺两题，无法进入本练习的主模型。因此保留21行。如果在计分前对九题执行“任一缺失即删行”，只会剩15行。</p>
+<p>最后检查模型。确认的公式是：</p>
+<pre class="text"><code>sleep_mean ~ stress_mean + rum_mean</code></pre>
+<p>文件中的 <code>age</code> 仅用于教学，不在确认公式内。加入它会改变条件比较，属于分析选择；即使 AI 说“控制年龄更严谨”，也应先说明为什么要改变目标。年龄列存在并不构成纳入模型的理由。</p>
+<p>如果输出与预期不符，可以逐项追问：“为什么只剩15行？”“反向题用了什么公式？”“年龄为什么进入了模型？”这样更容易查出问题发生在筛选、计分还是分析选择，而不用让 AI 把整个脚本重写一遍。</p>
+<div id="要求-ai-汇报研究影响而不只汇报代码-diff" class="legacy-anchor" aria-hidden="true">
+
+</div>
+</section>
+<section id="再问一次换一种有理由的规则结果会怎样" class="level2">
+<h2 class="anchored" data-anchor-id="再问一次换一种有理由的规则结果会怎样">再问一次：换一种有理由的规则，结果会怎样</h2>
+<p>按要求算对之后，还可以讨论另一项问题：结果是否很依赖我们采用的规则？这就是本例所做的敏感性分析。在运行前，我们约定单独比较一种替代做法：把“每项至少两题有效”换成“三题必须完整”，其余计分与模型不变。这样的比较只考察纳入规则改变的影响，不是多重插补，也不能告诉我们真实数据为什么缺失。</p>
+<p><a href="../examples/v1.3/run_analysis.py">运行脚本</a>得到以下结果，数值保留三位小数。截距与系数均为这份人工数据的普通最小二乘拟合值：</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th><strong>状态</strong></th>
-<th><strong>它只说明什么</strong></th>
+<th>规则</th>
+<th style="text-align: right;">纳入记录数</th>
+<th style="text-align: right;">截距</th>
+<th style="text-align: right;">压力系数</th>
+<th style="text-align: right;">反刍系数</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>运行成功</td>
-<td>代码执行并产生文件</td>
+<td>主规则：每项至少两题</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0.838</td>
+<td style="text-align: right;">0.364</td>
+<td style="text-align: right;">0.343</td>
 </tr>
 <tr class="even">
-<td>测试通过</td>
-<td>被写进测试的条件成立</td>
-</tr>
-<tr class="odd">
-<td>符合规格</td>
-<td>实现没有偏离已确认的样本、变量和模型规则</td>
-</tr>
-<tr class="even">
-<td>方法有效</td>
-<td>这些规则本身适合研究问题、测量与设计</td>
+<td>比较规则：三题均完整</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">−2.387</td>
+<td style="text-align: right;">1.081</td>
+<td style="text-align: right;">0.720</td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">注记</span>案例A：能运行，也可能不该采用
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>24 行合成教学数据中，当前确认规则要求每个三题量表至少两题有效，一题按 `6-x` 反向计分，教学模型固定为 `sleep_mean ~ stress_mean + rum_mean`。候选代码为了“让流程更干净”，改成九题全部完整、把反向计分写成 `5-x`，并加入年龄协变量。脚本运行成功，基础冒烟测试也通过，但规格测试发现样本数由 21 变为 15、哨兵分数错误、模型公式发生变化。研究者拒绝候选，保留确认后的基线。</p>
-</div>
-</div>
+<p>这张表表明，在本例中规则选择会明显改变系数数值。两组系数同为正，不代表结论“稳健到无需讨论”；大小与所代表的纳入对象也在改变。相反，也不能因为第二行的系数更大就采用第二行。你应保留预先说明的主规则，同时报告替代规则改变了什么。</p>
+<p>这里的人工题目有刻意重复的组合，样本也很小，因此表格用于练习计算和报告，不提供总体假设检验。真实研究中，如果缺失与未观察到的结果、参与者状态或测量过程有关，两种完整性规则都未必解决偏差。此时需要依据研究设计进一步分析缺失，而不是让 AI 在“删行”和“填均值”之间随意选一个。</p>
+<p>这时，AI 可以继续帮助你理解差异：列出从21行变成15行时少了哪些记录，说明计分和筛选怎样影响分析，再根据实际表格写一段同时报告两种结果的文字。你需要检查，它有没有把“换一种规则后系数变化明显”写成“某个心理机制得到了证明”。</p>
 </section>
-<section id="要求-ai-汇报研究影响而不只汇报代码-diff" class="level2">
-<h2 class="anchored" data-anchor-id="要求-ai-汇报研究影响而不只汇报代码-diff">6.4 要求 AI 汇报“研究影响”，而不只汇报代码 diff</h2>
+<section id="换成连续多天的数据怎样和-ai-讨论模型" class="level2">
+<h2 class="anchored" data-anchor-id="换成连续多天的数据怎样和-ai-讨论模型">换成连续多天的数据，怎样和 AI 讨论模型</h2>
+<p>假设现在的问题是：“同一个人在压力高于自身平常水平的日子，睡眠困难指标怎样变化？”数据每行是一人一天。你既拥有每个人内部的波动，也拥有人与人的平均差异。</p>
+<p>为了看清这两部分，本例生成60个合成人、每人14天，共840行。压力与睡眠困难是无量纲连续教学指标，不是限制在1–5的问卷分数。数据设为正的个体间关系、负的个体内关系。已知这项设定后，可以检查不同模型是否表达了这两类关系。</p>
+<p>初次阅读时，可以先跳过下面的生成细节，继续看模型怎样对应研究问题。需要复现时，再展开核对。</p>
+<details>
+<summary>
+查看教学数据的生成过程
+</summary>
 <ul>
-<li><p>样本是否改变；</p></li>
-<li><p>变量构造是否改变；</p></li>
-<li><p>测量项目或得分含义是否改变；</p></li>
-<li><p>设计结构是否改变；</p></li>
-<li><p>模型公式和分析地位是否改变；</p></li>
-<li><p>结果、表图和正文是否需要重建；</p></li>
-<li><p>输入、环境和复现顺序是否改变。</p></li>
+<li>每人的平均压力 <span class="math inline">\(\mu_i\)</span> 从均值5、标准差1.5的正态分布生成。</li>
+<li>每人生成14个均值0、标准差1的正态扰动，再减去这14个数自己的均值，得到 <span class="math inline">\(w_{it}\)</span>。</li>
+<li>每人的随机截距 <span class="math inline">\(u_i\)</span> 标准差为0.8；每行误差 <span class="math inline">\(e_{it}\)</span> 标准差为0.7，均为均值0的正态抽取，并按生成设定相互独立。</li>
+<li>压力为 <span class="math inline">\(x_{it}=\mu_i+w_{it}\)</span>；睡眠困难按以下生成式计算：</li>
 </ul>
-<p>正文不要求新手记忆复杂模板。普通研究者首先需要的是一份“代码修改与研究影响记录”：改了什么、为什么改、影响什么、怎样验证、如何重新生成、失败时回到哪里、谁决定是否采用。更完整的进阶模板放在配套控制资源中。</p>
+<p><span class="math display">\[
+\begin{aligned}
+y_{it}={}&amp;6+0.8(\mu_i-5)\\
+         &amp;-0.6w_{it}+u_i+e_{it}.
+\end{aligned}
+\]</span></p>
+<p>种子为20261013，生成器为 NumPy <code>default_rng</code>（PCG64）。只生成一次完整数据，没有按结果筛选种子，没有缺失、时间趋势或序列相关误差。将14个扰动中心化后，它们的和被约束为0，已不再是彼此独立的原始抽取；模型将它们作为给定的预测变量。这是一次模型教学示范，没有进行仿真功效研究。</p>
+</details>
+<p>如果不理解为什么要区分两个层次，可以先完成<a href="../chapters/method-learning.html">方法学习章的六行练习</a>。理解之后，把问题交给 AI：</p>
+<blockquote class="blockquote">
+<p>数据中每个人有14天记录。我想分别了解“某人压力高于自己平常时”和“平均压力不同的人之间”的关系。请解释模型需要哪两个压力变量，用一个人的记录演示计算。再说明，为什么同一个人的14行不能当成14个不同的人。暂时不要加入更复杂的模型。</p>
+</blockquote>
+<p>先计算每人的观测均值 <span class="math inline">\(\bar{x}_i\)</span>，再得到 <span class="math inline">\(x_{it}-\bar{x}_i\)</span>。本例要拟合的模型是：</p>
+<p><span class="math display">\[
+\begin{aligned}
+y_{it}={}&amp;\beta_0+\beta_W(x_{it}-\bar{x}_i)\\
+         &amp;+\beta_B(\bar{x}_i-5)+u_i+e_{it}.
+\end{aligned}
+\]</span></p>
+<p>可以请 AI 逐项对应解释：<span class="math inline">\(\beta_W\)</span> 比较一个人相对自身均值的变化；<span class="math inline">\(\beta_B\)</span> 比较平均压力不同的人；减去5只是为截距选择一个明确参考点。<span class="math inline">\(u_i\)</span> 表示这些预测项尚未解释的个人整体差异，同一个人的14行共享这个部分，所以840行不能视为840个独立的人。<span class="math inline">\(e_{it}\)</span> 则表示每次观测剩余的差异。</p>
+<p>这叫随机截距模型，因为每个人的起点可以不同。本模型仍为所有人设定同一个个体内斜率。如果你想问“哪些人的日内关联更强”，可以继续与 AI 讨论随机斜率、可能解释斜率差异的变量，以及数据能否支持这些参数。增加参数需要研究问题和数据方面的理由。</p>
+<p>个体均值和均值偏离的分解有明确的方法基础；时间趋势、不同测量时点等也可能使简单分解需要扩展。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/">Curran 与 Bauer（2011）</a> 本例故意使用平衡、完整且无系统时间趋势的数据，让你先掌握一个可运行的起点。</p>
 </section>
-<section id="ai-可以帮助数据清洗但规则先由研究者确认" class="level2">
-<h2 class="anchored" data-anchor-id="ai-可以帮助数据清洗但规则先由研究者确认">6.5 AI 可以帮助数据清洗，但规则先由研究者确认</h2>
-<p>AI 很适合扫描变量类型、缺失模式、重复记录、越界值和编码不一致，生成清洗报告与脚本。但“异常”不等于“应删除”，“缺失”也没有统一默认处理。凡是会改变样本、测量和模型的规则，都应先形成可见规格，再让代码执行。</p>
+<section id="实际运行后三个数各说什么" class="level2">
+<h2 class="anchored" data-anchor-id="实际运行后三个数各说什么">实际运行后，三个数各说什么</h2>
+<p>配套脚本使用 statsmodels——Python 中提供统计计算的一套程序——拟合随机截距线性混合模型，采用限制最大似然（REML）。同一脚本还计算把840行直接合并的普通回归，用于比较问题定义。结果如下：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>模型与项</th>
+<th style="text-align: right;">估计值</th>
+<th>模型给出的95%区间</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>直接合并回归：原始压力</td>
+<td style="text-align: right;">+0.441</td>
+<td>本教学表不报告忽略重复结构的常规区间</td>
+</tr>
+<tr class="even">
+<td>随机截距模型：个体内压力偏离</td>
+<td style="text-align: right;">−0.635</td>
+<td>[−0.689, −0.582]</td>
+</tr>
+<tr class="odd">
+<td>随机截距模型：个体间平均压力</td>
+<td style="text-align: right;">+0.757</td>
+<td>[+0.632, +0.881]</td>
+</tr>
+</tbody>
+</table>
+<p>后两行是逐项的渐近正态 Wald 95%置信区间，不是观测值范围、预测区间或贝叶斯可信区间。计算依赖指定模型及其假设，不能因为区间没有包含0就认为设计已经排除了混杂。本次固定效应和区间也有有限样本波动，不会与生成参数 −0.6、+0.8 完全一致。</p>
+<p>个体内系数 −0.635 的读法是：在本模型中，当一个人的压力比其观测期均值高1单位时，预测的睡眠困难平均低约0.635单位。个体间系数 +0.757 则比较平均压力相差1单位的人。直接合并回归的正数同时受到这两类变化的影响，不能拿来回答已限定的个体内问题。</p>
+<p>拿到输出后，不妨让 AI 帮你检查是否读对了系数：</p>
+<blockquote class="blockquote">
+<p>请分别用三句话解释上表的三个系数。每句话都必须说明比较单位。然后给出一个会把个体间结果误写成个体内结论的错误句子，让我修改。不要为这些合成数字编造心理机制。</p>
+</blockquote>
+<p>例如，“压力升高使一个人的睡眠更差”就读错了。这份数据的直接合并系数为正，但它混合了两种比较；要回答同一个人的变化，应看个体内系数−0.635，而且不能把它解释为因果作用。读懂结果，首先要知道自己的问题对应表中的哪一行。</p>
+<div id="运行成功与方法有效至少隔着两层" class="legacy-anchor" aria-hidden="true">
+
+</div>
 </section>
-<section id="操作演示先做只读审查再决定是否修改" class="level2">
-<h2 class="anchored" data-anchor-id="操作演示先做只读审查再决定是否修改">6.6 操作演示：先做只读审查，再决定是否修改</h2>
-<p>遇到报错时，很容易直接让代码代理“帮我修好”。正式项目可以先从只读审查开始：让 AI 说明代码对研究做了什么，再决定是否允许修改。</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<section id="结果出来以后继续检查什么" class="level2">
+<h2 class="anchored" data-anchor-id="结果出来以后继续检查什么">结果出来以后，继续检查什么</h2>
+<p>本例模型收敛，没有运行警告；估计的随机截距方差为0.620，残差方差为0.500。条件残差是观测值减去包含估计个体截距的拟合值，其均方根为0.682；相邻日条件残差合并计算的相关为−0.049。这些都是描述性诊断量，并非预设的“通过阈值”。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../examples/v1.3/figures/diary-diagnostics.png" class="img-fluid figure-img" alt="左图显示840个观测的条件残差与条件拟合值，水平参考线为零；右图将同一批残差的排序值与标准正态理论分位数比较。图用于观察曲线、扇形和尾部偏离，不给出自动通过结论。"></p>
+<figcaption>随机截距教学模型的诊断图：条件残差对条件拟合值的散点，以及条件残差的正态分位数图。所有840行均保留，没有删去极端点。</figcaption>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">注记</span>示例任务：
+<p>看图时先提出具体问题：残差是否随拟合值出现弯曲，提示线性均值结构不足？散布是否随水平改变，提示方差设定需要检查？尾部是否受少数记录影响？时间邻近的记录是否仍有结构？单个总体相关接近0，不能排除不同参与者或不同时段存在不同模式。正态分位数图也只是诊断线索，特别是条件残差经过模型估计，并不等同于直接观察到独立误差。</p>
+<p>真实项目还需要检查：记录数是否严重不均，观测时间是否真的等间隔；缺失是否与昨天的压力或睡眠有关；指标的分布与取值范围是否适合线性模型；固定斜率是否掩盖有科学意义的个体差异；个体均值是否因观察天数少而测得很不稳定。模型收敛只说明数值算法达到其判据，这些问题仍然存在。</p>
+<p>可以把诊断图和必要的数值一起交给 AI，要求它具体说明下一步：</p>
+<blockquote class="blockquote">
+<p>请描述图中实际可见的模式，并把“看见了什么”和“可能是什么原因”分开。对需要检查的问题，提出一个我现在能做的核查步骤。仅凭图无法判断的地方，请说明还需要什么数据。</p>
+</blockquote>
+<p>例如，发现明显时间趋势时，先检查时间变量与理论预期，再讨论怎样把趋势放进模型；发现缺失集中在高负担日时，先整理缺失模式和测量流程。不要把每个异常都处理成删除数据，也不要遍历大量模型，只为找到喜欢的系数。</p>
+<div id="从原始数据到正文数字是一条链" class="legacy-anchor" aria-hidden="true">
+
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>目标：比较当前 analysis.R 与我提供的分析规格，先做只读审查。</p>
-<p>允许读取：脚本、变量字典、分析规格和输出目录清单。</p>
-<p>请报告：①读取和写入哪些文件；②样本筛选规则；③变量与反向计分规则；④模型公式；⑤生成哪些输出；⑥任何与规格不一致或无法确认的地方。</p>
-<p>禁止：不要修改文件、删除数据、安装或升级依赖、改变样本规则或模型。若信息不足，停在“未知”。</p>
-</div>
-</div>
-<p>如果审查发现脚本要求九题全部完整，而规格写的是“每个三题量表至少两题有效”；或者反向计分写成 5-x、模型又额外加入年龄，第一步应先列出偏差清单，再决定是否修代码。</p>
-<p>只有研究者确认哪些属于实现错误、哪些需要另立方法决定后，才进入第二步：在副本或有限写入范围内生成候选补丁，再运行测试并比较样本、变量、模型和下游输出。这个顺序体现了运行框架的作用：同一个模型先处在只读环境，再按任务证据逐步增加权限。</p>
-<p>本章应用：做一次代码影响审计</p>
-<p>让 AI 对一个当前分析脚本做“代码影响审计”，只回答样本、变量、测量、模型、输出和复现六个问题，先不修改代码。如果你仅根据这份报告就能说明脚本对研究做了什么，代码代理才具备进入正式项目所需的基本可见性。</p>
+</section>
+<section id="让结果表与文字来自同一次计算" class="level2">
+<h2 class="anchored" data-anchor-id="让结果表与文字来自同一次计算">让结果表与文字来自同一次计算</h2>
+<p>配套脚本保存了计分数据、两种规则的比较表、纵向数据、模型系数、诊断用数据和软件环境。问卷回归还用直接线性代数复核；在本例平衡随机截距结构下，个体内系数也用去均值后的斜率独立核对。这样，读者可以沿着具体计算检查结果。</p>
+<p>你可以用真实输出写出如下段落：</p>
+<blockquote class="blockquote">
+<p>在60个合成人各14次记录的教学数据中，直接合并回归的压力系数为0.441。将观测期个人均值与个人均值偏离同时纳入随机截距模型后，个体内系数为−0.635，95%渐近Wald区间为[−0.689, −0.582]；个体间系数为0.757，区间为[0.632, 0.881]。该数据按预先指定的正个体间、负个体内关系构造，结果用于展示估计目标的区别，不是经验机制或因果结论。</p>
+</blockquote>
+<p>当计分规则或输入改变时，重新运行脚本，先更新表，再更新段落中的对应值。AI 可以查找哪些句子引用旧数字，并提出修改；确认时应回到新表，而不是凭聊天记忆重写一遍。科学代码审查也应兼顾程序与学科含义，Rokem（2024）的原文提供了相关实践建议。<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375">原文</a></p>
+<p>工作结束时，把采用的规格、实际输入与结果位置一起保留，明确哪些比较已经完成、哪些仍只是计划。<a href="../examples/v1.3/workflow/README.md">两轮报告例子</a>继续使用本章问卷结果，展示怎样从已有表生成不同阶段的数字稿。<a href="../chapters/02-project.html">项目连续性章</a>进一步说明，变化怎样传递到正文与下一次工作。</p>
+</section>
+<section id="亲自复现与迁移" class="level2">
+<h2 class="anchored" data-anchor-id="亲自复现与迁移">亲自复现与迁移</h2>
+<p>配套材料的<a href="../examples/v1.3/analysis-worked-example.md">运行说明</a>列出依赖、命令、数据生成过程和全部参考文件。你可以先读表和手算，不必先配置环境；希望练习文件操作时，动态指南的<a href="https://How-Tze.github.io/psych-ai-start-guide/chapters/data-analysis.html">数据处理教程</a>和<a href="https://How-Tze.github.io/psych-ai-start-guide/chapters/10-code-agent.html">代码代理起步</a>提供入口。</p>
+<p>最后完成三个判断：</p>
+<ol type="1">
+<li>主模型压力系数0.364，完整题比较为1.081。能否因为后者更大就改成主规则？不能。要解释规则的科学理由与改变的纳入集合，并保留约定比较，而不是用结果决定规则。</li>
+<li>纵向数据有840行，能否说招募了840人？不能。独立的参与者只有60个；不同参数依赖的有效信息也不等于一个简单的总行数。</li>
+<li>你的真实研究只收集一次问卷，能否仿照代码生成“个人均值偏离”来检验日内过程？不能。每人只有一行时，观测值等于个人观测均值，偏离全部为0；缺少的时间信息无法由模型补造。</li>
+</ol>
+<p>回到自己的项目时，先试着向同事解释：我想比较什么，为什么使用这份数据和这个模型，输出中的哪个数回答了问题，换一种有理由的做法后结果怎样变化。说不清的地方，就是下一次可以与 AI 继续讨论、再查阅方法文献的具体问题。<a href="../chapters/08-writing.html">写作章</a>会接着说明，怎样把已经核对的表格写成读者能理解的段落。</p>
+<p>若你的材料主要是访谈或开放回答，可以转到<a href="../chapters/qualitative-research.html">质性研究章</a>，跟着原话、不同解释和分析笔记继续练习。数值结果与资料处理的检查，则在<a href="../chapters/11-safety-recovery.html">核验、隐私与恢复章</a>展开。</p>
+</section>
+<section id="方法与软件来源" class="level2">
+<h2 class="anchored" data-anchor-id="方法与软件来源">方法与软件来源</h2>
+<p>Curran, P. J., &amp; Bauer, D. J. (2011). <em>The disaggregation of within-person and between-person effects in longitudinal models of change</em>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/">原文</a>。</p>
+<p>Rokem, A. (2024). <em>Ten simple rules for scientific code review</em>. PLOS Computational Biology, 20(9), e1012375. <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375">原文</a>。</p>
+<p>statsmodels. <em>Linear mixed effects models</em>. <a href="https://www.statsmodels.org/stable/mixed_linear.html">官方说明</a>，2026-10-13核对；本次实际运行版本为0.15.0。配套记录保存软件版本，结果以运行值为准。</p>
 
 
 </section>
@@ -849,13 +940,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/06-design.html" class="pagination-link" aria-label="第5章 研究问题、设计与材料">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第5章 研究问题、设计与材料</span></span>
+      <a href="../chapters/06-design.html" class="pagination-link" aria-label="第6章 研究设计">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第6章 研究设计</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/08-writing.html" class="pagination-link" aria-label="第7章 写作、修订与投稿">
-        <span class="nav-page-text"><span class="chapter-title">第7章 写作、修订与投稿</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/08-writing.html" class="pagination-link" aria-label="第8章 学术写作与修订">
+        <span class="nav-page-text"><span class="chapter-title">第8章 学术写作与修订</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -863,7 +954,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Hao Xie</p>
+<p>© 2026 Hao Xie · v1.3</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

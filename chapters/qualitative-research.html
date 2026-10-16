@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hao Xie">
+
+<title>质性研究：借助 AI 细读材料、比较解释 – 心理学研究的 AI 进阶手册</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/11-safety-recovery.html" rel="next">
+<link href="../chapters/10-automation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5630e6732664d48c7cde3b526013eeb9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-work-environment.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/qualitative-research.html"><span class="chapter-title">第11章 质性研究</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">心理学研究的 AI 进阶手册</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/How-Tze/psych-ai-research-handbook" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">首页与下载</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">导读：AI 还能怎样帮你做研究？</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">主体</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-work-environment.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 从聊天开始，认识 AI 工具</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-quick-start.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 第一次完整任务</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/method-learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 用 AI 学习研究方法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-literature.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 文献探索</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/theory-development.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 用 AI 推进理论思考</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 研究设计</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-data-code.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 数据分析</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-writing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第8章 学术写作与修订</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-project.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第9章 让研究继续下去</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-automation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章 重复工作与 Agent</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/qualitative-research.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第11章 质性研究</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-safety-recovery.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章 核验、隐私与恢复</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-conclusion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">结语</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">附录与来源</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendix-a.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录A 练习与材料下载</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendix-b.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录B 可直接使用的协作模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendix-c.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">附录C 当 AI 的回答成为研究数据</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考来源与教学材料说明</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ai-collaboration.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">AI 协作说明</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#先把材料和问题放在一起" id="toc-先把材料和问题放在一起" class="nav-link active" data-scroll-target="#先把材料和问题放在一起">先把材料和问题放在一起</a></li>
+  <li><a href="#告诉-ai你准备怎样理解这些话" id="toc-告诉-ai你准备怎样理解这些话" class="nav-link" data-scroll-target="#告诉-ai你准备怎样理解这些话">告诉 AI，你准备怎样理解这些话</a></li>
+  <li><a href="#让-ai-展开不同读法并追问各自的依据" id="toc-让-ai-展开不同读法并追问各自的依据" class="nav-link" data-scroll-target="#让-ai-展开不同读法并追问各自的依据">让 AI 展开不同读法，并追问各自的依据</a></li>
+  <li><a href="#用不顺手的片段修改解释" id="toc-用不顺手的片段修改解释" class="nav-link" data-scroll-target="#用不顺手的片段修改解释">用不顺手的片段修改解释</a></li>
+  <li><a href="#从一组标签走到一段有中心的分析" id="toc-从一组标签走到一段有中心的分析" class="nav-link" data-scroll-target="#从一组标签走到一段有中心的分析">从一组标签，走到一段有中心的分析</a></li>
+  <li><a href="#如果任务是按已有规则整理材料" id="toc-如果任务是按已有规则整理材料" class="nav-link" data-scroll-target="#如果任务是按已有规则整理材料">如果任务是按已有规则整理材料</a></li>
+  <li><a href="#材料变多以后怎样继续这项工作" id="toc-材料变多以后怎样继续这项工作" class="nav-link" data-scroll-target="#材料变多以后怎样继续这项工作">材料变多以后，怎样继续这项工作</a></li>
+  <li><a href="#练习把一个过强的解释改好" id="toc-练习把一个过强的解释改好" class="nav-link" data-scroll-target="#练习把一个过强的解释改好">练习：把一个过强的解释改好</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/How-Tze/psych-ai-research-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>反馈问题</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-work-environment.html">主体</a></li><li class="breadcrumb-item"><a href="../chapters/qualitative-research.html"><span class="chapter-title">第11章 质性研究</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">质性研究：借助 AI 细读材料、比较解释</span></h1>
+<p class="subtitle lead">v1.3 · 2026-10-16</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hao Xie </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>读完几份访谈，你可能已经有了印象，却说不清这些印象怎样连起来。让 AI “归纳五个主题”，很容易得到“学习压力、社会支持、自我管理”这样的答案。标题看起来齐全，回到原话却仍然不知道：这位受访者为什么一会儿关掉群聊，一会儿又重新打开？找同学讨论，对不同人意味着同一件事吗？</p>
+<p>AI 在这里能帮你做的，是把原本不容易并排看的材料放在一起，尝试不同的读法，找出一个解释遗漏的细节，再协助整理成可以讨论的文字。你可以从熟悉的千问、DeepSeek 或其他聊天应用开始，用下面的虚构材料练习。随着讨论深入，留下来的应当有原话、你的解释，以及改变想法的理由。</p>
+<section id="先把材料和问题放在一起" class="level2">
+<h2 class="anchored" data-anchor-id="先把材料和问题放在一起">先把材料和问题放在一起</h2>
+<p>本章使用<a href="../examples/v1.3/synthetic-interviews.csv">六段虚构访谈</a>，来自两位虚构受访者，每人三段。它们用于练习阅读和解释，不构成一项完整的访谈研究。本章的问答与分析均为教学编写。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>编号 / 受访者</th>
+<th>原话</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q01 / P1</td>
+<td>截止前我会关掉群聊，否则总觉得别人比我快。</td>
+</tr>
+<tr class="even">
+<td>Q02 / P1</td>
+<td>安静下来也会担心错过消息，有时又重新打开。</td>
+</tr>
+<tr class="odd">
+<td>Q03 / P1</td>
+<td>和熟悉的同学分工后，我倒不太在意进度排名了。</td>
+</tr>
+<tr class="even">
+<td>Q04 / P2</td>
+<td>我经常问同学作业怎么做，主要想确认大家理解的是同一个任务。</td>
+</tr>
+<tr class="odd">
+<td>Q05 / P2</td>
+<td>别人说我依赖讨论，但独自写的时候我也能推进。</td>
+</tr>
+<tr class="even">
+<td>Q06 / P2</td>
+<td>如果截止时间清楚，我会先试一版再去讨论。</td>
+</tr>
+</tbody>
+</table>
+<p>先自己读一遍，再写下一个想追究的问题：“面对学习任务，这两个人怎样安排与同伴的联系，又怎样解释自己的做法？”这个问法让注意力落在具体行动及其意义上。若直接问“社会支持如何降低学习压力”，就已经把同伴联系解释成支持，也预设了它的作用。</p>
+<p>可以把自己的初步理解一起给 AI：</p>
+<blockquote class="blockquote">
+<p>我想理解两位受访者如何安排独自学习和同伴交流。我先注意到，P1既想远离进度比较，又担心错过消息；P2强调讨论有具体用途，也说自己能独立推进。请按受访者分别整理这些变化，引用片段编号。把明确说出的内容和你提出的解释分开，指出还缺什么上下文。</p>
+</blockquote>
+<p>先把每个人的说法整理清楚，后续讨论再按编号回到原文。P1的三段要放在一起看，P2也一样。若把六句话拆散，按关键词分进六个格子，P1在“关掉”和“打开”之间的摇摆就很容易消失。</p>
+<p>真实材料还需要保留提问、前后回答和必要的访谈情境。若使用语音转写，先校对说话者、否定词及影响解释的停顿或语气；转写所需细致程度取决于研究问题。可以让工具标出听不清的位置，再回听录音。<strong>拟上传真实访谈前，先完成<a href="../chapters/11-safety-recovery.html#privacy">下一章的材料与环境检查</a></strong>，包括同意范围、机构要求和可识别信息。</p>
+</section>
+<section id="告诉-ai你准备怎样理解这些话" class="level2">
+<h2 class="anchored" data-anchor-id="告诉-ai你准备怎样理解这些话">告诉 AI，你准备怎样理解这些话</h2>
+<p>“编码”在质性分析中，是给一段有意义的材料加上便于思考和比较的标签，例如给Q01记下“暂时避开进度比较”。这里的编码与编写计算机程序是两回事。标签怎样形成、是否需要统一使用，要跟研究问题和所采用的分析方法一致。</p>
+<p>本章先沿<strong>反思性主题分析</strong>的思路练习：把分析者的理解也纳入考察，逐步发展能解释材料的主题。我们关注两人怎样叙述学习经历，承认这些叙述受到提问情境和表达方式的影响；阅读时也会带入自己对“独立学习”和“求助”的看法。Braun与Clarke强调，分析方法、研究者立场和质量判断应当相互一致，主题需要通过解释工作发展出来。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9879167/">原始方法讨论见Braun与Clarke（2023）</a>。</p>
+<p>开始讨论前，可以加一句普通的话：“请把这些话当作两人在特定情境下对自身学习的讲述；先贴近他们怎样描述，再讨论可能的含义。我的初步解释也可以修改。”这样比只指定“你是一位质性研究专家”更能说明本次工作要怎样进行。</p>
+<p>后面还会介绍另一种常见需要：团队已经有一套分类说明，希望 AI 帮忙定位相关片段。两种工作都可能用到表格，但判断做得好不好的依据有所不同。</p>
+</section>
+<section id="让-ai-展开不同读法并追问各自的依据" class="level2">
+<h2 class="anchored" data-anchor-id="让-ai-展开不同读法并追问各自的依据">让 AI 展开不同读法，并追问各自的依据</h2>
+<p>假设 AI 将P1概括为“回避社交”，将P2概括为“依赖同伴”。先回到它引用了什么。Q01说的是关闭群聊以避开进度比较，Q03却出现了主动分工；Q04说的是核对任务理解，Q05又明确提到独自推进。两个标签都把局部行动写成了稳定的人格特点。</p>
+<p>可以继续问：</p>
+<blockquote class="blockquote">
+<p>“回避社交”和“依赖同伴”分别跨过了哪些原话没有支持的推断？请围绕Q01—Q03提出两种有差别的读法，分别列出依据、难以解释的细节，以及还需要了解什么。解释可以有交集，不必勉强二选一。</p>
+</blockquote>
+<p>例如，第一种读法是：P1在调节进度比较带来的不适。Q01的“别人比我快”和Q03的“不太在意进度排名”支持这种关注；Q02则提醒我们，关掉群聊还有代价。第二种读法是：P1在试着掌握与同伴联系的时机和方式。关闭、重新打开、与熟悉同学分工，都可以放进这一思路；不过，材料并没有直接说“我要自主掌控”，这仍是分析者提出的解释。</p>
+<p>两种读法可以共同帮助理解P1。下一步要看，它们分别让你多看见了什么。第一种使进度比较变得突出；第二种让你追问，群聊与熟人分工为何可能带来不同体验。可以暂时保留两种读法，返回更多材料，而不急着选一个最好听的主题名称。</p>
+<p>对P2也做类似讨论。“确认大家理解的是同一个任务”提示了一种具体用途：讨论可以帮助核对任务要求。“独自写的时候我也能推进”又可能是在回应他人对“依赖”的评价。后者值得继续研究，但仅凭Q05，还不知道是谁评价、在什么场合说、P2怎样看待这句话。把这些缺口写出来，会使下一步阅读更有方向。</p>
+</section>
+<section id="用不顺手的片段修改解释" class="level2">
+<h2 class="anchored" data-anchor-id="用不顺手的片段修改解释">用不顺手的片段修改解释</h2>
+<p>假设你准备采用“远离同伴才能恢复掌控”这个解释。可以请 AI 专门检查它遇到了什么困难：</p>
+<blockquote class="blockquote">
+<p>请用全部六段材料检查这个解释。找出它难以容纳的地方，说明需要收窄、改写，还是暂时放下。不要只把相反片段解释成例外。</p>
+</blockquote>
+<p>Q03首先构成挑战：P1提到的是与熟悉同学分工后，对排名没那么在意。Q06也让“远离同伴”的说法显得过强：P2先试一版，随后仍会讨论。这两段推动我们把问题从“独处还是交流”改成“以什么方式、在什么时候交流”。</p>
+<p>这时可以写下一段分析笔记。它记录的是你为何改变判断，通常几句话就有用：</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">注记</span>一段分析笔记示范
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>我最初把关闭群聊读成了自主，把找同学读成依赖，这与我习惯把独立完成看得更积极有关。重新看Q03和Q06后，这种划分解释不了他们的全部说法：分工也可能使P1较少关注排名，先试做与讨论也可以相接。我改为关注两人怎样选择交流方式、安排交流时机。接下来还要看这种解释能否说明Q02中“担心错过”的顾虑，避免只挑主动安排的句子。</p>
+</div>
+</div>
+<p>AI 可以对照这段笔记查找遗漏、提出另一种读法。涉及你自己的经验和立场时，由你补充；让模型替你写“我作为某类研究者的经历”，会留下一个并非你真实经历的反思说明。</p>
+<p>如果新材料使一个解释越来越勉强，就回到片段和问题重新整理。保留被放弃的解释及一两句理由，下一次就能看见自己为何走到这里。</p>
+</section>
+<section id="从一组标签走到一段有中心的分析" class="level2">
+<h2 class="anchored" data-anchor-id="从一组标签走到一段有中心的分析">从一组标签，走到一段有中心的分析</h2>
+<p>“进度比较”“担心错过”“分工”“确认要求”目前只是一些阅读标签。把它们排成列表，还没有回答两人怎样安排同伴联系。可以请 AI 提议几种组织方式，并要求每一种都用一句话说明中心意思。</p>
+<p>例如，暂拟“让交流配合自己的学习节奏”：它试图连接P1对群聊和分工的不同体验，以及P2对先试做、再讨论的安排。随后要检验，这个表述是否过度强调了主动掌控。Q02中的担心提醒我们，交流也会牵动注意力，人未必总能按预想安排。</p>
+<p>可以先把中心意思写成：“想借助同伴，又要顾好自己的学习节奏。”这是一个暂定的解释，继续阅读完整材料后，可能需要拆开、收窄或放弃。两位受访者也不必在每一部分都相同：进度比较在P1的话里更明确，核对任务理解则在P2的话里更突出。反思性主题分析关注这种有中心意思的解释；给资料中的每种话题各取一个标题，会停留在较浅的归类层面。<a href="https://www.thematicanalysis.net/faqs/">有关主题与话题摘要的区别，见作者的方法问答</a>。</p>
+<p>把原话和分析分开摆放后，可以让 AI 帮你组织段落：</p>
+<blockquote class="blockquote">
+<p>请按“分析判断—具体原话—进一步解释”的顺序起草一段。保留P1和P2的差别，写出Q02带来的牵制。引号内只能使用材料原文；没有直接说出的含义，用“可以理解为”等方式表明这是解释。</p>
+</blockquote>
+<p>下面是一个供比较的教学段落：</p>
+<blockquote class="blockquote">
+<p>这两组讲述使我们把同伴联系理解为一种需要不断安排的学习活动。P1关掉群聊，是因为“否则总觉得别人比我快”（Q01），随后又会因担心错过消息而重新打开（Q02）。联系在这里既牵动注意，也难以轻易放下。与熟悉同学分工后，P1又说自己“不太在意进度排名了”（Q03），提示交流方式的改变可能具有不同意义。P2则把讨论说成核对任务理解的办法（Q04），并描述了先试一版、再去讨论的安排（Q06）。将这些片段放在一起，值得继续追问的是：人们如何使同伴联系帮助自己推进，又怎样应对它带来的牵制。</p>
+</blockquote>
+<p>这段文字给出了一个可以继续追问的解释。要把它发展成真实研究中的主题，需要回到完整材料，检查它与研究问题的关系、能容纳哪些差异、又遗漏了什么。引文也要回查原话；语言润色只能修改分析文字，不能把受访者的话改得更顺口后继续放在引号中。</p>
+</section>
+<section id="如果任务是按已有规则整理材料" class="level2">
+<h2 class="anchored" data-anchor-id="如果任务是按已有规则整理材料">如果任务是按已有规则整理材料</h2>
+<p>有些项目需要团队围绕明确问题整理许多访谈，例如找出受访者谈到任务要求、时间安排和求助的地方。团队可以先写<strong>代码本</strong>：每个标签是什么意思，哪些片段纳入，哪些不纳入，遇到模糊情况怎样记录。AI 据此做候选定位，研究者再处理遗漏和边界。</p>
+<p>以下只练习其中一项有清楚边界的整理任务：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>标签</th>
+<th>本次定位规则</th>
+<th>六段材料中的处理</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>核对任务理解</td>
+<td>明确提到与他人确认任务要求或理解</td>
+<td>Q04纳入；Q03的分工本身不够</td>
+</tr>
+<tr class="even">
+<td>谈及截止时间</td>
+<td>直接谈到截止时间或临近截止</td>
+<td>Q01、Q06纳入；Q02的“错过消息”不据此推定与截止有关</td>
+</tr>
+<tr class="odd">
+<td>独自推进</td>
+<td>明确说自己能独立推进，或先自行试做</td>
+<td>Q05、Q06纳入；Q01关掉群聊不直接说明已推进任务</td>
+</tr>
+</tbody>
+</table>
+<p>可以这样交代：“按这份定义逐段检查，保留原话与编号；一段可有多个标签。另外列出未纳入的片段及模糊处，方便我检查漏项。”Q02在这三项下没有被纳入，但仍是前面解释中很有价值的材料。分类未命中与研究上没有意义，是两种不同判断。</p>
+<p>先用少量材料试做，尤其留意看起来接近却不符合定义的片段。若团队修改了“独自推进”的含义，就请 AI 列出旧标签可能受影响的位置，再按新说明重新检查。Gale等介绍的框架法提供了一条进一步学习的路径：把个案和分类放在同一张矩阵中，借此比较同一人的不同说法与不同人的共同问题。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3848812/">原文及步骤见Gale等（2013）</a>。</p>
+<p><strong>使用代码本，并不自动意味着要计算编码一致率。</strong> 某些以编码可靠性为目标的方法，会考察不同编码者能否按共同规则一致判断；代码本式方法的目的和程序也有差异。前面采用的反思性主题分析，则通过反思和讨论深化解释，不把“大家给出同一标签”当成找到唯一正确答案。两次 AI 输出相同，可以作为检查输出重复性的线索，不能代替这些方法各自需要的质量判断。<a href="https://www.thematicanalysis.net/understanding-ta/">不同主题分析取向见作者说明</a>。</p>
+<p>如果准备把 AI 给出的标签计数，或用于后续统计比较，就需要另行评估分类表现。<a href="../chapters/appendix-c.html">附录 C</a>仍用这六段话，说明误报、漏报和计数单位怎样影响结果。</p>
+</section>
+<section id="材料变多以后怎样继续这项工作" class="level2">
+<h2 class="anchored" data-anchor-id="材料变多以后怎样继续这项工作">材料变多以后，怎样继续这项工作</h2>
+<p>从六段走向多份长访谈时，先给每份材料和段落稳定编号，保留受访者的连续讲述。可以逐份阅读，让 AI 协助整理当前这份材料的关注点，再做跨个案比较。如果一次只能处理一部分，就记录处理到了哪里；涉及解释的关键片段仍需打开上下文，不能让不断压缩的摘要成为唯一材料。</p>
+<p>回顾工作时，可以沿这条线检查有没有缺环：<strong>研究问题 → 原文与阅读笔记 → 不同解释 → 反例和修改理由 → 分析段落 → 下一步资料需求。</strong> 在<a href="../examples/v1.3/qualitative-reading-sheet.md">配套阅读记录</a>中，这些内容已经按本例填好，供你对照或改写。</p>
+<p>例如，读到Q03后，下一步可以追问：“能否讲一次与熟悉同学分工的具体经历？当时怎样安排，后来发生了什么？”围绕Q02，可以问：“你重新打开群聊后看到了什么，又怎样继续学习？”这样的提问能邀请更具体的叙述。让 AI 试拟几个问法，再检查有没有把“焦虑降低”“自主增强”等预期答案放进问题里。</p>
+<p>若研究仍在收集资料，这些疑问可以帮助调整后续访谈，按研究方案和伦理要求实施；若收集已经结束，就将材料的空缺写进分析范围。AI 模拟的回答可以用于练习访谈问法，不能填入真实资料空白。</p>
+<p>最后，记录 AI 实际参与过哪些工作：整理了哪些材料，提出过什么解释，你采用、修改或放弃了哪些建议。写方法说明时据此描述真实过程，也更方便同事理解分析是怎样形成的。整理文件与交接可接着看<a href="../chapters/02-project.html">项目连续性章</a>，从证据组织段落可回看<a href="../chapters/08-writing.html">写作章</a>。</p>
+</section>
+<section id="练习把一个过强的解释改好" class="level2">
+<h2 class="anchored" data-anchor-id="练习把一个过强的解释改好">练习：把一个过强的解释改好</h2>
+<p>先不看配套阅读记录，检查这句话：“两位受访者都因缺乏自信而依赖同伴，群聊使他们无法独立学习。”请选出支持、冲突或根本没有涉及这一判断的片段，写出自己的修改版本，再让 AI 检查你是否漏读了哪一句。</p>
+<p>完成时，留下原判断、修改后的段落和修改理由。关键不是你是否得到本章同样的标题，而是能否指明：哪些意思来自原话，哪些是你的解释，什么材料使你改变了看法，以及下一步还想理解什么。</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/How-Tze\.github\.io\/psych-ai-research-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/10-automation.html" class="pagination-link" aria-label="第10章 重复工作与 Agent">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第10章 重复工作与 Agent</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/11-safety-recovery.html" class="pagination-link" aria-label="第12章 核验、隐私与恢复">
+        <span class="nav-page-text"><span class="chapter-title">第12章 核验、隐私与恢复</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Hao Xie · v1.3</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/How-Tze/psych-ai-research-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>反馈问题</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

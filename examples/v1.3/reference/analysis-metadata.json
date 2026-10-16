@@ -1,0 +1,41 @@
+{
+  "purpose": "Synthetic worked example; one realization, not a power simulation or empirical finding",
+  "seed": 20261013,
+  "generator": "numpy default_rng / PCG64",
+  "generation": {
+    "people": 60,
+    "days": 14,
+    "person_mean_mean": 5,
+    "person_mean_sd": 1.5,
+    "intercept": 6,
+    "between_slope": 0.8,
+    "within_slope": -0.6,
+    "random_intercept_sd": 0.8,
+    "error_sd": 0.7,
+    "within_raw_sd": 1,
+    "within_centered_per_person": true,
+    "missing": false,
+    "time_trend": false,
+    "serially_correlated_errors": false
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0"
+  },
+  "diary_model": {
+    "n_observations": 840,
+    "n_people": 60,
+    "days_each": 14,
+    "converged": true,
+    "random_intercept_variance": 0.6200574113724863,
+    "residual_variance": 0.4999232267568023,
+    "conditional_rmse": 0.6822752658075425,
+    "pooled_lag1_residual_correlation": -0.04878156139078221,
+    "warnings": [],
+    "interval_method": "pointwise asymptotic normal 95% Wald intervals",
+    "estimation": "REML, random intercept, common within-person slope"
+  }
+}
