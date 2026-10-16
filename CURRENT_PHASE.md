@@ -1,8 +1,8 @@
 # Current phase
 
 - Phase: v1.3 capability chapter authoring
-- Status: REVIEW — TASK-010 whole-candidate prose and product-example revision complete
-- Approval: 2026-10-13 — candidate and v1.3 writing direction; 2026-10-14 — Chinese revision and literature/design priority; 2026-10-16 — continue complete chapter writing, prioritizing the workflow spine and opening sequence.
+- Status: REVIEW — TASK-011 qualitative and verification/privacy/recovery candidates complete
+- Approval: 2026-10-13 — candidate and v1.3 writing direction; 2026-10-14 — Chinese revision and literature/design priority; 2026-10-16 — complete workflow/opening, revise entry and prose, then prioritize qualitative research and verification/privacy/recovery.
 - Target: future v1.3; published edition remains v1.2.
 - Branch: docs/v1.3-authoring-preparation.
 
@@ -18,9 +18,11 @@ TASK-003/004 preparation is accepted. TASK-005 delivered the first three complet
 
 2026-10-16 further feedback: TASK-010 removes editorial self-defence and repeated disclaimers across all eleven candidates using Humanizer-zh; diversify examples and give Qwen/千问 and DeepSeek equal editorial consideration. Doubao was an example of reader experience, not the default brand for the book. Preserve scientific qualifications, detailed teaching and original calculations; verify new product facts against official sources.
 
+2026-10-16 next authorization: TASK-011 completes qualitative research and verification/privacy/recovery as full chapters, keeping detailed examples and connected AI workflows. The qualitative candidate is chapter 11 and the safety candidate follows as chapter 12; published paths and numbering stay unchanged. Use the existing six fictional excerpts and report script; distinguish methodological interpretation from rule-based retrieval and actually demonstrate report recovery.
+
 ## Deliverables and acceptance
 
-Eleven complete candidates under drafts/v1.3/: a reading guide and chapters 1–10. TASK-008 completed the workflow spine, opening and two actual report-generation examples. TASK-009 established a concrete beginner entry. TASK-010 reads and polishes all eleven candidates, removes editorial self-defence and redundant disclaimers, and distributes task examples across domestic and international products. Chapter 1 introduces QwenWork/千问办公, Qwen Code and DeepSeek Harness with dated official sources; it identifies the latter as a preview. Detailed teaching, numerical tables, equations, figures and all teaching files remain. Prices, onboarding and volatile account details stay in the separate guide.
+Thirteen complete candidates under drafts/v1.3/: a reading guide and chapters 1–12. TASK-011 adds qualitative research from excerpts through competing readings, a reflexive memo and a paragraph; a separate rule-based exercise distinguishes codebook use from coding-reliability goals. Verification/privacy/recovery connects checks to actual tasks, explains material handling and demonstrates a valid-format wrong input followed by report restoration. New reading notes and a repeatable recovery exercise accompany the prose. TASK-008 through010 established the workflow spine, beginner entry, natural expression and balanced product examples; those requirements continue. Prices, onboarding and volatile account details stay in the separate guide.
 
 ## Dependencies and constraints
 
@@ -28,7 +30,7 @@ Use the approved teaching materials and briefs. Keep chapters/, release/, index.
 
 ## Gates, escalation and exit
 
-TASK-005 through TASK-010 are in REVIEW. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. Remaining writing includes qualitative teaching, verification/privacy/recovery, conclusion, appendices and source/collaboration notes, followed by whole-book editing. Apply the beginner-entry, direct-prose and balanced-example requirements to that work. Escalate scope/version changes or unresolved source conflicts; solve routine editorial and computational questions within the approved briefs.
+TASK-005 through TASK-011 are in REVIEW. Human Authoring Gate approves exact prose before mechanical integration; v1.3 release remains a later reviewed gate. Remaining writing includes conclusion, appendices and source/collaboration notes, followed by whole-book editing. Apply the beginner-entry, direct-prose and balanced-example requirements to that work. Escalate scope/version changes or unresolved source conflicts; solve routine editorial and computational questions within the approved briefs.
 
 ## Previous phases
 
@@ -36,4 +38,4 @@ The preparation phase completed and was approved on 2026-10-13. The v1.2 Release
 
 ## Completion evidence
 
-TASK-010 used Humanizer-zh and official product sources checked on 2026-10-16. Numerical table rows, display/inline equations, figures, code blocks and scientific source URLs are retained; all examples/v1.3 files and published sources are unchanged. Twelve-page isolated Quarto preview rendered; 580 local references and image alternatives pass. Desktop and 390px checks cover the revised tools, product table, optional terms and workflow chapters; checked narrow views have no page overflow. Existing non-visible Quarto zh-CN/Abstract warnings remain. PR #3 stays draft; no merge, deployment or historical asset changes. Start Guide v0.11 remains independently published.
+TASK-011 used Humanizer-zh and checked primary methodological sources plus UK Data Service guidance on 2026-10-16. All six quotations and speaker IDs match the original CSV; thirty existing teaching data, specification, script and reference files are unchanged. Existing chapter numerical rows, formulas, figures and code remain. The recovery exercise ran against a temporary wrong input and then the confirmed input; the restored report matches the reference text, with no statistical refit or model call. Fourteen-page isolated Quarto preview rendered; 715 local references and image alternatives pass, with 17 new source-relative links additionally checked. Desktop and 390px checks cover both new chapters, quotation and recovery tables, the analytic-memo callout and review navigation; checked narrow pages have no overflow. Existing non-visible Quarto zh-CN/Abstract warnings remain. Published sources and frozen assets are unchanged; PR #3 stays draft. No merge or deployment. Start Guide v0.11 remains independently published.

@@ -173,6 +173,8 @@ $$
 
 回到自己的项目时，先试着向同事解释：我想比较什么，为什么使用这份数据和这个模型，输出中的哪个数回答了问题，换一种有理由的做法后结果怎样变化。说不清的地方，就是下一次可以与 AI 继续讨论、再查阅方法文献的具体问题。[写作章](08-academic-writing.qmd)会接着说明，怎样把已经核对的表格写成读者能理解的段落。
 
+若你的材料主要是访谈或开放回答，可以转到[质性研究章](11-qualitative-research.qmd)，跟着原话、不同解释和分析笔记继续练习。数值结果与资料处理的检查，则在[核验、隐私与恢复章](12-verification-privacy-recovery.qmd)展开。
+
 ## 方法与软件来源
 
 Curran, P. J., & Bauer, D. J. (2011). *The disaggregation of within-person and between-person effects in longitudinal models of change*. [原文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/)。

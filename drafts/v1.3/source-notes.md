@@ -2,6 +2,25 @@
 
 首批科学来源核查日期：2026-10-13；中文修订、写作章及文献/设计章补充：2026-10-14。既有计算与数据保留不变。这里记录可长期维护的引用边界，不保存浏览器抓取或原文大段摘录。
 
+## 质性研究与核验、隐私、恢复（TASK-011）
+
+核查日期：2026-10-16。质性章的 AI 问法、阅读记录、分析笔记、主题候选和段落均为本手册编写，方法文献不构成对这些 AI 用法的效果验证或作者推荐。六段原始虚构访谈保持不变。
+
+| 来源 | 实际核查范围 | 正文使用与限制 |
+|---|---|---|
+| Braun & Clarke（2023），*Toward good practice in thematic analysis: Avoiding common problems and be(com)ing a knowing researcher*，[全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC9879167/)，DOI 10.1080/26895269.2022.2129597 | 三类分析取向、主题与话题摘要、研究者立场及方法一致性讨论；2022-10-25在线，卷期为2023 | 支持区分方法目的与质量标准，主题发展需解释与反思；不是 AI 自动编码方案，也不把六段材料称作完成的反思性主题分析 |
+| Braun/Clarke 作者网站：[方法问答](https://www.thematicanalysis.net/faqs/)、[理解主题分析](https://www.thematicanalysis.net/understanding-ta/) | 搜索索引可读的作者正文，含独立编码、一致性、主题概念及取向说明 | 支持方法取向区分及反思性分析的解释目的；主要论证同时由上述2023全文核对。2019论文仅取得机构元数据/摘要，未以其全文作为细节依据 |
+| Gale 等（2013），*Using the framework method for the analysis of qualitative data in multi-disciplinary health research*，[全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3848812/)，DOI 10.1186/1471-2288-13-117 | Background、Stages 2—7及Discussion；个案/分类矩阵、初步编码、发展框架和解释 | 作为进一步学习代码本式框架法的入口；正文三项定位是自编的小练习，不能宣称完整实施框架法，也未将一致率设成该法必需步骤 |
+| UK Data Service，[Anonymisation for text data](https://ukdataservice.ac.uk/learning-hub/data-producer-support/preparing-data-for-sharing-and-reuse/anonymising-data-and-protecting-participants/anonymisationfortextdata/) | 间接识别、连贯替换、概括、过度/不足处理及工具环境 | 支持结合上下文减少识别风险并保留分析意义；博士生片段为新编，不引述真实受访者。未推导适用于所有地区的法律结论或某产品隐私保证 |
+
+核验与恢复章还复用此前已读的 Rokem（2024）代码审查与 Sandve 等（2013）可复算实践，引用范围不变。没有新增具体产品功能、价格或当前账户政策断言。
+
+### 实际恢复练习
+
+仅在忽略的 .qa/ 中复制 survey-sensitivity.csv，将主规则行 n=21 改为15。原 build_report.py 在 compare 模式下正常完成，输出错误主规则记录数15。随后用原确认输入生成新报告，主规则21、比较规则15及其他数字恢复，报告文本与既有 round-2/results.md 一致（按文本比较，忽略平台换行）。原输入字节不变。未改统计分析、未重新拟合、未调用模型；关于误用稿件、追踪摘要和处置的叙述是教学情境。配套 recovery-exercise.md 提供重复方法和实际对照，不纳入临时错误文件或运行日志。
+
+质性阅读记录以原CSV逐项核对六条引文、编号及两位说话者。按定义的定位练习为：任务理解Q04、截止Q01/Q06、独自推进Q05/Q06；Q02未命中这三项，但在解释发展中保留。此对照检查引用与明确任务规则，不评定唯一正确主题。
+
 | 来源 | 实际核查范围 | 支持的有限主张 | 不应归给来源的内容 |
 |---|---|---|---|
 | Curran & Bauer (2011), [全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC3059070/)，DOI 10.1146/annurev.psych.093008.100356 | 原文的层次分解、个人均值中心化与时间趋势讨论 | 个体内/个体间问题不同；简单中心化在时间趋势等条件下需要扩展 | 本包六行、24行、840行数据及系数均为新编，不是原文数据 |
