@@ -1,0 +1,5 @@
+model,term,estimate,ci_low,ci_high
+pooled_OLS,stress_index,0.4413007074,,
+random_intercept_REML,Intercept,6.1392718229,5.9341825932,6.3443610525
+random_intercept_REML,stress_within,-0.6351576693,-0.6887711211,-0.5815442176
+random_intercept_REML,stress_between,0.7566707850,0.6323132029,0.8810283672

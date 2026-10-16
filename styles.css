@@ -45,8 +45,32 @@ h1, h2, h3 {
 }
 
 table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
   font-size: 0.94rem;
   line-height: 1.55;
+}
+
+main.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.math.display {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.legacy-anchor {
+  scroll-margin-top: 5rem;
+}
+
+@media (max-width: 600px) {
+  table th:first-child:nth-last-child(3),
+  table td:first-child:nth-last-child(3) {
+    min-width: 7rem;
+  }
 }
 
 table th {

@@ -1,81 +1,28 @@
 # Current phase
 
-- **Phase:** v1.2 Release Gate
-- **Status:** DONE — RELEASED / DEPLOYED / VERIFIED
-- **Target publication version:** v1.2 — Multi-Agent Workflow / Agent Governance
-- **Release date:** 2026-09-24
+- Phase: v1.3 Release Gate
+- Status: IN_PROGRESS — TASK-014
+- Approval: 2026-10-16 — human approves the complete integrated edition and authorizes PDF/DOCX generation and inspection, final QA, publication of v1.3, historical preservation and legacy-link compatibility.
+- Frozen content input: `2271f1cbf9a122b56894edb63c9d01fbf63b237a`; PR #3.
+- Target: v1.3 HTML, PDF, DOCX and teaching materials; public edition remains v1.2 until deployment completes.
+- Branch: docs/v1.3-authoring-preparation.
 
-## Goal
+## Goal, scope and responsibilities
 
-Publish the approved v1.2 handbook source, PDF/DOCX assets, GitHub Release, and public HTML site; verify every published route and preserve the frozen v1.1 snapshot.
+TASK-013 is accepted. Codex executes TASK-014 end to end under the approved release gate: final metadata, print exports and inspection, final checks, PR readiness/merge, tag, Release/assets, gh-pages deployment, public smoke tests and recovery documentation. Substantial prose is frozen; no new scientific content or product facts.
 
-## In Scope
+## Dependencies and deliverables
 
-- Final release QA of PR #2 and its approved Chapter 9 prose.
-- Version/date metadata, README, CHANGELOG, citation, homepage, and release-state updates.
-- Generate and verify versioned PDF/DOCX assets; advance, merge, tag, and release PR #2.
-- Deploy the rendered site to GitHub Pages and smoke-test pages, downloads, and labels.
-- Record the result in canonical project state.
+Use the nineteen integrated texts and 34 teaching resources from the frozen commit. Deliver matching HTML/PDF/DOCX, teaching ZIP, immutable v1.3 tag and Release, working current and historical downloads and legacy entries. Preserve original source data, programs, numerical results, candidate files, CC BY 4.0 and the pre-existing untracked audit report.
 
-## Out of Scope
+## Acceptance and constraints
 
-- New substantive handbook content or a change to TASK-001's approved prose.
-- Rewriting the v1.1 tag, GitHub Release, PDF/DOCX, or historical site snapshot.
-- A new schema, framework, publication strategy, or version target.
+Follow TASK-014. Verify print content, native equations, navigation, tables, figures, pagination and final page images; full HTML build, local links, resources and narrow layout; clean tracked scope; public downloads and Release asset hashes. Baseline v1.1/v1.2 tags, Release metadata and frozen file hashes before mutation. Use actual publication date. Temporary files remain ignored. No changes to Start Guide.
 
-## Workstreams
+## Gates, escalation and exit
 
-| ID | Workstream | Current state |
-| --- | --- | --- |
-| A | Release metadata, governance, and source QA | DONE |
-| B | Versioned PDF/DOCX build and visual/content QA | DONE |
-| C | PR #2 readiness, merge, v1.2 tag and GitHub Release | DONE |
-| D | Pages deployment and public smoke test | DONE |
-| E | Final canonical-state and clean-workspace check | DONE |
+Human release authorization is complete; do not request approval for routine release actions. Escalate scientific/scope/version changes, conflicting authority, risks to historical snapshots or unfixable technical failures. Mark DONE only after merge, tag, Release, deployment and public verification, then record final evidence and leave a recoverable clean state.
 
-## Dependencies
+## Previous phases
 
-- TASK-001 is `DONE`; its approved text and human desktop/mobile preview review are recorded.
-- PR #2 contains the frozen primary v1.2 content range.
-- The human approved end-to-end execution of this Release Gate in D-009 and D-010.
-
-## Deliverables
-
-- Updated v1.2 source, metadata, governance, and release checklist on `main`.
-- `release/psych-ai-research-handbook_v1.2_zh-CN.pdf` and `.docx` attached to the v1.2 GitHub Release.
-- Immutable `v1.2` tag and an updated public GitHub Pages reading edition.
-- Verified public links and a concise release report.
-
-## Acceptance Criteria
-
-- The frozen TASK-001 prose and other substantive chapters are unchanged by release preparation.
-- Quarto HTML and DOCX renders pass; a matching PDF is exported from the finalized DOCX; layout, headings, tables, links, downloads, and mobile presentation are checked.
-- v1.2 metadata, publication date, citation, README, homepage, assets, tag, and Release agree.
-- PR #2 is merged to `main`; the tag resolves to the intended release commit; Pages serves that version.
-- v1.1 tag, historical Release, and frozen asset hashes remain unchanged.
-- Final local workspaces are clean and release state is recorded.
-
-## Constraints
-
-- Use `main` as source and `gh-pages` only for rendered output; keep `_site/` ignored on `main`.
-- Preserve CC BY 4.0 and do not commit secrets or restricted research data.
-- Follow `AGENTS.md` approved-release autonomy and escalation rules.
-
-## Decision Gates
-
-- The human has approved this Release Gate, frozen scope, version target, merge, tag, assets, Release, and deployment. Routine steps require no additional approval.
-- New strategic or substantive decisions require escalation under `AGENTS.md`.
-
-## Escalation Conditions
-
-- Substantive content or scope changes, an invalid version strategy, or conflict with approved prose/governance.
-- Merge, build, deployment, or QA failure that cannot be safely resolved mechanically.
-- Risk to historical release assets/tags or need for a new schema, framework, or publication-strategy decision.
-
-## Exit Criteria
-
-- v1.2 is RELEASED / DEPLOYED / VERIFIED, with public smoke tests and canonical-state updates complete.
-
-## Current Status
-
-PR #2 merged into `main` as `a8a9326`; the immutable [`v1.2` tag](https://github.com/How-Tze/psych-ai-research-handbook/tree/v1.2) resolves to that commit. The [GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2) was published with both PDF/DOCX assets on 2026-09-24. The [public site](https://How-Tze.github.io/psych-ai-research-handbook/) serves v1.2 from `gh-pages`; all 19 HTML routes returned 200, and v1.2 Release assets and both v1.1/v1.2 site downloads matched their repository SHA-256 hashes. The build has 914 valid local references, and the published `gh-pages` tree contains no temporary `.qa` files. The v1.1 tag, Release, and frozen asset hashes are unchanged. Two post-tag `main` commits corrected static-resource retention without changing substantive prose or the v1.2 assets. TASK-002 is complete. The next phase requires a new approved goal and scope.
+TASK-003–013 are DONE. v1.3 authoring was accepted at db54a0b and integration at 2271f1c on 2026-10-16. v1.2 was released on 2026-09-24 at a8a9326; historical snapshots remain frozen.

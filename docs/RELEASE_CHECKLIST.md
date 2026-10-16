@@ -1,5 +1,22 @@
 # Release checklists
 
+## v1.3 Release Gate — 2026-10-16
+
+- [x] Human accepted the integrated edition at `2271f1c` and authorized formal exports and publication (D-022 / TASK-014).
+- [x] Record v1.1/v1.2 tag, Release and four frozen-file baselines; preserve approved candidate source and teaching calculations.
+- [x] Update formal version, date, citation, current/historical download entries and lifecycle statements only.
+- [x] Generate matching 103-page A4 DOCX/PDF, update contents and page numbers, inspect every final page. Preserve 33 data tables, two figures and 28 native editable equations; 146 internal bookmarks/links and 155 external links pass structural checks.
+- [x] Verify 19 chapter sources against the approved input using an explicit status-only change list; print body matches raw DOCX after documented layout transformations.
+- [x] Render 22 HTML pages; validate 1,266 local references/resources, 50 material Markdown links, two old routes, 48 old content fragments and three homepage fragments.
+- [x] Check desktop and 390px viewport; homepage, navigation, case presentation, wide tables, formulas, images, references and current/historical downloads remain usable.
+- [x] Match 34 teaching downloads and ZIP entries to source; run extracted exercises and reproduce both reports without changing original data, analysis programs or results.
+- [x] Check tracked source and delivery scope for credentials/private artifacts; no temporary output, review changes, comments or macros in deliverables. The pre-existing untracked audit report is excluded.
+- [ ] Merge PR #3 and verify the merged tree; create immutable v1.3 tag.
+- [ ] Publish GitHub Release with PDF, DOCX and teaching ZIP; deploy `gh-pages`.
+- [ ] Verify public routes/download hashes and historical integrity; record final project state.
+
+Print generation is documented in `publication/README.md`. Word exports the checked DOCX directly to PDF, retaining navigable contents and PDF bookmarks. A second render after title-line balancing changed only seven page images; those were reinspected, and the other 96 images matched the already inspected pages byte for byte. Existing non-visible Quarto zh-CN translation warnings remain; they do not affect the checked Chinese text.
+
 ## v1.2 Release Gate — 2026-09-24
 
 - [x] Verify approved PR #2 scope and frozen v1.1 asset/tag/Release baselines.

@@ -1,0 +1,3 @@
+rule,n,Intercept,stress_mean,rum_mean
+at_least_two,21,0.8378960672,0.3641131224,0.3428946173
+all_three,15,-2.3870783305,1.0806174957,0.7204116638

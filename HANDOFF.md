@@ -8,7 +8,7 @@
 - Author: Hao Xie / GitHub: How-Tze
 - License: CC BY 4.0 (confirmed 2026-09-16)
 - Versioned PDF and DOCX under `release/` are frozen release artifacts; preserve both v1.1 and v1.2.
-- `chapters/` contains the current v1.2 Quarto reading edition; the `v1.1` tag preserves the earlier source.
+- This branch prepares the approved v1.3 release in `chapters/`; see the current phase below for publication status. Historical source remains in v1.1/v1.2 tags.
 - The manually authored DOCX table of contents was removed from HTML because Quarto supplies navigation.
 - One-cell case/example tables from Word were converted to Quarto callouts for web readability; wording is preserved.
 
@@ -28,10 +28,12 @@ Do not silently change frozen v1.1 or v1.2 arguments, claims, methods, or refere
 
 ## Current phase
 
-The **v1.2 Release Gate** is complete: `v1.2 RELEASED / DEPLOYED / VERIFIED` on 2026-09-24. [`CURRENT_PHASE.md`](CURRENT_PHASE.md) records the gate and QA summary; [`DECISIONS.md`](DECISIONS.md) records the approved scope and end-to-end execution authority; [`tasks/`](tasks/README.md) holds task specifications. Agents execute approved phase tasks and escalate strategic questions under [`AGENTS.md`](AGENTS.md).
+As of 2026-10-16, TASK-014 is IN_PROGRESS under the human-approved v1.3 Release Gate. The integrated edition at `2271f1c` is accepted; TASK-003–013 are DONE. Authorization covers matching HTML/PDF/DOCX, final QA, PR #3 readiness and merge, tag, Release assets, Pages deployment and public verification. Do not ask for repeated mechanical approvals. Substantial text is frozen.
 
-[`TASK-001`](tasks/TASK-001-multi-agent-workflow-update.md) and [`TASK-002`](tasks/TASK-002-v1.2-release.md) are `DONE`. [PR #2](https://github.com/How-Tze/psych-ai-research-handbook/pull/2) merged as `a8a9326`; the [`v1.2` tag](https://github.com/How-Tze/psych-ai-research-handbook/tree/v1.2) points to that commit. The [v1.2 GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2) has PDF/DOCX assets, and the [public site](https://How-Tze.github.io/psych-ai-research-handbook/) serves v1.2. The approved §9.5 was previously accepted by the human on desktop and mobile. Release smoke tests passed for all 19 public HTML pages, current and historical downloads, and Release assets; hashes and historical integrity are recorded in the [release checklist](docs/RELEASE_CHECKLIST.md). Two post-tag site-resource fixes on `main` preserve v1.1 download URLs and exclude temporary QA files from `gh-pages`; no substantive prose or v1.2 asset changed. The next phase needs a new approved goal and scope.
+The nineteen texts and 34 teaching files are integrated. Preserve two legacy routes, 48 content anchors and three home anchors; see `docs/v1.3-integration.md`. The ZIP contains the 34 files, an entry README and license. Explicit Quarto resources avoid copying temporary outputs. Data, scripts, figures and numerical results are unchanged.
 
-## Important future backlog
+The print workflow is documented in `publication/README.md`. Quarto produces DOCX; print-only formatting retains native equations and internal bookmarks; a separate invisible Word instance updates the TOC and exports matching PDF. Both are new v1.3 files; historical v1.1/v1.2 assets remain frozen. Release checks and final public evidence belong in `docs/RELEASE_CHECKLIST.md`.
 
-For a later handbook version, add a section on AI-assisted open-science release workflows: maintain complete local project assets, deliberately select non-sensitive public artifacts, generate/update README/data dictionaries/code/environment metadata, scan for secrets and sensitive content, and maintain public releases when analyses change. Human review remains mandatory for anonymization, consent, and third-party data licensing.
+The accepted Chinese style, contextual terminology, detailed AI research teaching and connected workflows remain intact. Draft QMD inputs and source notes preserve authoring evidence. No new scientific claims, model results or product facts are added during release.
+
+Temporary exports, page images and check output remain under ignored `.qa/task014/`. The pre-existing untracked `docs/project_audit_report.md` remains untouched. Start Guide remains independently published and unchanged. No new substantial work is authorized after this release.

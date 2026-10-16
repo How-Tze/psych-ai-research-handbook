@@ -2,8 +2,50 @@ project:
   type: book
   output-dir: _site
   resources:
+    - /chapters/00-usage.html
+    - /chapters/09-maintenance.html
     - /release/psych-ai-research-handbook_v1.1_zh-CN.pdf
     - /release/psych-ai-research-handbook_v1.1_zh-CN.docx
+    - /release/psych-ai-research-handbook_v1.2_zh-CN.pdf
+    - /release/psych-ai-research-handbook_v1.2_zh-CN.docx
+    - /release/psych-ai-research-handbook_v1.3_zh-CN.pdf
+    - /release/psych-ai-research-handbook_v1.3_zh-CN.docx
+    - /examples/v1.3/README.md
+    - /examples/v1.3/analysis-spec.md
+    - /examples/v1.3/analysis-worked-example.md
+    - /examples/v1.3/check_cases.py
+    - /examples/v1.3/counterbalance.csv
+    - /examples/v1.3/design-materials.md
+    - /examples/v1.3/experiment-spec.md
+    - /examples/v1.3/figures/diary-diagnostics.png
+    - /examples/v1.3/figures/provenance.json
+    - /examples/v1.3/figures/within-between.png
+    - /examples/v1.3/literature-reading-notes.md
+    - /examples/v1.3/method-six-rows.csv
+    - /examples/v1.3/plot_teaching.py
+    - /examples/v1.3/qualitative-reading-sheet.md
+    - /examples/v1.3/qualitative-spec.md
+    - /examples/v1.3/reference/analysis-metadata.json
+    - /examples/v1.3/reference/diary-coefficients.csv
+    - /examples/v1.3/reference/diary-diagnostics.csv
+    - /examples/v1.3/reference/diary-synthetic.csv
+    - /examples/v1.3/reference/survey-scored.csv
+    - /examples/v1.3/reference/survey-sensitivity.csv
+    - /examples/v1.3/requirements-analysis.txt
+    - /examples/v1.3/run_analysis.py
+    - /examples/v1.3/survey24.csv
+    - /examples/v1.3/synthetic-interviews.csv
+    - /examples/v1.3/templates/change-note.md
+    - /examples/v1.3/templates/project-entry.md
+    - /examples/v1.3/templates/task-note.md
+    - /examples/v1.3/workflow/README.md
+    - /examples/v1.3/workflow/build_report.py
+    - /examples/v1.3/workflow/discussion-candidate.md
+    - /examples/v1.3/workflow/recovery-exercise.md
+    - /examples/v1.3/workflow/round-1/results.md
+    - /examples/v1.3/workflow/round-2/results.md
+    - /downloads/psych-ai-research-handbook_v1.3_materials.zip
+    - /drafts/v1.3/source-notes.md
 lang: zh-CN
 title: 心理学研究的 AI 进阶手册
 author: Hao Xie
@@ -11,58 +53,60 @@ book:
   title: 心理学研究的 AI 进阶手册
   subtitle: 从零散问答到可推进、可检查、可交接的个人研究项目
   author: Hao Xie
-  date: 2026-09-24
+  date: 2026-10-16
   site-url: https://How-Tze.github.io/psych-ai-research-handbook/
   repo-url: https://github.com/How-Tze/psych-ai-research-handbook
   repo-actions:
-  - issue
+    - issue
   search: true
   chapters:
-  - href: index.qmd
-    text: 首页
-  - href: chapters/00-usage.qmd
-    text: 使用说明
-  - href: chapters/01-introduction.qmd
-    text: 导读：为什么值得重新认识科研中的 AI
-  - part: 主体
-    chapters:
-    - href: chapters/02-project.qmd
-      text: 第1章 你做的其实是一个项目
-    - href: chapters/03-work-environment.qmd
-      text: 第2章 AI 已经从聊天框进入工作环境
-    - href: chapters/04-quick-start.qmd
-      text: 第3章 快速开始
-    - href: chapters/05-literature.qmd
-      text: 第4章 文献、阅读与理论整理
-    - href: chapters/06-design.qmd
-      text: 第5章 研究问题、设计与材料
-    - href: chapters/07-data-code.qmd
-      text: 第6章 数据、代码与统计分析
-    - href: chapters/08-writing.qmd
-      text: 第7章 写作、修订与投稿
-    - href: chapters/09-maintenance.qmd
-      text: 第8章 让 AI 帮你维护研究项目
-    - href: chapters/10-automation.qmd
-      text: 第9章 固定重复工作
-    - href: chapters/11-safety-recovery.qmd
-      text: 第10章 核验、权限与恢复
-    - href: chapters/12-conclusion.qmd
-      text: 结语
-  - part: 附录与来源
-    chapters:
-    - href: chapters/appendix-a.qmd
-      text: 附录A 心理学研究常见 AI 场景速查
-    - href: chapters/appendix-b.qmd
-      text: 附录B 最小个人项目模板
-    - href: chapters/appendix-c.qmd
-      text: 附录C 当 LLM 本身进入研究设计
-    - href: chapters/references.qmd
-      text: 参考文献与动态来源说明
-    - href: chapters/ai-collaboration.qmd
-      text: AI 协作说明
+    - href: index.qmd
+      text: 首页与下载
+    - href: chapters/01-introduction.qmd
+      text: 导读：AI 还能怎样帮你做研究？
+    - part: 主体
+      chapters:
+        - href: chapters/03-work-environment.qmd
+          text: 第1章 从聊天开始，认识 AI 工具
+        - href: chapters/04-quick-start.qmd
+          text: 第2章 第一次完整任务
+        - href: chapters/method-learning.qmd
+          text: 第3章 用 AI 学习研究方法
+        - href: chapters/05-literature.qmd
+          text: 第4章 文献探索
+        - href: chapters/theory-development.qmd
+          text: 第5章 用 AI 推进理论思考
+        - href: chapters/06-design.qmd
+          text: 第6章 研究设计
+        - href: chapters/07-data-code.qmd
+          text: 第7章 数据分析
+        - href: chapters/08-writing.qmd
+          text: 第8章 学术写作与修订
+        - href: chapters/02-project.qmd
+          text: 第9章 让研究继续下去
+        - href: chapters/10-automation.qmd
+          text: 第10章 重复工作与 Agent
+        - href: chapters/qualitative-research.qmd
+          text: 第11章 质性研究
+        - href: chapters/11-safety-recovery.qmd
+          text: 第12章 核验、隐私与恢复
+        - href: chapters/12-conclusion.qmd
+          text: 结语
+    - part: 附录与来源
+      chapters:
+        - href: chapters/appendix-a.qmd
+          text: 附录A 练习与材料下载
+        - href: chapters/appendix-b.qmd
+          text: 附录B 可直接使用的协作模板
+        - href: chapters/appendix-c.qmd
+          text: 附录C 当 AI 的回答成为研究数据
+        - href: chapters/references.qmd
+          text: 参考来源与教学材料说明
+        - href: chapters/ai-collaboration.qmd
+          text: AI 协作说明
   license: CC BY 4.0
   page-footer:
-    left: © 2026 Hao Xie
+    left: © 2026 Hao Xie · v1.3
     right: '[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 format:
   html:

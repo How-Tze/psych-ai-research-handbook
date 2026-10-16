@@ -2,34 +2,42 @@
 title: "心理学研究的 AI 进阶手册"
 subtitle: "从零散问答到可推进、可检查、可交接的个人研究项目"
 author: "Hao Xie"
-date: "2026-09-24"
+date: "2026-10-16"
 ---
 
-**v1.2 · 2026年9月24日**
+**v1.3 · 2026年10月16日**
 
-这是一份面向心理学与社会科学学生、科研助理和导师的开放研究手册。它关注的不是“怎样让 AI 替你研究”，而是怎样把 AI 放进真实研究过程，减少版本比较、材料整理、项目维护、代码检查和结果一致性核对等结构性劳动，同时保留研究者对问题、方法、伦理与结论的最终判断。
+如果你用过千问、DeepSeek、豆包或 ChatGPT，向它提问、请它翻译一段英文，或者帮忙改一段话，你已经有了开始阅读本书的经验。你可能还没有试过：让 AI 陪你把一个统计疑问弄明白，把几篇论文放在一起找出真正的分歧，或者按照你确定的规则处理表格、生成图，再把结果用到下一版文稿里。
 
-::: {.callout-important appearance="simple" icon=false}
+这本手册面向心理学和社会科学的学生、科研助理及研究者，想带你走完这些具体过程。**你可以从会聊天开始，逐步学会借助 AI 完成原先不熟悉、做起来费力，或不知道怎样继续的研究工作。**
+
+[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.3_zh-CN.pdf){.btn .btn-primary} [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.3_zh-CN.docx){.btn .btn-outline-primary}
+
+[**从导读开始**](chapters/01-introduction.qmd){.btn .btn-primary} [**查找练习与材料**](chapters/appendix-a.qmd){.btn .btn-outline-primary} [**下载教学材料整包（ZIP）**](downloads/psych-ai-research-handbook_v1.3_materials.zip){.btn .btn-outline-secondary download="psych-ai-research-handbook_v1.3_materials.zip"}
+
+::: {.callout-note appearance="simple" icon=false}
 ## 阅读版与冻结版
 
-当前网站是 **v1.2 的 HTML 阅读版**。对应的 PDF 与 DOCX 为同版正式发行文件；v1.1 的正文、PDF 与 DOCX 保留在历史版本中。
+当前网站是 **v1.3 的 HTML 阅读版**，PDF 与 DOCX 使用同版正文。配套教学材料可以整包下载，也可以从附录按任务查找。v1.1 和 v1.2 的正文快照与发行文件保留在历史版本中。
 :::
-
-[**下载 PDF 正式版**](release/psych-ai-research-handbook_v1.2_zh-CN.pdf){.btn .btn-primary}  [**下载 DOCX 正式版**](release/psych-ai-research-handbook_v1.2_zh-CN.docx){.btn .btn-outline-primary}  [**查看 GitHub Release**](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2){.btn .btn-outline-secondary}
 
 ## 推荐阅读方式
 
-第一次阅读，建议先看“使用说明”和第1—3章；随后直接跳到当前任务对应的文献、研究设计、数据代码或写作章节。已经开始把 AI 放进真实项目的读者，可以继续阅读第8—10章。
+| 你现在想做什么 | 从这里开始 |
+|---|---|
+| 主要用过聊天，想知道 AI 还能怎样帮忙 | [认识 AI 工具](chapters/03-work-environment.qmd) → [第一次完整任务](chapters/04-quick-start.qmd) |
+| 学方法、读论文、形成研究问题和设计 | [方法学习](chapters/method-learning.qmd)、[文献探索](chapters/05-literature.qmd)、[理论思考](chapters/theory-development.qmd)、[研究设计](chapters/06-design.qmd) |
+| 处理已有数据、访谈或文稿 | [数据分析](chapters/07-data-code.qmd)、[质性研究](chapters/qualitative-research.qmd)、[写作修订](chapters/08-writing.qmd) |
+| 把多轮工作接起来，复用成果并处理问题 | [项目连续性](chapters/02-project.qmd) → [重复工作与 Agent](chapters/10-automation.qmd) → [核验、隐私与恢复](chapters/11-safety-recovery.qmd) |
 
-如果你主要需要“今天具体打开哪个 AI 产品、API 是什么、怎样开始”，请配合动态更新的 [**《心理学研究者的 AI Start Guide》**](https://How-Tze.github.io/psych-ai-start-guide/) 使用。该配套指南与本手册分开维护：本手册保存相对稳定的方法原则，Start Guide 负责快速变化的产品与入口。
+先完成一个与你当前工作相关的例子，再回到需要补充的章节。可复制的项目、任务与变更说明见[附录 B](chapters/appendix-b.qmd)；需要注册、订阅选择或具体产品操作时，使用独立更新的[《心理学研究者的 AI Start Guide》](https://How-Tze.github.io/psych-ai-start-guide/)。
 
 ## 版本原则
 
-- **v1.2 PDF / DOCX**：当前版本的正式发行文件。
-- **HTML 阅读版**：与 v1.2 正文同步的在线阅读形态。
-- **v1.1**：保留在 [历史 Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.1) 与 tag 中，不静默改写。
-- **后续内容更新**：进入新的版本号，不静默改写已经冻结的发行文件。
-- 产品能力、套餐、界面与政策会变化；相关动态事实均应以页面标注的核查时间和官方来源为准。
+- **v1.3 当前版**（2026-10-16）：[PDF](release/psych-ai-research-handbook_v1.3_zh-CN.pdf)、[DOCX](release/psych-ai-research-handbook_v1.3_zh-CN.docx)、[GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.3)。
+- **v1.2 历史版**（2026-09-24）：[PDF](release/psych-ai-research-handbook_v1.2_zh-CN.pdf)、[DOCX](release/psych-ai-research-handbook_v1.2_zh-CN.docx)、[GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.2)。
+- **v1.1 历史版**（2026-09-16）：[PDF](release/psych-ai-research-handbook_v1.1_zh-CN.pdf)、[DOCX](release/psych-ai-research-handbook_v1.1_zh-CN.docx)、[GitHub Release](https://github.com/How-Tze/psych-ai-research-handbook/releases/tag/v1.1)。
+- 已发布的正文快照和发行文件保持不变；后续内容修订使用新的版本号。旧章节链接在新版中继续可用。
 
 ## 开放许可与引用
 
@@ -37,6 +45,6 @@ date: "2026-09-24"
 
 建议引用：
 
-> Xie, Hao. (2026). *心理学研究的 AI 进阶手册* (v1.2). https://How-Tze.github.io/psych-ai-research-handbook/
+> Xie, Hao. (2026). *心理学研究的 AI 进阶手册* (v1.3). https://How-Tze.github.io/psych-ai-research-handbook/
 
 [查看版本记录（CHANGELOG）](https://github.com/How-Tze/psych-ai-research-handbook/blob/main/CHANGELOG.md)
