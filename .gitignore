@@ -21,3 +21,12 @@ Thumbs.db
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Author workbench: generated dependencies, binaries and local caches
+__pycache__/
+*.pyc
+tools/author-workbench/frontend/node_modules/
+tools/author-workbench/frontend/dist/
+tools/author-workbench/build/
+tools/author-workbench/dist/
+.pytest_cache/

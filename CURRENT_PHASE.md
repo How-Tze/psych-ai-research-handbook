@@ -1,32 +1,25 @@
 # Current phase
 
-- Phase: v1.3 Release Gate
-- Status: DONE — TASK-014; released and publicly verified 2026-10-16
-- Approval: 2026-10-16 — human approves the complete integrated edition and authorizes PDF/DOCX generation and inspection, final QA, publication of v1.3, historical preservation and legacy-link compatibility.
-- Frozen content input: `2271f1cbf9a122b56894edb63c9d01fbf63b237a`; PR #3.
-- Published: v1.3 HTML, PDF, DOCX and teaching materials. Release source/tag: `029e41406b4248de1d1bd552559d3118f4ce245a`; gh-pages: `014e79d5081b99abc5cb9a539630a60c2b487c35`.
-- Source: main; PR #3 merged. Publication records are completed separately without changing the frozen tag.
+- Phase: 作者工作台入口上线（AW-07）。
+- Status: IN_PROGRESS — TASK-017；2026-10-18 用户验收工作台并授权功能发布。
+- Scope: 两站作者入口、当前位置、来源识别、隐私检查与修复、安装更新、合并及部署。
+- Public content: 主手册 v1.3、指南 v0.12、正文和历史资产不变。
+- Work: 两库 `codex/author-workbench`；工具独立版本 0.1.1。
 
-## Goal, scope and responsibilities
+## Delivery and acceptance
 
-TASK-013 is accepted. Codex executes TASK-014 end to end under the approved release gate: final metadata, print exports and inspection, final checks, PR readiness/merge, tag, Release/assets, gh-pages deployment, public smoke tests and recovery documentation. Substantial prose is frozen; no new scientific content or product facts.
+TASK-015、TASK-016 均已获批准并 DONE。本轮入口已实现；网页只转交公开章节和位置，本机保存待合并草稿。工具使用说明见 `tools/author-workbench/README.md`；检查和发布证据归入 `tasks/TASK-017-author-entry-release.md`。
 
-## Dependencies and deliverables
+18 项自动化测试通过；两站 58 页入口标识、正文可见文本、113 份正文/下载/教学文件、4,394 处本地引用检查通过。正在完成安装版、浏览器与线上发布验收。私人预览改用本地 MathML，限制外部资源加载，保留读写来源隔离。
 
-Use the nineteen integrated texts and 34 teaching resources from the frozen commit. Deliver matching HTML/PDF/DOCX, teaching ZIP, immutable v1.3 tag and Release, working current and historical downloads and legacy entries. Preserve original source data, programs, numerical results, candidate files, CC BY 4.0 and the pre-existing untracked audit report.
+## Continuing work
 
-## Acceptance and constraints
+当前发布门槛允许本功能的 main 合并和部署。遇到正文、历史版本或私人数据原则变化才升级决策；本轮不整合作者草稿。下一轮内容更新先读取工作台 pending，再按获准范围冻结批次；作者新修订和范围外想法继续保留。
 
-Follow TASK-014. Verify print content, native equations, navigation, tables, figures, pagination and final page images; full HTML build, local links, resources and narrow layout; clean tracked scope; public downloads and Release asset hashes. Baseline v1.1/v1.2 tags, Release metadata and frozen file hashes before mutation. Use actual publication date. Temporary files remain ignored. No changes to Start Guide.
+原 TASK-016 的未实测边界保留：未重启 Windows、未模拟整机断电，跨域 iframe 自动点击受工具限制。预存未跟踪 `docs/project_audit_report.md` 不动，私人数据与 QA 原始产物不提交。
 
-## Gates, escalation and exit
+## Completed release phase
 
-Human release authorization is complete; do not request approval for routine release actions. Escalate scientific/scope/version changes, conflicting authority, risks to historical snapshots or unfixable technical failures. Mark DONE only after merge, tag, Release, deployment and public verification, then record final evidence and leave a recoverable clean state.
+TASK-003–014 均 DONE。v1.3 完整候选在 `db54a0b` 获准，正式整合输入为 `2271f1c`；PR #3 合并及 v1.3 标签为 `029e41406b4248de1d1bd552559d3118f4ce245a`。Release `415120365` 提供 PDF、DOCX、教学 ZIP，gh-pages `014e79d5081b99abc5cb9a539630a60c2b487c35`，Pages 运行 `38926095603` 成功。
 
-## Previous phases
-
-TASK-003–014 are DONE. v1.3 authoring was accepted at db54a0b and integration at 2271f1c on 2026-10-16. v1.2 was released on 2026-09-24 at a8a9326; historical snapshots remain frozen.
-
-## Completion evidence
-
-PR #3 merged; tag v1.3 points to 029e414. GitHub Release 415120365 was published on 2026-10-16 with three matching assets. Pages workflow 38926095603 succeeded. Public verification checked 63 site pages/files and all three Release downloads; six current/historical print files and the teaching ZIP match local artifacts byte for byte. All 34 teaching resources match after normalizing text line endings. v1.1/v1.2 tags, Release identities/dates/assets and four frozen-file hashes match the pre-release baseline. Final QA details and checksums are in `docs/RELEASE_CHECKLIST.md`. No further implementation is authorized by this completed phase.
+十九篇正文和 34 份教学资源完成整合；公开检查 63 个页面/文件及三个 Release 附件。历史 v1.1/v1.2 标签、Release 和冻结文件保持。详细完成证据及校验值见 `tasks/TASK-014-v1.3-release.md`、`docs/RELEASE_CHECKLIST.md`。原发布门槛已执行完毕，不延伸到本轮新功能。

@@ -1,5 +1,13 @@
 # HANDOFF — Psych AI Research Handbook
 
+## Active work — 2026-10-18
+
+TASK-015、TASK-016 已验收完成；TASK-017 获准把“作者模式”入口接到两站并发布。两库分支为 `codex/author-workbench`，共用工具 0.1.1 已更新安装。当前完成本地检查，准备合并和部署；最终证据见 TASK-017。
+
+日常从页面右下角或桌面/开始菜单的“心理学 AI 手册·作者工作台”进入。记录在 `%LOCALAPPDATA%/PsychAI/AuthorWorkbench`，保存为待合并草稿；使用与隐私边界见 `tools/author-workbench/README.md`。
+
+正文 v1.3/v0.12 与冻结下载保持。下一轮获准内容任务先读取 pending、选择范围、冻结批次，保留作者改字，再处理批注并写入候选证据；新修订留待处理。本轮测试不创建真实意见，预存审查文件不动。
+
 ## Current state
 
 - Artifact: 《心理学研究的 AI 进阶手册》
@@ -26,7 +34,7 @@ Do not silently change frozen v1.1 or v1.2 arguments, claims, methods, or refere
 - Unresolved: the current Quarto installation emits non-visible `zh-CN` translation warnings for “Abstract”; monitor upstream/tooling changes unless this becomes reader-visible.
 - The website maintenance branch was merged into `main` as `78646c7`. Later merges and deployments require an approved release gate or explicit human authorization.
 
-## Current phase
+## Completed v1.3 release phase
 
 As of 2026-10-16, TASK-014 is DONE under the human-approved v1.3 Release Gate. The integrated edition at `2271f1c` is accepted; TASK-003–014 are DONE. Authorization covers matching HTML/PDF/DOCX, final QA, PR #3 readiness and merge, tag, Release assets, Pages deployment and public verification. Do not ask for repeated mechanical approvals. Substantial text is frozen. PR #3 merged as `029e414`, also the v1.3 tag target. Release `415120365` carries PDF/DOCX/ZIP; gh-pages `014e79d` deployed successfully (run `38926095603`). Public checks passed for 63 site pages/files and all three Release downloads. See `docs/RELEASE_CHECKLIST.md` for hashes, historical integrity and the bounded browser-check limitation.
 
@@ -36,4 +44,4 @@ The print workflow is documented in `publication/README.md`. Quarto produces DOC
 
 The accepted Chinese style, contextual terminology, detailed AI research teaching and connected workflows remain intact. Draft QMD inputs and source notes preserve authoring evidence. No new scientific claims, model results or product facts are added during release.
 
-Temporary exports, page images and check output remain under ignored `.qa/task014/`. The pre-existing untracked `docs/project_audit_report.md` remains untouched. Start Guide remains independently published and unchanged. No new substantial work is authorized after this release.
+Temporary exports, page images and check output remain under ignored `.qa/task014/`. The pre-existing untracked `docs/project_audit_report.md` remains untouched. Start Guide was unchanged by this handbook release and subsequently completed its own v0.12 release. The completed release gate grants no authority for later phases; current design/governance scope is recorded above.

@@ -1,0 +1,8 @@
+{
+  "name": "psych-ai-author-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "tsc --noEmit && vite build"},
+  "devDependencies": {"typescript": "^5.9.0", "vite": "^8.0.0"}
+}
