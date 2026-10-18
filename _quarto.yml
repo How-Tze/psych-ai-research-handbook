@@ -47,6 +47,9 @@ project:
     - /downloads/psych-ai-research-handbook_v1.3_materials.zip
     - /drafts/v1.3/source-notes.md
 lang: zh-CN
+author-workbench-project: handbook
+filters:
+  - assets/author-entry/author-entry.lua
 title: 心理学研究的 AI 进阶手册
 author: Hao Xie
 book:

@@ -5,6 +5,7 @@ let session = sessionStorage.getItem('aw-session') || '';
 let projects: Item[] = [], entries: Item[] = [], batches: Item[] = [];
 let project = 'handbook', source = 'index.qmd', documentData: Item | null = null;
 let previewOrigin = '', currentBuild = '', navigation = 0, anchor = '', dataDirectory = '';
+let incoming: Item = {}, appVersion = '';
 let editor: Item | null = null, saveTimer: ReturnType<typeof setTimeout> | undefined, saving: Promise<void> | null = null;
 let isDirty = false;
 const root = document.querySelector<HTMLDivElement>('#app')!;
@@ -61,7 +62,9 @@ function shell() {
         const page = projects.find(p=>p.id===project)!.pages.find((p:Item)=>p.page===message.page);
         if (page) await openPage(project, page.source, message.anchor);
       }
-      if (message.type === 'ready' && anchor) locate(anchor);
+      if (message.type === 'ready') locate(anchor, '', incoming.quote || '');
+      if (message.type === 'located' && message.fallback) toast('段落已有变化，已定位到所在小节。');
+      if (message.type === 'located' && message.missing) toast('原来的小节已变化，请从目录查找；修改仍可正常保存。');
       if (message.type === 'position') {
         anchor = message.anchor;
         await api('/api/location', {project, source, anchor});
@@ -71,8 +74,8 @@ function shell() {
   window.addEventListener('beforeunload', event => { if (isDirty || saving) { event.preventDefault(); event.returnValue = ''; } });
 }
 
-function locate(value: string, block = '') {
-  el<HTMLIFrameElement>('#preview').contentWindow?.postMessage({source:'psych-author-shell',type:'locate',anchor:value,block},previewOrigin);
+function locate(value: string, block = '', quote = '') {
+  el<HTMLIFrameElement>('#preview').contentWindow?.postMessage({source:'psych-author-shell',type:'locate',anchor:value,block,quote},previewOrigin);
 }
 
 function drawPages() {
@@ -84,7 +87,7 @@ function drawPages() {
     const b = action(page.title, () => openPage(project,page.source), page.source===source?'page-link active':'page-link');
     b.title=page.title; target.append(b);
   }
-  el('#version-label').textContent='本地试用 · 0.1.0';
+  el('#version-label').textContent='作者工作台 · '+appVersion;
 }
 
 async function refreshEntries() {
@@ -94,10 +97,10 @@ async function refreshEntries() {
   el('#top-status').textContent=`${entries.filter(e=>e.kind==='replacement' && e.state!=='withdrawn').length} 处文字草稿 · 保存在本机`;
 }
 
-async function openPage(key: string, pageSource: string, section = '', force = false) {
+async function openPage(key: string, pageSource: string, section = '', force = false, target: Item = {}) {
   await flush();
   const ticket=++navigation;
-  project=key; source=pageSource; anchor=section;
+  project=key; source=pageSource; anchor=section; incoming=target;
   el<HTMLSelectElement>('#project').value=key;
   const item=projects.find(p=>p.id===key)!;
   const page=item.pages.find((p:Item)=>p.source===pageSource);
@@ -122,7 +125,14 @@ async function openPage(key: string, pageSource: string, section = '', force = f
   if(ticket!==navigation) return;
   const frame=el<HTMLIFrameElement>('#preview'); frame.src=documentData!.preview; frame.hidden=false;
   el('#loading').hidden=true;
-  if(documentData!.conflicts.length) el('#preview-status').textContent='有修改与当前原文不一致，已保留记录。请在意见箱查看，预览未自动覆盖。';
+  const messages:string[]=[];
+  if(target.from_public) {
+    if(!target.build) messages.push('原页面未提供来源标识，当前显示本地原文与私人草稿。');
+    else if(target.build!==documentData!.metadata.public_build) messages.push('线上与本地原文不同，当前显示本地原文与私人草稿；旧位置可能已有变化。');
+    else el('#version').textContent=`${item.version} · 原文与阅读页一致 · 私人草稿`;
+  }
+  if(documentData!.conflicts.length) messages.push('有修改与当前原文不一致，已保留记录。请在意见箱查看，预览未自动覆盖。');
+  el('#preview-status').textContent=messages.join(' ');
   await api('/api/location',{project,source,anchor});
   await refreshEntries();
 }
@@ -316,7 +326,7 @@ async function copy(text:string) {try{await navigator.clipboard.writeText(text);
 function entryHelp() {
   const body=modal('方便地打开作者工作台');
   body.append(node('p','平时使用桌面或开始菜单中的“心理学 AI 手册·作者工作台”，会恢复上次阅读位置。'));
-  body.append(node('p','从正式网站阅读时，可以使用下面的书签。将它拖到浏览器书签栏；读到需要修改的页面时点击。首次可能提示打开本机应用。'));
+  body.append(node('p','从两站阅读时，点击右下角“作者模式”即可进入当前章节和位置。浏览器可能提示打开本机应用。旧页面也可使用下面的书签，把它拖到书签栏即可。'));
   const bookmark=node('a','在作者模式中打开','bookmark') as HTMLAnchorElement;
   bookmark.href="javascript:(()=>{location.href='psychauthor://open?url='+encodeURIComponent(location.href)})()";
   bookmark.onclick=event=>event.preventDefault();body.append(bookmark);
@@ -324,16 +334,16 @@ function entryHelp() {
 }
 function openUrlDialog() {
   const body=modal('从阅读页面进入');const input=window.document.createElement('input');input.type='url';input.placeholder='粘贴主手册或动态指南的页面地址';input.setAttribute('aria-label','页面网址');body.append(input);
-  body.append(action('打开对应章节',async()=>{const target=await api('/api/open-url',{url:input.value});el<HTMLDialogElement>('#dialog').close();await openPage(target.project,target.source,target.anchor);toast('已打开本地对应章节；线上版本未识别时，以标明版本的本地原文为准。');},'primary'));input.focus();
+  body.append(action('打开对应章节',async()=>{const target=await api('/api/open-url',{url:input.value});el<HTMLDialogElement>('#dialog').close();await openPage(target.project,target.source,target.anchor,false,target);},'primary'));input.focus();
 }
 
 async function start() {
   const hash=new URLSearchParams(location.hash.slice(1));const boot=hash.get('boot');let target:Item={};
   if(boot) {const response=await fetch('/bootstrap',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:boot})});const value=await response.json();window.history.replaceState(null,'',location.pathname);if(!response.ok)throw new Error(value.error);session=value.session;sessionStorage.setItem('aw-session',session);target=value.target;}
-  shell();const state=await api('/api/state');projects=state.projects;entries=state.entries;batches=state.batches;previewOrigin=state.preview_origin;dataDirectory=state.data_directory;
+  shell();const state=await api('/api/state');projects=state.projects;entries=state.entries;batches=state.batches;previewOrigin=state.preview_origin;dataDirectory=state.data_directory;appVersion=state.version;
   el<HTMLSelectElement>('#project').append(...projects.map(p=>new Option(p.id==='handbook'?'主手册':'动态指南',p.id)));
   target=target.project?target:(state.last||{project:'handbook',source:'index.qmd'});
-  await refreshEntries();await openPage(target.project,target.source,target.anchor||'');
+  await refreshEntries();await openPage(target.project,target.source,target.anchor||'',false,target);
 }
 
 start().catch(error=>{if(projects.length){report(error);return;}root.replaceChildren();const panel=node('div','','start-error');panel.append(node('span','研','brand-icon'),node('h1','打开作者工作台'),node('p',error.message),node('p','请使用桌面或开始菜单中的快捷方式重新打开。服务重启后，旧会话需要重新进入。'));root.append(panel);});

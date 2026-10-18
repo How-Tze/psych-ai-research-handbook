@@ -17,6 +17,7 @@ from .render import Renderer
 from .source import blocks
 from .store import Store, Conflict
 from .util import inside
+from .preview_security import NONCE_MARKER, preview_policy
 
 
 class Runtime:
@@ -262,7 +263,9 @@ def preview_app(runtime: Runtime, bridge_file: Path):
         result.headers["Cache-Control"] = "no-store"
         result.headers["Referrer-Policy"] = "no-referrer"
         result.headers["X-Content-Type-Options"] = "nosniff"
-        result.headers["Content-Security-Policy"] = f"frame-ancestors {runtime.origin}; object-src 'none'; form-action 'none'"
+        # HTML routes supply their own per-response script nonce.
+        if "Content-Security-Policy" not in result.headers:
+            result.headers["Content-Security-Policy"] = preview_policy(runtime.origin, secrets.token_urlsafe(24))
         return result
 
     @app.get("/bridge.js")
@@ -281,6 +284,15 @@ def preview_app(runtime: Runtime, bridge_file: Path):
             target = inside(runtime.renderer.directory / job_id / "_site", path or "index.html")
         except ValueError:
             return Response(status_code=404)
+        if target.suffix.lower() == ".html":
+            nonce = secrets.token_urlsafe(24)
+            # Also seals old caches and static demonstration HTML before serving.
+            from bs4 import BeautifulSoup
+            from .preview_security import seal_preview
+            soup = BeautifulSoup(target.read_text(encoding="utf-8"), "html.parser")
+            seal_preview(soup)
+            content = str(soup).replace(NONCE_MARKER, nonce)
+            return Response(content, media_type="text/html", headers={"Content-Security-Policy": preview_policy(runtime.origin, nonce)})
         return FileResponse(target)
 
     return app

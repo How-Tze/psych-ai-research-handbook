@@ -2,11 +2,11 @@
 
 ## Active work — 2026-10-18
 
-TASK-015 已批准并 DONE；TASK-016 的私人作者工作台 0.1.0 已实现、安装，处于 REVIEW，等待作者试用。两库工作分支为 `codex/author-workbench`。桌面和开始菜单入口名为“心理学 AI 手册·作者工作台”，私人记录在 `%LOCALAPPDATA%/PsychAI/AuthorWorkbench`，程序与记录分开存放。
+TASK-015、TASK-016 已验收完成；TASK-017 获准把“作者模式”入口接到两站并发布。两库分支为 `codex/author-workbench`，共用工具 0.1.1 已更新安装。当前完成本地检查，准备合并和部署；最终证据见 TASK-017。
 
-实现及使用说明见 `tools/author-workbench/README.md`，实际检查与边界见 `docs/author-workbench-trial.md`。两站共用同一工具。开始下一轮获准内容任务时读取 pending、选择范围、冻结批次，先保留作者改字，再处理批注；仅凭聊天生成稿不能标为已整合。新修订留待处理。
+日常从页面右下角或桌面/开始菜单的“心理学 AI 手册·作者工作台”进入。记录在 `%LOCALAPPDATA%/PsychAI/AuthorWorkbench`，保存为待合并草稿；使用与隐私边界见 `tools/author-workbench/README.md`。
 
-正文、下载、历史标签、main 和公开网站未变；没有推送、合并或部署。AW-07 公开入口仍需独立授权。测试记录在忽略的 `.qa/task016/`，不混入真实私人意见箱；预存审查文件未动。
+正文 v1.3/v0.12 与冻结下载保持。下一轮获准内容任务先读取 pending、选择范围、冻结批次，保留作者改字，再处理批注并写入候选证据；新修订留待处理。本轮测试不创建真实意见，预存审查文件不动。
 
 ## Current state
 

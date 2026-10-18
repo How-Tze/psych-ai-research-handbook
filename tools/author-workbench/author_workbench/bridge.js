@@ -46,8 +46,13 @@
   window.addEventListener('message', event => {
     if (event.source !== parent || event.origin !== window.awParentOrigin || event.data?.source !== 'psych-author-shell') return;
     if (event.data.type === 'locate') {
-      const target = document.getElementById(event.data.anchor) || document.querySelector(`[data-aw-block="${CSS.escape(event.data.block || '')}"]`);
+      const norm = value => value.replace(/\s+/g, ' ').trim();
+      const quote = norm(String(event.data.quote || ''));
+      const matches = quote ? [...document.querySelectorAll('main p,main li')].filter(p => !p.querySelector('p,li') && norm(p.textContent).startsWith(quote)) : [];
+      const paragraph = matches.length === 1 ? matches[0] : null;
+      const target = paragraph || document.querySelector(`[data-aw-block="${CSS.escape(event.data.block || '')}"]`) || document.getElementById(event.data.anchor);
       target?.scrollIntoView({block:'center', behavior:'smooth'});
+      send({type:'located',fallback:Boolean(quote && !paragraph && target),missing:Boolean((quote || event.data.anchor) && !target)});
     }
   });
   let timer;

@@ -15,6 +15,8 @@ from author_workbench.merge import apply_exact, record_result
 from author_workbench.server import Runtime, app_for, preview_app
 from author_workbench.util import digest, inside
 from author_workbench.render import materialize
+from author_workbench.preview_security import seal_preview, preview_policy, NONCE_MARKER
+from bs4 import BeautifulSoup
 
 
 TEXT = "---\ntitle: 测试章\n---\n\n开篇的一段文字。\n\n## 研究问题\n\n需要修改的正文。\n\n> 引用中的意见。\n\n- 第一项内容。\n- 第二项内容。\n\n::: {.callout-note}\n\n提示框中的段落。\n\n:::\n\n$$\ny=x+1\n$$\n\n| 列一 | 列二 |\n|---|---|\n| A | B |\n\n```python\nprint('不执行')\n```\n\n最后一段。\n"
@@ -63,6 +65,62 @@ def test_source_spans_keep_structure_and_unicode():
     for block in result: marked=marked.replace(f'<span data-aw-id="{block["id"]}"></span>',"")
     assert marked==TEXT
     assert not any("print(" in b["original"] or "y=x" in b["original"] or "| A" in b["original"] for b in result)
+
+
+def test_public_entry_position_and_source_identity(setup):
+    _, catalog, _ = setup
+    raw, meta = catalog.read('handbook', 'chapters/sample.qmd')
+    from urllib.parse import urlencode
+    query = urlencode({'project':'handbook','page':'chapters/sample.html','anchor':'研究问题',
+                       'quote':'需要修改的正文。','build':meta['public_build']})
+    target = catalog.target('psychauthor://open?' + query)
+    assert target['quote'] == '需要修改的正文。'
+    assert target['build'] == meta['public_build'] and target['source'] == 'chapters/sample.qmd'
+    fallback = catalog.target('https://example.com/handbook/chapters/sample.html?' +
+                              urlencode({'aw-build':meta['public_build'],'aw-quote':target['quote']}) + '#研究问题')
+    assert fallback == target
+    source = catalog.get('handbook')['root'] / 'chapters/sample.qmd'
+    source.write_bytes(raw.replace(b'\n', b'\r\n'))
+    assert catalog.read('handbook','chapters/sample.qmd')[1]['public_build'] == meta['public_build']
+    with pytest.raises(ValueError): catalog.target('psychauthor://open?' + query + '&execute=evil')
+
+
+def test_private_preview_blocks_active_prose_and_external_resources():
+    soup = BeautifulSoup('''<html><head><base href="https://example.invalid/">
+      <script src="https://example.invalid/remote.js"></script>
+      <script src="../site_libs/quarto-html/quarto.js"></script></head><body>
+      <main><p onclick="fetch('https://example.invalid')">草稿原文</p>
+      <script>location='https://example.invalid'</script><iframe src="https://example.invalid"></iframe>
+      <a href="javascript:evil()">链接</a></main>
+      <script id="quarto-html-after-body">readerInit()</script></body></html>''','html.parser')
+    seal_preview(soup)
+    assert not soup.select('iframe,base,[onclick]')
+    assert 'location=' not in str(soup) and 'remote.js' not in str(soup)
+    assert not soup.select_one('main a').has_attr('href')
+    assert len(soup.select('script[nonce]')) == 3
+    assert all(s.get('nonce') == NONCE_MARKER for s in soup.select('script'))
+    policy = preview_policy('http://127.0.0.1:2568','test-nonce')
+    assert "default-src 'self'" in policy and "connect-src 'self'" in policy
+    assert "frame-src 'none'" in policy and "form-action 'none'" in policy
+    seal_preview(soup)
+    assert len(soup.select('script[src="/bridge.js"]')) == 1
+
+
+def test_preview_responses_use_distinct_nonces(setup):
+    directory, _, config = setup
+    frontend=directory/'web';frontend.mkdir()
+    runtime=Runtime(directory,config,frontend,26901,26902)
+    folder=runtime.renderer.directory/'test'/'_site';folder.mkdir(parents=True)
+    (folder/'index.html').write_text('<html><body><main>草稿</main><script>evil()</script></body></html>',encoding='utf-8')
+    runtime.renderer.jobs['test']={'status':'ready'}
+    client=TestClient(preview_app(runtime,Path(__file__).parents[1]/'author_workbench/bridge.js'),base_url=runtime.preview_origin)
+    path=f'/p/{runtime.preview_key}/test/index.html'
+    first,second=client.get(path),client.get(path)
+    assert first.status_code == second.status_code == 200
+    assert first.headers['Content-Security-Policy'] != second.headers['Content-Security-Policy']
+    assert 'evil()' not in first.text and NONCE_MARKER not in first.text
+    assert first.headers['Referrer-Policy'] == 'no-referrer'
+    assert client.post(path).status_code == 403
 
 
 def test_crlf_and_repeated_paragraphs():

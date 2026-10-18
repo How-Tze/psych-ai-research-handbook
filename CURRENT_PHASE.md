@@ -1,30 +1,22 @@
 # Current phase
 
-- Phase: 私人作者工作台本地试用。
-- Status: REVIEW — TASK-016；2026-10-18 已实现并安装本地试用 0.1.0，等待作者实际使用反馈。
-- Authorization: 用户批准 AW-01 至 AW-06，实现一键入口、直接编辑、可靠保存、批注、随手记和下一轮整合；不发布。
-- Public baseline: 主手册 v1.3、指南 v0.12 及历史版本不变。
-- Working branches: 两库 `codex/author-workbench`；未合并 main、推送、打标签或部署。
+- Phase: 作者工作台入口上线（AW-07）。
+- Status: IN_PROGRESS — TASK-017；2026-10-18 用户验收工作台并授权功能发布。
+- Scope: 两站作者入口、当前位置、来源识别、隐私检查与修复、安装更新、合并及部署。
+- Public content: 主手册 v1.3、指南 v0.12、正文和历史资产不变。
+- Work: 两库 `codex/author-workbench`；工具独立版本 0.1.1。
 
-## Goal and delivery
+## Delivery and acceptance
 
-作者从阅读页面进入编辑，修改先保存在本机独立草稿库，下一轮获准更新时再整合。两站共用 `tools/author-workbench/`，不用维护两套工具。
+TASK-015、TASK-016 均已获批准并 DONE。本轮入口已实现；网页只转交公开章节和位置，本机保存待合并草稿。工具使用说明见 `tools/author-workbench/README.md`；检查和发布证据归入 `tasks/TASK-017-author-entry-release.md`。
 
-已安装桌面和开始菜单入口、`psychauthor://` 协议；界面支持段落改字、私人预览、修订恢复、保存冲突比较、批注、随手记、备份与任务包。精确整合只写明确指定的独立候选分支，附文件证据回执。
+18 项自动化测试通过；两站 58 页入口标识、正文可见文本、113 份正文/下载/教学文件、4,394 处本地引用检查通过。正在完成安装版、浏览器与线上发布验收。私人预览改用本地 MathML，限制外部资源加载，保留读写来源隔离。
 
-使用和执行入口：`tools/author-workbench/README.md`。实现范围及交付检查：`tasks/TASK-016-author-workbench.md`、`docs/author-workbench-trial.md`。已批准设计与经验分别见 `docs/author-workbench-design.md`、`docs/iteration-lessons-2026-10.md`。
+## Continuing work
 
-## Acceptance and remaining boundary
+当前发布门槛允许本功能的 main 合并和部署。遇到正文、历史版本或私人数据原则变化才升级决策；本轮不整合作者草稿。下一轮内容更新先读取工作台 pending，再按获准范围冻结批次；作者新修订和范围外想法继续保留。
 
-15 项自动化测试通过；58 页隔离 Quarto 渲染、1,196 个可编辑段落映射通过；正文可见文本与正式构建一致；4,278 处本地引用检查通过。115 份正式源码、配置和下载/教学文件对本轮开始时的哈希基线无变化。实际验证了安装版冷启动、协议章/节定位、浏览器改字保存、重开恢复、双窗口冲突、撤销、任务包和 390px 目录。
-
-图片、图注、表格、公式、代码和结构调整使用批注。未重启用户的 Windows，也未模拟整机断电；书签在所有浏览器的表现尚未逐一验证。正文点击入口已实现，自动浏览器对跨域 iframe 的点击受工具限制；已实际验证同页“选段改字”入口。完整范围见试用记录，不能把这些边界报告为全部实测。
-
-## Gates and next step
-
-TASK-015 已批准并 DONE。TASK-016 交付本地试用后处于 REVIEW；收集作者使用反馈，按现有批准范围修复体验问题。AW-07 公共入口上线仍未授权；不改正式网站，不延用旧版本发布权限。
-
-若需改变私人保存/批次整合原则、正文范围、出版策略或历史快照，提出具体替代方案。预存未跟踪 `docs/project_audit_report.md` 保持原样；私人记录与 QA 资料不进入公共 Git。
+原 TASK-016 的未实测边界保留：未重启 Windows、未模拟整机断电，跨域 iframe 自动点击受工具限制。预存未跟踪 `docs/project_audit_report.md` 不动，私人数据与 QA 原始产物不提交。
 
 ## Completed release phase
 

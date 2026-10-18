@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 
 from .source import blocks, relocate, insertion_prefix
 from .util import atomic_write, digest, inside, run, write_json
+from .preview_security import seal_preview
 
 
 def materialize(text: str, spans: list[dict], replacements: list[dict]) -> tuple[str, list[str]]:
@@ -64,7 +65,7 @@ class Renderer:
         if drafts:
             pieces.append(json.dumps([(e["id"], e["revision"], e.get("state")) for e in self.store.entries(project)
                                       if e["kind"] == "replacement"], sort_keys=True).encode())
-        return digest(b"renderer-2\0" + b"\0".join(pieces) + str(drafts).encode())[:24]
+        return digest(b"renderer-3\0" + b"\0".join(pieces) + str(drafts).encode())[:24]
 
     def request(self, project, drafts=True, force=False):
         key = self.key(project, drafts)
@@ -164,7 +165,10 @@ class Renderer:
             html.pop("include-after-body", None)
             html.pop("include-before-body", None)
             html.pop("include-in-header", None)
-            html["html-math-method"] = "mathjax"
+            # Chromium renders MathML locally. No CDN can receive draft content.
+            html["html-math-method"] = "mathml"
+            html["embed-resources"] = False
+            html["self-contained"] = False
             nav = config.get("book", config.get("website", {}))
             nav.pop("repo-actions", None)
             nav.pop("comments", None)
@@ -184,8 +188,7 @@ class Renderer:
                     if not block["mapped"]:
                         missing.append({"source": source, "id": block["id"]})
                 total += len(markers)
-                bridge = soup.new_tag("script", src="/bridge.js")
-                soup.body.append(bridge)
+                seal_preview(soup)
                 atomic_write(output, str(soup))
             manifest["unmapped"] = missing
             write_json(folder / "manifest.json", manifest)

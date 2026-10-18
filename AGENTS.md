@@ -109,7 +109,7 @@ Within a frozen release scope:
 - Distinguish direct replacements, requests for the next iteration and ideas saved for later. A private note does not expand an active task's scope. Mark an item integrated only with evidence in candidate source; integration is not publication.
 - Use `tools/author-workbench/README.md` for the installed local workbench. Begin each authorized content iteration by reading its pending records and selecting those within scope before drafting. Keep unselected ideas and newer revisions pending; do not require the author to repeat saved feedback in chat.
 - Keep private notes, source snapshots and recovery data outside public Git and site output, with durable storage and backup. They are not disposable QA artifacts or a replacement for canonical project state.
-- TASK-015 was approved on 2026-10-18. TASK-016 authorizes AW-01–06 implementation, installation and local trial, with no main merge, public deployment or formal-source edits. Entry is a core requirement; public comments remain excluded. See `docs/author-workbench-design.md` and `tasks/TASK-016-author-workbench.md` for actual implementation state; lessons are in `docs/iteration-lessons-2026-10.md`.
+- TASK-015 and TASK-016 were accepted on 2026-10-18. TASK-017 authorizes AW-07 public entry, necessary privacy fixes, local package update, final QA, main merge and gh-pages deployment for this feature. Preserve all published prose, versions, assets and pending private edits. Public comments remain excluded. See `docs/author-workbench-design.md` and `tasks/TASK-017-author-entry-release.md` for implementation state; lessons are in `docs/iteration-lessons-2026-10.md`.
 
 ## QA
 After meaningful site changes:

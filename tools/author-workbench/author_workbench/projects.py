@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 import re
 from urllib.parse import parse_qs, unquote, urlsplit
@@ -94,7 +95,9 @@ class Catalog:
             dirty = bool(git(root, "status", "--porcelain", "--", source))
         except ValueError:
             commit, dirty = None, True
-        return raw, {"commit": commit, "dirty": dirty, "hash": digest(raw)}
+        # Line endings can differ between a Windows checkout and a Linux build.
+        public_hash = hashlib.sha1(raw.replace(b"\r\n", b"\n")).hexdigest()
+        return raw, {"commit": commit, "dirty": dirty, "hash": digest(raw), "public_build": "sha1:" + public_hash}
 
     def public(self) -> list[dict]:
         return [{k: v for k, v in p.items() if k not in {"root", "document"}} for p in self.projects.values()]
@@ -109,7 +112,7 @@ class Catalog:
             if parsed.netloc != "open" or parsed.path not in {"", "/"}:
                 raise ValueError("不支持的作者入口")
             query = parse_qs(parsed.query)
-            if set(query) - {"project", "page", "anchor", "build", "url"}:
+            if set(query) - {"project", "page", "anchor", "build", "quote", "url"}:
                 raise ValueError("入口包含未知操作")
             if "url" in query:
                 return self.target(query["url"][0])
@@ -117,6 +120,7 @@ class Catalog:
             page = query.get("page", ["index.html"])[0]
             anchor = query.get("anchor", [""])[0]
             build = query.get("build", [""])[0]
+            quote = query.get("quote", [""])[0]
         elif parsed.scheme in {"https", "http"}:
             project = None
             for key, item in self.projects.items():
@@ -127,7 +131,10 @@ class Catalog:
                     break
             if project is None:
                 raise ValueError("这不是两站中的页面地址")
-            anchor, build = unquote(parsed.fragment), ""
+            query = parse_qs(parsed.query)
+            anchor = unquote(parsed.fragment)
+            build = query.get("aw-build", [""])[0]
+            quote = query.get("aw-quote", [""])[0]
         else:
             raise ValueError("请粘贴两站的完整页面地址")
         item = self.get(project)
@@ -139,4 +146,4 @@ class Catalog:
         found = next((p for p in item["pages"] if p["page"] == page), None)
         if not found:
             raise ValueError("该地址尚未对应当前章节，请在工作台选择章节；原意见仍可记录。")
-        return {"project": project, "source": found["source"], "anchor": anchor[:1000], "build": build[:128], "from_public": True}
+        return {"project": project, "source": found["source"], "anchor": anchor[:1000], "build": build[:128], "quote": quote[:160], "from_public": True}
