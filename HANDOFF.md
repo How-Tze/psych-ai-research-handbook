@@ -2,9 +2,11 @@
 
 ## Active work — 2026-10-18
 
-TASK-015 处于 REVIEW：用户要求设计两站共用的私人作者工作台，并整理本对话迭代经验。已明确“随时保存、下一轮集中整合”，优先方便的桌面/阅读页入口，暂不考虑公开评论。
+TASK-015 已批准并 DONE；TASK-016 的私人作者工作台 0.1.0 已实现、安装，处于 REVIEW，等待作者试用。两库工作分支为 `codex/author-workbench`。桌面和开始菜单入口名为“心理学 AI 手册·作者工作台”，私人记录在 `%LOCALAPPDATA%/PsychAI/AuthorWorkbench`，程序与记录分开存放。
 
-完整方案见 `docs/author-workbench-design.md`，经验见 `docs/iteration-lessons-2026-10.md`，授权与验收见 TASK-015 和 CURRENT_PHASE。两库工作分支均为 `codex/author-workbench-design`；本轮只交付设计与治理，功能未实现，未安装、合并或发布。后续实施须使用新的已批准任务，不能继承已完成的 v1.3 发布权限。
+实现及使用说明见 `tools/author-workbench/README.md`，实际检查与边界见 `docs/author-workbench-trial.md`。两站共用同一工具。开始下一轮获准内容任务时读取 pending、选择范围、冻结批次，先保留作者改字，再处理批注；仅凭聊天生成稿不能标为已整合。新修订留待处理。
+
+正文、下载、历史标签、main 和公开网站未变；没有推送、合并或部署。AW-07 公开入口仍需独立授权。测试记录在忽略的 `.qa/task016/`，不混入真实私人意见箱；预存审查文件未动。
 
 ## Current state
 

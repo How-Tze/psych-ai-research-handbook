@@ -104,12 +104,12 @@ Within a frozen release scope:
 - Treat Doubao, Qwen/千问, DeepSeek and international products as task-dependent examples. Do not turn one example into the only route, rotate brands mechanically, or infer application features from model names.
 - Keep data, reference results and teaching resources consistent across the two projects. Reuse versioned materials and specific cross-links; preserve old page paths, heading anchors and downloads.
 
-### Private author edits and the current design phase
+### Private author edits and local workbench
 - The author confirmed on 2026-10-18 that saved edits are inputs to the next authorized iteration, not live changes to published content. Preserve exact author wording during integration; show conflicts instead of overwriting it silently.
 - Distinguish direct replacements, requests for the next iteration and ideas saved for later. A private note does not expand an active task's scope. Mark an item integrated only with evidence in candidate source; integration is not publication.
-- Once the workbench is implemented, begin each authorized content iteration by reading its pending records and selecting those within scope before drafting. Keep unselected ideas and newer revisions pending; do not require the author to repeat saved feedback in chat.
+- Use `tools/author-workbench/README.md` for the installed local workbench. Begin each authorized content iteration by reading its pending records and selecting those within scope before drafting. Keep unselected ideas and newer revisions pending; do not require the author to repeat saved feedback in chat.
 - Keep private notes, source snapshots and recovery data outside public Git and site output, with durable storage and backup. They are not disposable QA artifacts or a replacement for canonical project state.
-- TASK-015 currently covers design and governance only. Entry design is a core requirement; public comments are excluded. Proposed implementation and its approval status are in `docs/author-workbench-design.md`; consolidated lessons are in `docs/iteration-lessons-2026-10.md`. Do not treat the proposed workbench as an existing tool.
+- TASK-015 was approved on 2026-10-18. TASK-016 authorizes AW-01–06 implementation, installation and local trial, with no main merge, public deployment or formal-source edits. Entry is a core requirement; public comments remain excluded. See `docs/author-workbench-design.md` and `tasks/TASK-016-author-workbench.md` for actual implementation state; lessons are in `docs/iteration-lessons-2026-10.md`.
 
 ## QA
 After meaningful site changes:

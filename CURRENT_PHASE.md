@@ -1,33 +1,30 @@
 # Current phase
 
-- Phase: 私人作者工作台设计与经验整理。
-- Status: REVIEW — TASK-015，2026-10-18 交付技术路线与治理更新，待集中审阅。
-- Authorization: 用户要求完整技术设计、总结本对话迭代经验并将必要内容写入治理文件；确认编辑保存后进入下一轮更新，入口要方便，暂不考虑公开评论。
-- Public baseline: 主手册 v1.3（2026-10-16），指南 v0.12（2026-10-17）；均保持已发布状态。
-- Working branches: 两库 `codex/author-workbench-design`；设计文件不代表 main 已更新。
+- Phase: 私人作者工作台本地试用。
+- Status: REVIEW — TASK-016；2026-10-18 已实现并安装本地试用 0.1.0，等待作者实际使用反馈。
+- Authorization: 用户批准 AW-01 至 AW-06，实现一键入口、直接编辑、可靠保存、批注、随手记和下一轮整合；不发布。
+- Public baseline: 主手册 v1.3、指南 v0.12 及历史版本不变。
+- Working branches: 两库 `codex/author-workbench`；未合并 main、推送、打标签或部署。
 
-## Goal and scope
+## Goal and delivery
 
-解决从阅读到修改的切换成本，设计直接修改、私人批注、随手记和下一轮 AI 整合的完整路线。重点包括桌面/阅读页入口、冷启动、保存位置、版本与源码定位、私人预览、批次处理、冲突和恢复。总结从 v1.3 写作到 v0.12 发布及本轮的新经验，只将必要规则写入治理。
+作者从阅读页面进入编辑，修改先保存在本机独立草稿库，下一轮获准更新时再整合。两站共用 `tools/author-workbench/`，不用维护两套工具。
 
-## Deliverables and dependencies
+已安装桌面和开始菜单入口、`psychauthor://` 协议；界面支持段落改字、私人预览、修订恢复、保存冲突比较、批注、随手记、备份与任务包。精确整合只写明确指定的独立候选分支，附文件证据回执。
 
-- `docs/author-workbench-design.md`：完整技术路线与 AW-01 至 AW-07 拟实施工作包。
-- `docs/iteration-lessons-2026-10.md`：两站迭代经验、当前目的与治理取舍。
-- `tasks/TASK-015-author-workbench-design.md`：当前任务、验收及权限边界。
-- 依赖两库已发布基线、既有任务/发布记录和用户本轮授权；两站共用设计，指南保留简短入口，不复制整套方案。
+使用和执行入口：`tools/author-workbench/README.md`。实现范围及交付检查：`tasks/TASK-016-author-workbench.md`、`docs/author-workbench-trial.md`。已批准设计与经验分别见 `docs/author-workbench-design.md`、`docs/iteration-lessons-2026-10.md`。
 
-## Acceptance and constraints
+## Acceptance and remaining boundary
 
-按 TASK-015 验收：入口包含服务未启动和浏览器限制的实际情况；保存不改正式源码或触发发布；记录可恢复且可由下一轮读取；作者改字与批注意图分别处理；源码映射等技术假设有验证工作包。经验有反馈与仓库依据，文件链接和变更范围经过检查。
+15 项自动化测试通过；58 页隔离 Quarto 渲染、1,196 个可编辑段落映射通过；正文可见文本与正式构建一致；4,278 处本地引用检查通过。115 份正式源码、配置和下载/教学文件对本轮开始时的哈希基线无变化。实际验证了安装版冷启动、协议章/节定位、浏览器改字保存、重开恢复、双窗口冲突、撤销、任务包和 390px 目录。
 
-本轮仅改设计与治理，不写功能、不安装服务、不注册协议、不改正文或构建配置，不合并 main、不发布。已有正文、下载、历史标签、冻结资产和预存未跟踪 `docs/project_audit_report.md` 不动。
+图片、图注、表格、公式、代码和结构调整使用批注。未重启用户的 Windows，也未模拟整机断电；书签在所有浏览器的表现尚未逐一验证。正文点击入口已实现，自动浏览器对跨域 iframe 的点击受工具限制；已实际验证同页“选段改字”入口。完整范围见试用记录，不能把这些边界报告为全部实测。
 
-## Gates, escalation and exit
+## Gates and next step
 
-设计交付后保持 REVIEW，供一次集中审阅。用户批准实施后建立新的执行任务并沿工作包推进，无需每步确认；公共入口上线仍需相应技术发布授权。技术提案不等于已获实现或发布批准。
+TASK-015 已批准并 DONE。TASK-016 交付本地试用后处于 REVIEW；收集作者使用反馈，按现有批准范围修复体验问题。AW-07 公共入口上线仍未授权；不改正式网站，不延用旧版本发布权限。
 
-若需要改变已确认的保存/整合原则、正文范围、出版策略或历史快照，提出具体替代方案。实现尚未开始不构成 BLOCKED。
+若需改变私人保存/批次整合原则、正文范围、出版策略或历史快照，提出具体替代方案。预存未跟踪 `docs/project_audit_report.md` 保持原样；私人记录与 QA 资料不进入公共 Git。
 
 ## Completed release phase
 
