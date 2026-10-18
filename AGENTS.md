@@ -96,6 +96,21 @@ Within a frozen release scope:
 - Preserve the distinction between researcher judgment and AI structural/execution labor.
 - Avoid turning the book into a generic AI product manual; dynamic product onboarding belongs in the separate Start Guide project.
 
+### Durable editorial lessons
+- Begin with a research task the reader recognizes, a concrete action and an expected result; introduce technical names when they help. Assume ordinary chat experience, not knowledge of AI engineering terms.
+- Explain how to do research or learn methods with AI. Preserve detailed cases and scientific reasoning; do not drift into a standalone methods textbook or expand merely to add length.
+- Show how outputs become later inputs, how the researcher makes decisions, and how a project continues across revisions and sessions. A workflow is more than a list of steps or governance files.
+- Polish Chinese with Humanizer-zh when available and applicable, preserving meaning, evidence and qualifications. Remove editorial self-defence, repeated disclaimers and formulaic contrasts; do not remove conditions that affect research judgment.
+- Treat Doubao, Qwen/千问, DeepSeek and international products as task-dependent examples. Do not turn one example into the only route, rotate brands mechanically, or infer application features from model names.
+- Keep data, reference results and teaching resources consistent across the two projects. Reuse versioned materials and specific cross-links; preserve old page paths, heading anchors and downloads.
+
+### Private author edits and the current design phase
+- The author confirmed on 2026-10-18 that saved edits are inputs to the next authorized iteration, not live changes to published content. Preserve exact author wording during integration; show conflicts instead of overwriting it silently.
+- Distinguish direct replacements, requests for the next iteration and ideas saved for later. A private note does not expand an active task's scope. Mark an item integrated only with evidence in candidate source; integration is not publication.
+- Once the workbench is implemented, begin each authorized content iteration by reading its pending records and selecting those within scope before drafting. Keep unselected ideas and newer revisions pending; do not require the author to repeat saved feedback in chat.
+- Keep private notes, source snapshots and recovery data outside public Git and site output, with durable storage and backup. They are not disposable QA artifacts or a replacement for canonical project state.
+- TASK-015 currently covers design and governance only. Entry design is a core requirement; public comments are excluded. Proposed implementation and its approval status are in `docs/author-workbench-design.md`; consolidated lessons are in `docs/iteration-lessons-2026-10.md`. Do not treat the proposed workbench as an existing tool.
+
 ## QA
 After meaningful site changes:
 1. run `quarto render`;
